@@ -1,10 +1,3 @@
-<p align="center">
-  <a href="https://www.yuque.com/itwanger/ydx81p/nksgcaox959w7ie9">
-      <img src="http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/zsxq-hb.jpg" style="margin: 0 auto; width: 700px;" />
-  </a>
-</p>
-
->[二哥的编程星球](https://tobebetterjavaer.com/zhishixingqiu/)已经有 **1000 多名** 小伙伴加入了，如果你也需要一个良好的学习氛围，[戳链接](https://tobebetterjavaer.com/zhishixingqiu/)加入我们吧！这是一个「编程学习指南 + Java项目实战 + LeetCode刷题」的私密圈子，你可以阅读星球专栏、向二哥提问、帮你制定学习计划、跟着二哥一起做项目、刷力扣，冲冲冲。
 
 <p align="center">
   <a href="https://tobebetterjavaer.com">
@@ -45,7 +38,7 @@
 
 > 知识库收录的核心内容就全在这里面了，大类分为 Java 核心、Java 企业级开发、数据库、计算机基础、求职面试、学习资源、程序人生，几乎你需要的这里都有。
 
-![](https://itwanger-oss.oss-cn-beijing.aliyuncs.com/tobebetterjavaer/images/tobebetterjavaer-map.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/tobebetterjavaer-map.png)
 
 
 # 学习路线
@@ -91,11 +84,11 @@
 >  **Java核心非常重要**！我将其分成了Java 基础篇（包括基础语法、面向对象、集合框架、异常处理、Java IO 等）、Java 并发篇和 Java 虚拟机篇。
 
 
-## Java概述
+## Java概述及环境配置
 
 - [Java简介，什么是 Java？](docs/overview/what-is-java.md)
 - [Java发展简史](docs/overview/java-history.md)
-- [Java的特点，Java能做什么](docs/overview/java-can-do-what.md)
+- [学Java还有前途吗？](docs/overview/java-can-do-what.md)
 - [安装Java开发工具包JDK](docs/overview/jdk-install-config.md)
 - [安装集成开发环境Intellij IDEA](docs/overview/IDEA-install-config.md)
 - [编写第一个Java程序：Hello World](docs/overview/hello-world.md)
@@ -104,10 +97,9 @@
 ## Java基础语法
 
 - [Java中常用的48个关键字 & 2个保留字](docs/basic-extra-meal/48-keywords.md)
-- [Java命名规范，告别编码 5 分钟，命名 2 小时](docs/basic-extra-meal/java-naming.md)
-- [Java注释：单行、多行和文档注释](docs/basic-grammar/javadoc.md)
-- [Java 中的数据类型（8 种基本数据类型和引用数据类型）](docs/basic-grammar/basic-data-type.md)
-- [Java 数据类型转换（强制类型转换+自动类型转换）](docs/basic-grammar/type-cast.md)
+- [Java注释](docs/basic-grammar/javadoc.md)
+- [Java中的数据类型](docs/basic-grammar/basic-data-type.md)
+- [Java 数据类型转换](docs/basic-grammar/type-cast.md)
 - [Java流程控制语句](docs/basic-grammar/flow-control.md)
 - [Java运算符](docs/basic-grammar/operator.md)
 
@@ -197,6 +189,7 @@
 
 ## Java重要知识点
 
+- [Java命名规范](docs/basic-extra-meal/java-naming.md)
 - [彻底弄懂Java中的Unicode和UTF-8编码](docs/basic-extra-meal/java-unicode.md)
 - [Java中new Integer与Integer.valueOf的区别](docs/basic-extra-meal/int-cache.md)
 - [深入剖析Java中的拆箱和装箱](docs/basic-extra-meal/box.md)
@@ -433,6 +426,7 @@
 - [40 道 Nginx 精选面试题👍](docs/interview/nginx-40.md)
 - [60 道 MySQL 精选面试题👍](docs/interview/mysql-60.md)
 - [17 道 Dubbo 精选面试题👍](docs/interview/dubbo-17.md)
+- [40 道 Kafka 精选面试题👍](docs/interview/kafka-40.md)
 - [Java 基础背诵版八股文必看🍉](docs/interview/java-basic-baguwen.md)
 - [Java 并发编程背诵版八股文必看🍉](docs/interview/java-thread-baguwen.md)
 - [Java 虚拟机背诵版八股文必看🍉](docs/interview/java-jvm-baguwen.md)
@@ -458,8 +452,6 @@
 - [有无实习/暑期实习 offer 如何准备秋招？💪](docs/nice-article/weixin/zijxjjdyfqzgl.md)
 - [简历如何优化，简历如何投递，面试如何准备？💪](docs/nice-article/weixin/luoczbmsddyb.md)
 - [校招时间节点、简历编写、笔试、HR面、实习等注意事项💪](docs/nice-article/weixin/youdxzhhmjzlycfx.md)
-
-
 
 ## 城市选择
 

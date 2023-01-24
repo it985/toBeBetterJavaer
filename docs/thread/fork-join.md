@@ -24,7 +24,7 @@ Fork/Join框架是一个实现了ExecutorService接口的多线程处理器，�
 
 Fork/Join的运行流程大致如下所示：
 
-![fork/join流程图](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/fork-join-ba0c0e3f-dc9b-445d-874a-5878503a98f7.png)
+![fork/join流程图](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/fork-join-ba0c0e3f-dc9b-445d-874a-5878503a98f7.png)
 
 需要注意的是，图里的次级子任务可以一直分下去，一直分到子任务足够小为止。用伪代码来表示如下：
 
@@ -47,7 +47,7 @@ solve(任务):
 
 工作窃取流程如下图所示：
 
-![工作窃取算法流程](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/fork-join-819f4ad9-25ce-4e7e-a1d7-e36a70e584a4.png)
+![工作窃取算法流程](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/fork-join-819f4ad9-25ce-4e7e-a1d7-e36a70e584a4.png)
 
 值得注意的是，当一个线程窃取另一个线程的时候，为了减少两个任务线程之间的竞争，我们通常使用**双端队列**来存储任务。被窃取的任务线程都从双端队列的**头部**拿任务执行，而窃取其他任务的线程从双端队列的**尾部**执行任务。
 
@@ -120,7 +120,7 @@ private int doJoin() {
 ```
 
 我们在之前介绍过说Thread.join()会使线程阻塞，而ForkJoinPool.join()会使线程免于阻塞，下面是ForkJoinPool.join()的流程图：
-![join流程图](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/fork-join-8e03485d-efe0-4edf-8516-a9b10dea6e7f.png)
+![join流程图](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/fork-join-8e03485d-efe0-4edf-8516-a9b10dea6e7f.png)
 
 **RecursiveAction和RecursiveTask**
 
@@ -345,6 +345,6 @@ public void testComputeFibonacci() {
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

@@ -2,7 +2,7 @@
 title: 校招 Java 后端开发应该掌握到什么程度？
 shortTitle: 校招Java后端应该掌握到什么程度?
 description: 参加了21届的春招和秋招，拿到过阿里、腾讯、字节等大厂的offer，目前刚刚入职阿里淘系技术（Java后端开…
-tags:
+tag:
   - 学习建议
 author: 阿里巴巴大淘宝技术 
 category:
@@ -140,9 +140,9 @@ head:
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)
 
 
 

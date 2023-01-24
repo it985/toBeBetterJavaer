@@ -1,5 +1,5 @@
 ---
-title: Java命名规范，告别编码 5 分钟，命名 2 小时
+title: Java命名规范
 shortTitle: Java命名规范
 category:
   - Java核心
@@ -12,6 +12,8 @@ head:
       content: Java,Java SE,Java基础,Java教程,Java程序员进阶之路,Java入门,教程,Java命名规范,命名规范
 ---
 
+## 3.2 Java命名规范
+
 “二哥，Java 中的命名约定都有哪些呢？”三妹的脸上泛着甜甜的笑容，她开始对接下来要学习的内容充满期待了，这正是我感到欣慰的地方。
 
 “对于我们中国人来说，名字也是有讲究的，比如说我叫沉默王二，你就叫沉默王三，哈哈。”我笑着对三妹说。
@@ -23,6 +25,8 @@ head:
 好的命名可以让你的代码更易读，包括你自己和你的小伙伴，看一眼，不用想太多，就能明白代码是干嘛的。
 
 拿我这个笔名“沉默王二”来举例吧，读起来我就觉得朗朗上口，读者看到这个笔名就知道我是一个什么样的人——对不熟的人保持沉默，对熟的人妙语连珠，哈哈。
+
+>当然了，如果你暂时记不住也没关系，后面再回头来记一下就好了。
 
 ### 01、包（package）
 
@@ -43,7 +47,7 @@ head:
 - 类名使用 UpperCamelCase（驼峰式命名）风格
 - 尽量不要省略成单词的首字母，但以下情形例外：DO/BO/DTO/VO/AO/PO/UID 等
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/core-grammar/fifteen-01.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/core-grammar/fifteen-01.png)
 
 另外，如果是抽象类的话，使用 Abstract 或 Base 开头；如果是异常类的话，使用 Exception 结尾；如果是测试类的话，使用 Test 结尾。
 
@@ -158,6 +162,6 @@ Service/DAO 层的方法命名规约：
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

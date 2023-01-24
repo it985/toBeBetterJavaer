@@ -2,9 +2,8 @@
 title: 从军官到程序员，翻天覆地
 shortTitle: 从军官到程序员，翻天覆地
 description: 本来想考完研就写下这篇文章的，由于拖延，或者懒得写，直到现在才痛下决心把它写出来。算是对过去几年的总结，与我有着相同的经历的人们分享一下自己的人生经历，记录曾经的迷茫。 楼主本科是西北某985学校国防生…
-tags:
+tag:
   - 程序员
-  - 考研
 category:
   - 知乎
 head:
@@ -94,7 +93,7 @@ head:
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)
 

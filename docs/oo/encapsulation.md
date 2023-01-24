@@ -139,9 +139,9 @@ public class Husband {
 
 ```
 Husband husband = new Husband();
-husband.age \= 30;
-husband.name \= "张三";
-husband.sex \= "男";    //貌似有点儿多余
+husband.age = 30;
+husband.name = "张三";
+husband.sex = "男";    //貌似有点儿多余
 ```
 
 但是那哪天如果我们需要修改 Husband，例如将 age 修改为 String 类型的呢？你只有一处使用了这个类还好，如果你有几十个甚至上百个这样地方，你是不是要改到崩溃。如果使用了封装，我们完全可以不需要做任何修改，只需要稍微改变下 Husband 类的 setAge()方法即可。
@@ -259,6 +259,6 @@ public String getCzHTML(){
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

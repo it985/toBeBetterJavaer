@@ -80,7 +80,7 @@ t3.start();
 来看一下执行后的结果：
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/wangzhe-thread-01.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/wangzhe-thread-01.png)
 
 
 ♠②：创建一个类实现Runnable接口，并重写run方法。
@@ -118,7 +118,7 @@ t3.start();
 
 来看一下执行后的结果：
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/wangzhe-thread-02.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/wangzhe-thread-02.png)
 
 ♠③：实现Callable接口，重写call()方法，这种方式可以通过FutureTask获取任务执行的返回值。
 
@@ -201,7 +201,7 @@ t3.start();
 
 来看一下执行后的结果：
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/wangzhe-thread-03.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/wangzhe-thread-03.png)
 
 
 3）`setDaemon()`：将此线程标记为守护线程，准确来说，就是服务其他的线程，像 Java 中的垃圾回收线程，就是典型的守护线程。
@@ -227,12 +227,12 @@ t3.start();
 
 最后再来看一下线程的生命周期吧，一图胜千言。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/wangzhe-thread-04.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/wangzhe-thread-04.png)
 
 ----
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

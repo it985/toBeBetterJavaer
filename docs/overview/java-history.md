@@ -12,7 +12,7 @@ head:
       content: Java,Java SE,Java基础,Java教程,Java程序员进阶之路,Java入门,教程,Java简史
 ---
 
-# Java发展简史
+## 2.2 Java发展简史
 
 20 世纪 90 年代，单片式计算机系统诞生。单片式计算机系统不仅廉价（之前的计算机非常庞大，并且昂贵），而且功能强大，可以大幅度提升消费性电子产品的智能化程度。
 
@@ -24,7 +24,7 @@ Sun 公司为了抢占市场先机，在 1991 年成立了一个由詹姆斯·�
 
 **Oak** 是“Java”的第二个名字，这次就有点意义了。Oak（橡树）是力量的象征，被美国、法国、德国等许多欧美国家选为国树。橡树长下面这样。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/overview/two-01.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/overview/two-01.png)
 
 1992 年，Oak 的雏形有了，但项目组在向硬件生产商进行商演的时候，并没有获得认可，于是 Oak 就被搁置一旁了。
 
@@ -38,7 +38,7 @@ Sun 公司为了抢占市场先机，在 1991 年成立了一个由詹姆斯·�
 
 “Java”是印度尼西亚爪哇岛的英文名，因生产咖啡而闻名，所以，小伙伴也看到了，Java 这个单词经常和一杯冒着热气的咖啡一起出现。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/overview/two-02.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/overview/two-02.png)
 
 同年，Sun 公司在 SunWorld 大会上正式发布了 Java 1.0 版本，第一次提出了“Write Once, Run anywhere”的口号。《时代》杂志将 Java 评为 1995 年十大最佳产品之一。
 
@@ -64,7 +64,7 @@ JDK 6 的最后一个升级补丁为 Java SE 6 Update 211， 于 2018 年 10 月
 
 2009 年 4 月 20 日，Oracle 以 74 亿美元的价格收购了市值曾超过 2000 亿美元的 Sun 公司——太阳终究还是落山了。对于 Java 语言这个孩子来说，可以说是好事，也可以说是坏事。好事是 Oracle 有钱，能够注入资金推动 Java 的发展；坏处就是 Oracle 是后爸，对 Java 肯定没有 Sun 那么亲，走的是极具商业化的道路。
 
- 2014 年 3 月 18 日，JDK 8 终于来了，步伐是那么蹒跚，但终究还是来了。带着最强有力的武器——Lambda 表达式而来。虽然 JDK 19 马上就发布了，但“新版任你发，我用 Java 8”的梗至今还流传着。
+2014 年 3 月 18 日，JDK 8 终于来了，步伐是那么蹒跚，但终究还是来了。带着最强有力的武器——Lambda 表达式而来。虽然 JDK 19 马上就发布了，但“新版任你发，我用 Java 8”的梗至今还流传着。
 
 2017 年 9 月 21 日，JDK 9 发布。从此以后，JDK 更新版本的速度令开发者应接不暇，半年一个版本，虽然 Oracle 的目的是好的，为了避免因功能增加而引发的跳票风险，但不得不承认，版本更新的节奏实在是有点过于频繁。
 
@@ -90,4 +90,4 @@ Java 在云时代面临着以 Go 语言为主的容器（Docker 等技术）生�
 
 关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

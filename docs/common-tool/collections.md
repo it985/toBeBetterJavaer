@@ -20,7 +20,7 @@ Collections 是 JDK 提供的一个工具类，位于 java.util 包下，提供�
 Collections 的用法很简单，在 Intellij IDEA 中敲完 `Collections.` 之后就可以看到它提供的方法了，大致看一下方法名和参数就能知道这个方法是干嘛的。
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/common-tool/collections-01.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/common-tool/collections-01.png)
 
 为了节省大家的学习时间，我将这些方法做了一些分类，并列举了一些简单的例子。
 
@@ -114,7 +114,7 @@ System.out.println("填充后的结果：" + list);
 
 [HashMap 是线程不安全](https://mp.weixin.qq.com/s/qk_neCdzM3aB6pVWVTHhNw)的，这个我们前面讲到了。那其实 ArrayList 也是线程不安全的，没法在多线程环境下使用，那 Collections 工具类中提供了多个 synchronizedXxx 方法，这些方法会返回一个同步的对象，从而解决多线程中访问集合时的安全问题。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/common-tool/collections-02.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/common-tool/collections-02.png)
 
 使用起来也非常的简单：
 
@@ -259,9 +259,9 @@ addAll 后：[沉默王九, 沉默王十, 沉默王二]
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)
 
 
 

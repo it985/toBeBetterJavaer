@@ -19,7 +19,7 @@ head:
 
 “好吧。”我只好摊摊手地说，“那我先画张集合框架的结构图等着你。”
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/collection/gailan-01.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/collection/gailan-01.png)
 
 
 “完了没？三妹。”
@@ -30,7 +30,7 @@ head:
 
 Java 集合框架可以分为两条大的支线：
 
-- Collection，主要由 List、Set、Queue 组成，List 代表有序、可重复的集合，典型代表就是封装了动态数组的 ArrayList 和封装了链表的 LinkedList；Set 代表无序、不可重复的集合，典型代表就是 HashSet 和 TreeSet；Queue 代表队列，典型代表就是双端队列 ArrayDeque，以及优先级队列 PriorityQue。
+- Collection，主要由 List、Set、Queue 组成，List 代表有序、可重复的集合，典型代表就是封装了动态数组的 ArrayList 和封装了链表的 LinkedList；Set 代表无序、不可重复的集合，典型代表就是 HashSet 和 TreeSet；Queue 代表队列，典型代表就是双端队列 ArrayDeque，以及优先级队列 PriorityQueue。
 - Map，代表键值对的集合，典型代表就是 HashMap。
 
 “接下来，我们再来过一遍。”
@@ -65,7 +65,7 @@ Stack 是 Vector 的一个子类，本质上也是由动态数组实现的，只
 
 > Set 的特点是存取无序，不可以存放重复的元素，不可以用下标对元素进行操作，和 List 有很多不同
 
-## **1）HashSet**
+### **1）HashSet**
 
 HashSet 其实是由 HashMap 实现的，只不过值由一个固定的 Object 对象填充，而键用于操作。
 
@@ -129,7 +129,7 @@ HashSet(int initialCapacity, float loadFactor, boolean dummy) {
 
 这是一个包含了 4 个元素的双端队列，和一个包含了 5 个元素的双端队列。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/collection/gailan-02.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/collection/gailan-02.png)
 
 head 指向队首的第一个有效的元素，tail 指向队尾第一个可以插入元素的空位，因为是循环数组，所以 head 不一定从是从 0 开始，tail 也不一定总是比 head 大。
 
@@ -206,6 +206,6 @@ HashMap 是无序的，所以遍历的时候元素的顺序也是不可测的。
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

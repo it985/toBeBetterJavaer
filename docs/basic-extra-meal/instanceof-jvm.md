@@ -19,7 +19,7 @@ head:
 
 >作者：RednaxelaFX，整理：沉默王二，链接：[https://www.zhihu.com/question/21574535/answer/18998914](https://www.zhihu.com/question/21574535/answer/18998914)
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/basic-extra-meal/instanceof-jvm-b676fee6-bfd4-4ae9-9c7b-e488e345f775.gif)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/basic-extra-meal/instanceof-jvm-b676fee6-bfd4-4ae9-9c7b-e488e345f775.gif)
 
 --------
 
@@ -117,6 +117,6 @@ VM runtime的：
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

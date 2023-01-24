@@ -66,7 +66,7 @@ public class Student {
 
 “哦哦，别担心，三妹，画幅图你就全明白了。”说完我就打开 draw.io 这个网址，认真地画起了图。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/19-01.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/19-01.png)
 
 “现在，是不是一下子就明白了？”看着这幅漂亮的手绘图，我心里有点小开心。
 
@@ -95,7 +95,7 @@ public class Counter {
 
 我在侃侃而谈，而三妹似乎有些不太明白。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/19-02.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/19-02.png)
 
 
 “没关系，三妹，你先盲猜一下，这段代码输出的结果是什么？”
@@ -147,7 +147,7 @@ public class StaticCounter {
 
 “另外，需要注意的是，由于静态变量属于一个类，所以不要通过对象引用来访问，而应该直接通过类名来访问，否则编译器会发出警告。”
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/19-03.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/19-03.png)
 
 
 ## 02、静态方法
@@ -208,11 +208,11 @@ public class StaticMethodStudent {
 
 “先是在静态方法中访问非静态变量，编译器不允许。”
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/19-04.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/19-04.png)
 
 “然后在静态方法中访问非静态方法，编译器同样不允许。”
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/19-05.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/19-05.png)
 
 “关于静态方法的使用，这下清楚了吧，三妹？”
 
@@ -224,7 +224,7 @@ public class StaticMethodStudent {
 
 “java.lang.Math 类的几乎所有方法都是静态的，可以直接通过类名来调用，不需要创建类的对象。”
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/19-06.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/19-06.png)
 
 ## 03、静态代码块
 
@@ -278,7 +278,7 @@ public class StaticBlockNoMain {
 
 “在命令行中执行 `java StaticBlockNoMain` 的时候，会抛出 NoClassDefFoundError 的错误。”
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/19-07.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/19-07.png)
 
 “三妹，来看下面这个例子。”
 
@@ -343,7 +343,7 @@ public class Singleton {
 
 “三妹，你看，在 Singleton 类上加 static 后，编译器就提示错误了。”
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/19-08.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/19-08.png)
 
 三妹点了点头，所有所思。
 
@@ -351,6 +351,6 @@ public class Singleton {
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

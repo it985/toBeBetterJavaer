@@ -22,7 +22,7 @@ head:
 
 以我正在运行着的编程喵喵项目实例（基于 Java 8）来说，结果是这样的。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/basic-extra-meal/jdk9-char-byte-string-d826ce88-bbbe-47a3-a1a9-4dd86dd3632f.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/basic-extra-meal/jdk9-char-byte-string-d826ce88-bbbe-47a3-a1a9-4dd86dd3632f.png)
 
 其中 String 对象有 17638 个，占用了 423312 个字节的内存，排在第三位。
 
@@ -79,7 +79,7 @@ private final byte coder;
 
 Java 会根据字符串的内容自动设置为相应的编码，要么 Latin-1 要么 UTF16。
 
-也就是说，从 `char[]` 到 `byte[]`，**中文是两个字节，纯英文是一个字节，在此之前呢，中文是两个字节，应为也是两个字节**。
+也就是说，从 `char[]` 到 `byte[]`，**中文是两个字节，纯英文是一个字节，在此之前呢，中文是两个字节，英文也是两个字节**。
 
 ## 三、为什么用UTF-16而不用UTF-8呢？
 
@@ -91,7 +91,8 @@ Java 会根据字符串的内容自动设置为相应的编码，要么 Latin-1 
 具体的表现形式为：
 
 - 0xxxxxxx：一个字节；
-- 110xxxxx 10xxxxxx：两个字节编码形式（开始两个 1）； - 1110xxxx 10xxxxxx 10xxxxxx：三字节编码形式（开始三个 1）； 
+- 110xxxxx 10xxxxxx：两个字节编码形式（开始两个 1）；
+- 1110xxxx 10xxxxxx 10xxxxxx：三字节编码形式（开始三个 1）；
 - 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx：四字节编码形式（开始四个 1）。
 
 关于字符编码，我在《Java 程序员进阶之路》里曾讲到过，想要深入了解的小伙伴查看下面的链接🔗：
@@ -117,6 +118,6 @@ Java 会根据字符串的内容自动设置为相应的编码，要么 Latin-1 
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

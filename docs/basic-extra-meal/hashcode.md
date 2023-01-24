@@ -31,7 +31,7 @@ public native int hashCode();
 
 具体的实现可以参考 `jdk/src/hotspot/share/runtime/synchronizer.cpp`（源码可以到 GitHub 上 OpenJDK 的仓库中下载）。`get_next_hash()` 方法会根据 hashCode 的取值来决定采用哪一种哈希值的生成策略。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/basic-extra-meal/hashcode-1.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/basic-extra-meal/hashcode-1.png)
 
 并且 `hashCode()` 方法被 `@HotSpotIntrinsicCandidate` 注解修饰，说明它在 HotSpot 虚拟机中有一套高效的实现，基于 CPU 指令。
 
@@ -173,7 +173,7 @@ public static int hashCode(Object a[]) {
 
 代码似乎很简单，归纳出的数学公式如下所示（n 为字符串长度）。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/basic-extra-meal/hashcode-2.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/basic-extra-meal/hashcode-2.png)
 
 注意：31 是个奇质数，不大不小，一般质数都非常适合哈希计算，偶数相当于移位运算，容易溢出，造成数据信息丢失。
 
@@ -242,6 +242,6 @@ static inline intptr_t get_next_hash(Thread* current, oop obj) {
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

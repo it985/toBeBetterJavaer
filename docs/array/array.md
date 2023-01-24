@@ -12,7 +12,9 @@ head:
       content: Java,Java SE,Java基础,Java教程,Java程序员进阶之路,Java入门,教程,java数组,数组
 ---
 
-“二哥，我看你公众号的一篇文章里提到，ArrayList 的内部是用数组实现的，我就对数组非常感兴趣，想深入地了解一下，今天终于到这个环节了，好期待呀！”三妹的语气里显得很兴奋。
+## 4.1 Java数组
+
+“二哥，我看你公众号的一篇文章里提到，[ArrayList](https://tobebetterjavaer.com/collection/arraylist.html) 的内部是用数组实现的，我就对数组非常感兴趣，想深入地了解一下，今天终于到这个环节了，好期待呀！”三妹的语气里显得很兴奋。
 
 “的确是的，看 ArrayList 的源码就一清二楚了。”我一边说，一边打开 Intellij IDEA，并找到了 ArrayList 的源码。
 
@@ -197,7 +199,6 @@ String[] anArray = new String[] {"沉默王二", "一枚有趣的程序员", "�
 Stream<String> aStream = Arrays.stream(anArray);
 ```
 
-
 如果想对数组进行排序的话，可以使用 Arrays 类提供的 `sort()` 方法。
 
 - 基本数据类型按照升序排列
@@ -257,6 +258,6 @@ int index = Arrays.binarySearch(anArray, 4);
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

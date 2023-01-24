@@ -132,7 +132,7 @@ add方法的逻辑也比较容易理解，请看上面的注释。需要注意�
 
 假设COW的变化如下图所示：
 
-![最终一致性的分析](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/CopyOnWriteArrayList-01.png)
+![最终一致性的分析](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/CopyOnWriteArrayList-01.png)
 
 数组中已有数据1,2,3，现在写线程想往数组中添加数据4，我们在第5行处打上断点，让写线程暂停。读线程依然会“不受影响”的能从数组中读取数据，可是还是只能读到1,2,3。**如果读线程能够立即读到新添加的数据的话就叫做能保证数据实时性**。当对第5行的断点放开后，读线程才能感知到数据变化，读到完整的数据1,2,3,4，而保证**数据最终一致性**，尽管有可能中间间隔了好几秒才感知到。
 
@@ -161,6 +161,6 @@ CopyOnWrite容器有很多优点，但是同时也存在两个问题，即内存
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

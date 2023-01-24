@@ -13,7 +13,7 @@ category:
 
 周末就不分享技术了。今天早上在知乎看到一个挺有意思的话题：**不到 20 人的 IT 公司该去吗**？
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-budrditgsgqm-092ccdf7-12ac-4ca0-81b0-0d7fc193ffdc.jpg)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-budrditgsgqm-092ccdf7-12ac-4ca0-81b0-0d7fc193ffdc.jpg)
 
 回答区有一位老哥分享了自己在一个20 来人的小公司的奇葩工作经历，分享一下。
 
@@ -227,12 +227,12 @@ category:
 
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-rumrabbitmqzypjdg-53717e59-63c9-44bd-99d3-dd2c26fe68bb.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-rumrabbitmqzypjdg-53717e59-63c9-44bd-99d3-dd2c26fe68bb.png)
 
 ----
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

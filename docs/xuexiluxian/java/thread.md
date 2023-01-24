@@ -1,6 +1,6 @@
 ---
 star: true
-title: Java并发编程学习路线（建议收藏🔥）
+title: 2023年最值得收藏的Java并发编程学习路线（🔥）
 shortTitle: Java并发编程学习路线
 category:
   - 学习路线
@@ -18,7 +18,7 @@ head:
 
 今天这篇文章就来给大家盘点一下 Java 并发到底该如何从入门到精通，请及时用鸡毛掸子把收藏夹里的灰清理一下。在阅读过程中，如果有所帮助，麻烦点赞/收藏和转发，算是对我码字的这份坚持的亿点点鼓励。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-1.gif)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-1.gif)
 
 
 ## 一、为什么要学 Java 并发？
@@ -29,7 +29,7 @@ head:
 
 当然了，Java 并发涉及到东西实在是不少，包括操作系统的知识，Java 虚拟机的一些知识，Java 线程模型的知识，多线程相关的关键字，比如说 synchronized、volatile 等，还有锁的知识、JDK 提供的工具类等等，学起来还是非常容易令人头大的。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-2.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-2.png)
 
 因此，我们需要一些高效的学习路线图，以及一些优质的学习资源，从而减少我们学习Java 并发编程所投入的时间和精力。
 
@@ -37,7 +37,7 @@ head:
 
 这是我最近整理的一张关于 Java 并发编程的思维导图，大的方向可以分为三个部分：线程基础、理论基础、工具类 JUC。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-map.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-map.png)
 
 线程基础部分包括：
 
@@ -73,13 +73,13 @@ head:
 
 进去直接找 Java 核心里面的 Java 并发编程就对了。我按照前面的思维导图整理了 27 篇文章，全部都是硬核级别的，跟着学就对了。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-map-1.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-map-1.png)
 
 ### **2）视频**
 
 懂的都懂，看视频到 B 站。黑马的《Java并发编程》评价还不错，300 多个小节，我觉得讲的比较好的有三部分：synchronized优化原理、AQS和线程池。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-4.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-4.png)
 
 >视频地址：[https://www.bilibili.com/video/BV16J411h7Rd](https://www.bilibili.com/video/BV16J411h7Rd)
 
@@ -87,7 +87,7 @@ head:
 
 纸质书只推荐一本《[Java 并发编程实战](https://book.douban.com/subject/10484692/)》，豆瓣评分 9.0。不过这本书确实有点老了，基本上是按照 Java 6 来讲解的，希望出版社能早点出 2.0 版。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-5.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-5.png)
 
 《Java 并发编程实战》这本书从总体上来看，分两条主线：
 
@@ -108,13 +108,13 @@ head:
 
 推荐 RedSpider社区的[深入浅出 Java 多线程](http://concurrent.redspider.group/RedSpider.html)，比Java 并发编程实战更通俗易懂一些，因为里面穿插了很多精美的手绘图。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-6.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-6.png)
 
 >GitHub地址：[https://github.com/RedSpider1/concurrent](https://github.com/RedSpider1/concurrent)
 
 考虑到有些小伙伴可能需要 [PDF 版本](https://mp.weixin.qq.com/s/pxKrjw_5NTdZfHOKCkwn8w)，我花了一周的时间整理了一份，需要的小伙伴请扫描下方的二维码关注作者的原创公众号「**沉默王二**」回复关键字「**并发**」就可以拉取到了。
 
-![扫码关注后回复「并发」关键字](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)
+![扫码关注后回复「并发」关键字](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)
 
 再推荐一份 GitHub 上星标 3.6k+ 的 Java 并发知识点总结：
 
@@ -134,7 +134,7 @@ head:
 
 这里给大家推荐两份 Java 并发编程方面的八股文，一份来自[三分恶](https://mp.weixin.qq.com/s/1jhBZrAb7bnvkgN1TgAUpw)，一份来自小牛，先截图给大家看一下 Java 并发方面都有哪些高频的面试题。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-7.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-7.png)
 
 为了方便大家的阅读和背诵，我已经将其整理到了二哥的小破站《Java 程序员进阶之路》上，面渣逆袭 Java 并发篇：
 
@@ -146,7 +146,7 @@ Java 并发编程八股文（背诵版）：
 
 这两份八股文的质量都非常高，来看一下AQS了解多少小节下的内容，图文并茂，非常容易消化和吸收。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-8.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-8.png)
 
 诚实点说，如果能把这两份八股文背会的话，简历上就真的敢写“精通”Java 并发了。
 
@@ -161,7 +161,7 @@ Java 提供的并发组件，大致可以分为两类：
 
 想要学好 Java 并发编程，就必须得对下图中提到的基础概念进行充分的理解。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-9.jpg)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java-thread-9.jpg)
 
 在我看来，并发编程主要是用来解决这两个痛点的：
 
@@ -209,7 +209,7 @@ Java 提供的并发组件，大致可以分为两类：
 
 给大家截图展示一下里面都有哪些优质的 PDF：
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java/java-books.jpg)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java/java-books.jpg)
 
 **Java 并发编程虽然难学，会涉及到操作系统、CPU、内存等偏基础方面的内容，但如果你能坚持学下去，内功自然而然就提升了一大截**。
 
@@ -217,7 +217,7 @@ Java 提供的并发组件，大致可以分为两类：
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

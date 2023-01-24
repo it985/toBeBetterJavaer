@@ -11,17 +11,21 @@ export const sidebarConfig = sidebar({
   // 你可以省略 .md 扩展名，以 / 结尾的路径会被推断为 /README.md(区分大小写)
   "/nice-article/itmind/": [
     "readme.md",
+    "shangwang.md",
     "ideapxideajhideayjjhmideazxjhzcmpjjcyjjhqcyx",
     "yigkymxczideatsyqdffblwxjcywdxbxt",
     "ideapjazjczxjhmzcmyjjhcxgxz",
     "ideajhmideajhmideapxideajhmideazcmideayjjhm",
+    "intellijidearhgbgxdsxbxt",
     "navicatmacyjpx",
     "navicatzxbwindowspjbjc",
     "typorayjpx",
     "typoramaczwpjbhyjjdkptmarkdownbjqmksimacsocom",
     "xshellazpjbjcxshellpxffxbxt",
     "pycharmjhpxmazjcnyrgxxbxt",
-    "yang1",
+    "webstormjhmwebstormwdzsjhmxbxt",
+    "visualstudiopxbazjcnfvisualstudiojhmmyxbxt",
+    "sublimetextzcmpjazjcqckyxbxt",
   ],
   "/pdf/": [
     "java",
@@ -87,7 +91,7 @@ export const sidebarConfig = sidebar({
       children: [
         {
           prefix: "overview/",
-          text: "2.1 Java概述",
+          text: "2.1 Java概述及环境配置",
           collapsible: true,
           children: [
           "what-is-java",
@@ -103,7 +107,6 @@ export const sidebarConfig = sidebar({
           collapsible: true,
           children: [
           "basic-extra-meal/48-keywords",
-          "basic-extra-meal/java-naming",
           "basic-grammar/javadoc",
           "basic-grammar/basic-data-type",
           "basic-grammar/type-cast",
@@ -225,6 +228,7 @@ export const sidebarConfig = sidebar({
           prefix:"basic-extra-meal/",
           collapsible: true,
           children: [
+            "basic-extra-meal/java-naming",
           "java-unicode",
           "int-cache",
           "box",
@@ -614,6 +618,7 @@ export const sidebarConfig = sidebar({
             "redis-12",
             "mysql-60",
             "dubbo-17",
+            "kafka-40",
             "java-basic-baguwen",
             "java-thread-baguwen",
             "java-jvm-baguwen",

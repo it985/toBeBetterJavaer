@@ -1,6 +1,6 @@
 ---
 star: true
-title: MySQL学习路线（建议收藏🔥）
+title: 2023年最值得收藏的MySQL学习路线（建议收藏🔥）
 shortTitle: MySQL学习路线
 category:
   - 学习路线
@@ -28,17 +28,17 @@ MySQL 在校招面试中，被问到的频率非常高；在日常开发中，My
 
 >视频地址：[https://www.bilibili.com/video/BV1UE41147KC](https://www.bilibili.com/video/BV1UE41147KC)
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-370c309d-b3f6-4d68-917a-4069ebc7a600.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-370c309d-b3f6-4d68-917a-4069ebc7a600.png)
 
 ### 书籍
 
 书的话，有两本，一本是《[SQL 必知必会](https://book.douban.com/subject/35167240/)》，一本是《[SQL基础教程（第2版）](https://book.douban.com/subject/27055712/)》，任选一本即可。
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-9d645bf3-fe62-47bd-bfe3-bd31d4987d5a.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-9d645bf3-fe62-47bd-bfe3-bd31d4987d5a.png)
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-ff3e8536-4690-4b60-8e69-27e641c9ea39.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-ff3e8536-4690-4b60-8e69-27e641c9ea39.png)
 
 
 ## 第二阶段：入门 MySQL
@@ -57,14 +57,14 @@ SQL 学完，再学 MySQL 就会更加丝滑，学习曲线会平滑一些。
 
 >视频地址：[https://www.bilibili.com/video/BV1iq4y1u7vj](https://www.bilibili.com/video/BV1iq4y1u7vj)
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-4c9d7851-9563-4864-b565-1e28a657b160.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-4c9d7851-9563-4864-b565-1e28a657b160.png)
 
 
 如果喜欢女老师上课的话，推荐尚硅谷的另外一门课《**MySQL基础教程丨mysql数据库实战**》视频课，一共 178 集，基本上覆盖了 MySQL 的核心技术点，包括数据库和表的常用操作、约束、视图、存储过程等内容。不过，这个视频的录音质量真的是不太高，建议大家不要带耳机来修这门课。
 
 >视频地址：[https://www.bilibili.com/video/BV1xW411u7ax](https://www.bilibili.com/video/BV1xW411u7ax)
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-f8c57aad-669e-4980-93ed-b4e78bc87cd2.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-f8c57aad-669e-4980-93ed-b4e78bc87cd2.png)
 如果想突击 MySQL 的话，推荐《**老杜带你学_mysql入门基础**》，据说 3 天就能学完，一共 151 集，有同学对课程进行了总结提炼，这里也贴一下博客地址：
 
 >博客地址：[https://blog.csdn.net/weixin_43896929/article/details/120750965](https://blog.csdn.net/weixin_43896929/article/details/120750965)
@@ -72,7 +72,7 @@ SQL 学完，再学 MySQL 就会更加丝滑，学习曲线会平滑一些。
 >视频地址：[https://www.bilibili.com/video/BV1Vy4y1z7EX](https://www.bilibili.com/video/BV1Vy4y1z7EX)
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-32720432-9269-4b99-929a-b359afa96c04.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-32720432-9269-4b99-929a-b359afa96c04.png)
 
 
 ### 书籍
@@ -82,15 +82,15 @@ SQL 学完，再学 MySQL 就会更加丝滑，学习曲线会平滑一些。
 书籍的话，推荐《[MySQL 是怎样使用的、快速入门 MySQL](https://book.douban.com/subject/35670862/)》、《[MySQL 必知必会](https://book.douban.com/subject/3354490/)》，任选一本就可以。
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-3cb6a898-977f-4586-8e78-0246c322855c.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-3cb6a898-977f-4586-8e78-0246c322855c.png)
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-9d5db75f-10c8-464e-bbd4-35a79785cd61.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-9d5db75f-10c8-464e-bbd4-35a79785cd61.png)
 
 《MySQL 是怎样使用的、快速入门 MySQL》这本书在掘金上也有[小册](https://s.juejin.cn/ds/MDPeuBk/)，如果购买过这本小册的话，也就不用再购买纸质书了。
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-22571cf9-8058-4613-b8df-9dd5cdfcb47b.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-22571cf9-8058-4613-b8df-9dd5cdfcb47b.png)
 
 
 ### MySQL 学习建议
@@ -100,13 +100,13 @@ SQL 学完，再学 MySQL 就会更加丝滑，学习曲线会平滑一些。
 >[https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/)
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-10f00d3a-2cbb-4ba7-8c1f-526391de2b36.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-10f00d3a-2cbb-4ba7-8c1f-526391de2b36.png)
 
 
 安装完成后，记得安装可视化工具：**Navicat**，方便操作。
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-f0e569b0-5c8d-4387-87cd-f5df64e218cd.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-f0e569b0-5c8d-4387-87cd-f5df64e218cd.png)
 
 星球里分享过 macOS 的 Navicat 破解版：
 
@@ -137,7 +137,7 @@ Windows 的话，在 Java 程序员进阶之路上分享过破解方法：
 >[https://www.nowcoder.com/ta/sql](https://www.nowcoder.com/ta/sql)
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-dfdb957f-ff78-42e5-aae5-758d84852e46.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-dfdb957f-ff78-42e5-aae5-758d84852e46.png)
 
 
 如果你是测试人员、业务人员、数据分析岗，或者实习岗，一般掌握到这个成都就可以了。如果你是 Java 后端开发人员，或者 DBA，那就要往进阶层面走了。
@@ -170,26 +170,26 @@ Windows 的话，在 Java 程序员进阶之路上分享过破解方法：
 《高性能 MySQL》出到了第四版，和第三版比，删除了不少内容，更精简了。
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-af4eafb6-7a37-4931-8aac-dc44bcabfb82.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-af4eafb6-7a37-4931-8aac-dc44bcabfb82.png)
 
 
 《MySQL 是怎样运行的：从跟上理解 MySQL》这本书真不错，评价非常高。全书分为四个部分，第一部分（1-3 章），主要就是普及 MySQL；第二部分（4-9 章）是全书的基础，介绍了 InnoDB、索引、B+树；第三部分（10-17 章）主要介绍了工作中常用到的查询优化，比如说单表查询是如何执行的，连接查询是如何执行的，以及如何查看 explain 语句的执行结果；第四部分（18-22 章）介绍了事务、redo 日志、MVCC、各种锁的细节。
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-018bba71-529c-41ff-8622-60439fec0b50.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-018bba71-529c-41ff-8622-60439fec0b50.png)
 
 
 《MySQL 是怎样运行的：从跟上理解 MySQL》这本书在掘金上也有[小册](https://s.juejin.cn/ds/MDfcwNb/)，购买过的可以不用再购买纸质书了，内容差不多。
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-675d507a-f05b-4f53-9c7e-9394502a6576.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-675d507a-f05b-4f53-9c7e-9394502a6576.png)
 
 
 
 《MySQL技术内幕:InnoDB存储引擎》这本书详细介绍了 MySQL 的系统架构和各种各样的存储引擎，非常顶的一本书。强烈推荐2、4、5三章。
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-f0631706-60e8-473e-89e9-04ea5fc0dccd.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-f0631706-60e8-473e-89e9-04ea5fc0dccd.png)
 
 
 
@@ -198,7 +198,7 @@ Windows 的话，在 Java 程序员进阶之路上分享过破解方法：
 极客上的《[MySQL 实战 45 讲](http://gk.link/a/11Gcp)》评价挺高的，可以看看。一共分为两部分，基础篇（深入浅出地讲述了 MySQL 的核心知识、以及 MySQL 的基础架构、日志系统、事务隔离、锁等内容）和实践篇（结合一个个关键的数据库问题触发，分析数据库原理并给出实践指导）。
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-5338019d-a197-4438-8c0e-934a45794d91.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-5338019d-a197-4438-8c0e-934a45794d91.png)
 
 >星球同学可以到星球的百度网盘里取，地址在《Java 程序员进阶之路》知识星球的[置顶链接](https://t.zsxq.com/07N3NbmEe)里。
 
@@ -211,7 +211,7 @@ Windows 的话，在 Java 程序员进阶之路上分享过破解方法：
 英文能力比较强的球友，可以试读一下 [MySQL 的官方文档](https://dev.mysql.com/doc/)。
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-eb464848-e5d9-4611-8b32-2fe799e7ca68.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-eb464848-e5d9-4611-8b32-2fe799e7ca68.png)
 
 
 ## 第三阶段：面试突击/实战运用
@@ -225,7 +225,7 @@ Windows 的话，在 Java 程序员进阶之路上分享过破解方法：
 星球用户可以在星球的[知识图谱](https://t.zsxq.com/04FuZrRVf)里获取 PDF 版本。
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-2aecc2a4-febb-4403-a4ce-d5656c879d3b.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-2aecc2a4-febb-4403-a4ce-d5656c879d3b.png)
 
 
 准备升职加薪/跳槽的同学，那就一定要在实际的工作当中加以运用，不然很可能学完一段时间就忘记了。
@@ -235,7 +235,7 @@ Windows 的话，在 Java 程序员进阶之路上分享过破解方法：
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)
 

@@ -177,7 +177,7 @@ Object听到这话，皱了皱眉，他沉默了一会儿，缓缓站起身子�
 
 我见他好像魔怔了，仿佛在思考什么，于是迈步走到他刚才站立的地方看着前面，原来，这是他们的族谱！这里是异常的祠堂！
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/exception/npe-1.jpg)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/exception/npe-1.jpg)
 
 看完这张族谱，我恍然大悟，好像明白了什么。突然，我的脑袋里出现了一个冰冷的机器声音：“获取异常族谱，历练完成度+100。”
 
@@ -230,6 +230,6 @@ Object听到这话，皱了皱眉，他沉默了一会儿，缓缓站起身子�
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

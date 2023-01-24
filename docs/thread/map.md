@@ -64,7 +64,7 @@ public class TestVector {
 
 整体架构(列举常用的容器类)
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/map-a6a020a3-4573-4cf8-b5ae-1541ae45801c.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/map-a6a020a3-4573-4cf8-b5ae-1541ae45801c.png)
 
 
 下面分别介绍一些常用的并发容器类和接口，因篇幅原因，这里只介绍这些类的用途和基本的原理，不做过多的源码解析。
@@ -117,7 +117,7 @@ ConcurrentHashMap在JDK 1.7中，提供了一种粒度更细的加锁机制来�
 
 有些方法需要跨段，比如size()、isEmpty()、containsValue()，它们可能需要锁定整个表而不仅仅是某个段，这需要按顺序锁定所有段，操作完毕后，又按顺序释放所有段的锁。如下图：
 
-![分段锁机制](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/map-3d991ca1-5d58-465c-b097-ffaf6c31f3bc.png)
+![分段锁机制](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/thread/map-3d991ca1-5d58-465c-b097-ffaf6c31f3bc.png)
 
 ConcurrentHashMap是由Segment数组结构和HashEntry数组结构组成。Segment是一种可重入锁ReentrantLock，HashEntry则用于存储键值对数据。
 
@@ -633,6 +633,6 @@ public class BlackListServiceImpl {
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

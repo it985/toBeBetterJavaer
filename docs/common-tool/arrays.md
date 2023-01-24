@@ -177,7 +177,7 @@ public static boolean equals(Object[] a, Object[] a2) {
 }
 ```
 
-因为数组是一个对象，所以先使用“==”操作符进行判断，如果不相等，再判断是否为 null，两个都为 null，返回 false；紧接着判断 length，不等的话，返回 false；否则的话，依次调用 `Objects.equals()` 比较相同位置上的元素是否相等。
+因为数组是一个对象，所以先使用“==”操作符进行判断，如果不相等，再判断是否为 null，其中一个为 null，返回 false；紧接着判断 length，不等的话，返回 false；否则的话，依次调用 `Objects.equals()` 比较相同位置上的元素是否相等。
 
 “这段代码还是非常严谨的，对吧？三妹，这也就是我们学习源码的意义，欣赏的同时，可以学习源码作者清晰的编码思路。”我语重心长地给三妹讲。
 
@@ -439,6 +439,6 @@ System.out.println(Arrays.toString(arr));
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

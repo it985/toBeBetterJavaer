@@ -2,7 +2,7 @@
 home: true
 icon: home
 title: 主页
-heroImage: http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/logo.png
+heroImage: https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/logo.png
 heroText: Java程序员进阶之路
 tagline: 沉默王二BB：这是一份通俗易懂、风趣幽默的Java学习指南，内容涵盖Java基础、Java并发编程、Java虚拟机、Java企业级开发、Java面试等核心知识点。学Java，就认准Java程序员进阶之路😄
 actions:
@@ -13,7 +13,7 @@ actions:
     link: /zhishixingqiu/
     type: default
 footer: |-
-  <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2021038026号-1</a> | 主题: <a href="https://vuepress-theme-hope.github.io/v2/" target="_blank">VuePress Theme Hope</a>
+  <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2021038026号-1</a> | 主题: <a href="https://theme-hope.vuejs.press/zh/" target="_blank">VuePress Theme Hope</a>
 ---
 
 ## 推荐阅读 
@@ -27,9 +27,9 @@ footer: |-
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)
 
 
 ## star趋势图
@@ -42,7 +42,7 @@ footer: |-
 开源不易，如果《Java 程序员进阶之路》对你有些帮助，可以请作者喝杯咖啡，算是对开源做出的一点点鼓励吧！
 
 <div align="left">
-    <img src="http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/weixin-zhifu.png" width="260px">
+    <img src="https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/weixin-zhifu.png" width="260px">
 </div>
 
 :gift_heart: 感谢大家对我资金的赞赏，每隔一个月会统计一次。

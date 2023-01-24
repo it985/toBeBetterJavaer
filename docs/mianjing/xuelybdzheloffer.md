@@ -20,7 +20,7 @@ head:
 
 去年的这个时候，有个朋友邀请我去阿里，然后，，，，，，我不假思索地就拒绝了。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-xuelybdzheloffer-2b16e830-bb77-4299-9ecf-f80b34147888.jpg)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-xuelybdzheloffer-2b16e830-bb77-4299-9ecf-f80b34147888.jpg)
 
 因为说实话，阿里的修福报文化不太适合我——不小心又装逼了。其实主要是我在洛阳已经扎根生芽了，深深地爱上了脚下的这篇土地——不小心又文艺了。
 
@@ -252,7 +252,7 @@ g、分库分表：减轻 DB 压力
 
 之前给大家分享的另外一个故事，关于我大学同学考研的，应该老读者还记得，他最近在准备面试，去北京，一边工作一边读研。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-xuelybdzheloffer-ed34aa11-4023-4846-b38f-96a8a80d690a.jpg)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-xuelybdzheloffer-ed34aa11-4023-4846-b38f-96a8a80d690a.jpg)
 
 记住一句很“粗暴”的话，伟大的牛逼之前总是傻逼式的坚持，是鸡汤也好，是鼓励也好，我们任何人都应该像读者茶杯说的那样：
 
@@ -274,7 +274,7 @@ g、分库分表：减轻 DB 压力
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

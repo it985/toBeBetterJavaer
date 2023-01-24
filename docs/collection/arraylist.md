@@ -207,7 +207,7 @@ public void add(int index, E element) {
 
 “三妹，注意看，我画幅图来表示下。”我认真地做起了图。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/collection/arraylist-01.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/collection/arraylist-01.png)
 
 ## 更新 ArrayList 中的元素
 
@@ -308,7 +308,7 @@ private void fastRemove(int index) {
 
 “三妹，注意看，我画幅图来表示下。”我认真地做起了图。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/collection/arraylist-02.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/collection/arraylist-02.png)
 
 ## 查找 ArrayList 中的元素
 
@@ -411,6 +411,6 @@ ArrayList，如果有个中文名的话，应该叫动态数组，也就是可�
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

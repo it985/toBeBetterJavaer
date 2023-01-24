@@ -233,20 +233,6 @@ try {
 
 捕获异常的问题是，如果稍后调用的方法为其方法声明添加了新的检查性异常，则开发人员的意图是应该处理具体的新异常。如果你的代码只是捕获异常（或 Throwable），永远不会知道这个变化，以及你的代码现在是错误的，并且可能会在运行时的任何时候中断。
 
-## 在你的方法里抛出定义具体的检查性异常
-
-```
-public void foo() throws Exception { //错误方式
-}
-```
-
-一定要避免出现上面的代码示例，它破坏了检查性异常的目的。 声明你的方法可能抛出的具体检查性异常，如果只有太多这样的检查性异常，你应该把它们包装在你自己的异常中，并在异常消息中添加信息。 如果可能的话，你也可以考虑代码重构。
-
-```
-public void foo() throws SpecificException1, SpecificException2 { //正确方式
-}
-```
-
 
 ## 始终正确包装自定义异常中的异常，以便堆栈跟踪不会丢失
 
@@ -423,9 +409,9 @@ public void dataAccessCode() {
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)
 
 
 

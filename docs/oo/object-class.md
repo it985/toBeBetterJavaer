@@ -161,7 +161,7 @@ null
 
 第二种：`main()` 方法不在 Person 类中，而在另外一个类中。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/object-class/16-01.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/object-class/16-01.png)
 
 实际开发中，我们通常不在当前类中直接创建对象并使用它，而是放在使用对象的类中，比如说上图中的 PersonTest 类。
 
@@ -225,7 +225,7 @@ public class Person {
 
 person 被称为对象 Person 的引用变量，见下图：
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/object-class/16-02.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/object-class/16-02.png)
 
 通过对象的引用变量，可以直接对字段进行初始化（`person.name = "沉默王二"`），所以以上代码输出结果如下所示：
 
@@ -431,6 +431,6 @@ public class Test {
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

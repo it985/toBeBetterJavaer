@@ -26,7 +26,7 @@ head:
 
 有一对双胞胎，姐姐叫阿丽塔，妹妹叫洛丽塔。我们普通人可能完全无法分辨谁是姐姐谁是妹妹，可她们的妈妈却可以轻而易举地辨认出。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/string/equals-01.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/string/equals-01.png)
 
 
 `.equals()` 就好像我们普通人，看见阿丽塔以为是洛丽塔，看见洛丽塔以为是阿丽塔，看起来一样就觉得她们是同一个人；“==”操作符就好像她们的妈妈，要求更严格，观察更细致，一眼就能分辨出谁是姐姐谁是妹妹。
@@ -226,6 +226,6 @@ public boolean contentEquals(CharSequence cs) {
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

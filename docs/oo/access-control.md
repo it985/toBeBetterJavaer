@@ -121,7 +121,7 @@ class People {//默认访问权限（包访问权限）
 下面是 Main 类中的提示的错误：
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/bokeyuan-jianxijavazhongdifangwenquanxiankongzhi-154ae82f-72a5-45fc-ad3c-e1eb575d8572.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/bokeyuan-jianxijavazhongdifangwenquanxiankongzhi-154ae82f-72a5-45fc-ad3c-e1eb575d8572.png)
 
 
 提示 Peolple 类在 Main 类中不可见。从这里就可以看出，如果用默认访问权限去修饰一个类，该类只对同一个包中的其他类可见，对于不同包中的类是不可见的。
@@ -191,7 +191,7 @@ public class People {
 此时在 Main 类中会提示错误：
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/bokeyuan-jianxijavazhongdifangwenquanxiankongzhi-b3e9dc56-53e8-42f1-b8ee-35115edfe7e7.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/bokeyuan-jianxijavazhongdifangwenquanxiankongzhi-b3e9dc56-53e8-42f1-b8ee-35115edfe7e7.png)
 
 
 由此可以看出，如果用默认访问权限来修饰类的方法或者变量，则只能在同一个包的其他类中进行访问。
@@ -249,7 +249,7 @@ public class People {
 则会在 Main 中报错：
 
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/bokeyuan-jianxijavazhongdifangwenquanxiankongzhi-b1d4b7ed-fc87-47d4-bdd9-3f6a8ea96100.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/bokeyuan-jianxijavazhongdifangwenquanxiankongzhi-b1d4b7ed-fc87-47d4-bdd9-3f6a8ea96100.png)
 
 
 如果在 com.cxh.test1 中定一个类 Man 继承 People，则可以在类 Man 中显示调用方法 getName 和 setName：
@@ -287,6 +287,6 @@ public class Man extends People {
 
 最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)
