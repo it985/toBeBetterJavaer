@@ -1,18 +1,20 @@
 ---
-title: Java中new Integer与Integer.valueOf的区别
-shortTitle: new Integer与Integer.valueOf的区别
+title: Java基本数据类型缓存池剖析（IntegerCache）
+shortTitle: Java基本数据类型缓存池
 category:
   - Java核心
 tag:
   - Java重要知识点
-description: Java程序员进阶之路，小白的零基础Java教程，从入门到进阶，Java中new Integer与Integer.valueOf的区别
+description: 本文详细介绍了Java基本数据类型缓存池，包括其工作原理、应用场景以及如何使用缓存池提高内存利用效率。通过本文，您将了解到Java基本数据类型缓存池的优化策略和实践，掌握如何在实际开发中合理使用缓存池，提高程序性能。
 head:
   - - meta
     - name: keywords
-      content: Java,Java SE,Java基础,Java教程,Java程序员进阶之路,Java入门,教程,Integer
+      content: Java, 基本数据类型, 缓存池, 内存优化, 缓存池原理, 缓存池应用, 缓存池实践
 ---
 
-“三妹，今天我们来补一个小的知识点：Java 数据类型缓存池。”我喝了一口枸杞泡的茶后对三妹说，“考你一个问题哈：`new Integer(18) 与 Integer.valueOf(18)` 的区别是什么？”
+# 3.5 基本数据类型缓存池
+
+“三妹，今天我们来补一个小的知识点：Java 基本数据类型缓存池。”我喝了一口枸杞泡的茶后对三妹说，“考你一个问题哈：`new Integer(18) 与 Integer.valueOf(18)` 的区别是什么？”
 
 “难道不一样吗？”三妹有点诧异。
 
@@ -111,9 +113,11 @@ private static class IntegerCache {
 }
 ```
 
+详细解释下：当我们通过 `Integer.valueOf()` 方法获取整数对象时，会先检查该整数是否在 IntegerCache 中，如果在，则返回缓存中的对象，否则创建一个新的对象并缓存起来。
 
+需要注意的是，如果使用 `new Integer()` 创建对象，即使值在 -128 到 127 范围内，也不会被缓存，每次都会创建新的对象。因此，推荐使用 `Integer.valueOf()` 方法获取整数对象。
 
-之前我们在[学习 static 关键字](https://tobebetterjavaer.com/oo/static.html)的时候，提到过静态代码块，还记得吧？三妹。静态代码块通常用来初始化一些静态变量，它会优先于 main() 方法执行。
+[学习 static 关键字](https://tobebetterjavaer.com/oo/static.html)的时候，会详细解释静态代码块，你暂时先记住，三妹，静态代码块通常用来初始化一些静态变量，它会优先于 main() 方法执行。
 
 在静态代码块中，low 为 -128，也就是缓存池的最小值；high 默认为 127，也就是缓存池的最大值，共计 256 个。
 
@@ -169,14 +173,15 @@ Exception in thread "main" java.lang.AssertionError
 
 “原来 assert 是这样用的啊，我明白了。”三妹表示学会了。
 
-“那，缓存池之所以存在的原因也是因为这样做可以提高程序的整体性能，因为相对来说，比如说 Integer，-128~127 这个范围内的 256 个数字使用的频率会高一点。”我总结道。
+在 Java 中，针对一些基本数据类型（如 Integer、Long、Boolean 等），Java 会在程序启动时创建一些常用的对象并缓存在内存中，以提高程序的性能和节省内存开销。这些常用对象被缓存在一个固定的范围内，超出这个范围的值会被重新创建新的对象。
 
-“get 了！二哥你真棒，又学到了。”三妹很开心~
+使用数据类型缓存池可以有效提高程序的性能和节省内存开销，但需要注意的是，在特定的业务场景下，缓存池可能会带来一些问题，例如缓存池中的对象被不同的线程同时修改，导致数据错误等问题。因此，在实际开发中，需要根据具体的业务需求来决定是否使用数据类型缓存池。
 
 ----
 
-最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
+GitHub 上标星 7600+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 7600+ 的 Java 教程](https://tobebetterjavaer.com/overview/)
 
-微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
+
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

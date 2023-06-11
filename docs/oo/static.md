@@ -1,7 +1,7 @@
 ---
-title: 一文彻底搞懂 Java static 关键字：静态变量、静态方法、静态代码块、静态内部类
-shortTitle: 一文彻底搞懂Java static关键字
-description: Java程序员进阶之路，小白的零基础Java教程，一文彻底搞懂 Java static 关键字：静态变量、静态方法、静态代码块、静态内部类
+title: 详解 Java static 关键字的作用：静态变量、静态方法、静态代码块、静态内部类
+shortTitle: Java static关键字
+description: 本文详细讲解了Java中的static关键字，包括其作用、用法、使用场景以及注意事项。文章通过实例解析，帮助读者深入理解static关键字在Java编程中的重要性，提高编程水平和技巧。
 category:
   - Java 核心
 tag:
@@ -9,10 +9,12 @@ tag:
 head:
   - - meta
     - name: keywords
-      content: Java,Java SE,Java基础,Java教程,Java程序员进阶之路,Java入门,教程,static,java静态变量,java静态方法,java静态代码块,java静态内部类
+      content: Java,static,静态变量,静态方法,静态代码块,静态内部类,java static,static关键字
 ---
 
-“哥，你牙龈肿痛轻点没？周一的《教妹学 Java》（Java 程序员进阶之路的前身）你都没有更新，偷懒了呀！”三妹关心地问我。
+# 5.15 Java static关键字
+
+“哥，你牙龈肿痛轻点没？周一的《教妹学 Java》（二哥的Java进阶之路前身）你都没有更新，偷懒了呀！”三妹关心地问我。
 
 “今天周四了，吃了三天的药，疼痛已经减轻不少，咱妈还给我打了电话，让我买点牛黄解毒片下下火。”我面带着微笑对三妹说，“学习可不能落下，今天我们来学 Java 中 `static` 关键字吧。”
 
@@ -22,7 +24,7 @@ head:
 
 “static 关键字的作用可以用一句话来描述：‘**方便在没有创建对象的情况下进行调用**，包括变量和方法’。也就是说，只要类被加载了，就可以通过类名进行访问。”我扶了扶沉重眼镜，继续说到，“static 可以用来修饰类的成员变量，以及成员方法。我们一个个来看。”
 
-## 01、静态变量
+### 01、静态变量
 
 “如果在声明变量的时候使用了 static 关键字，那么这个变量就被称为静态变量。静态变量只在类加载的时候获取一次内存空间，这使得静态变量很节省内存空间。”家里的暖气有点足，我跑去开了一点窗户后继续说道。
 
@@ -150,7 +152,7 @@ public class StaticCounter {
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/19-03.png)
 
 
-## 02、静态方法
+### 02、静态方法
 
 “说完静态变量，我们来说静态方法。”说完，我准备点一支华子来抽，三妹阻止了我，她指一指烟盒上的「吸烟有害身体健康」，我笑了。
 
@@ -226,7 +228,7 @@ public class StaticMethodStudent {
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/19-06.png)
 
-## 03、静态代码块
+### 03、静态代码块
 
 “三妹，站起来活动一下，我的脖子都有点僵硬了。”
 
@@ -307,7 +309,7 @@ public class StaticBlockDemo {
 
 “静态代码块在初始集合的时候，真的非常有用。在实际的项目开发中，通常使用静态代码块来加载配置文件到内存当中。”
 
-## 04、静态内部类
+### 04、静态内部类
 
 “三妹啊，除了以上只写，static 还有一个不太常用的功能——静态内部类。”
 
@@ -349,8 +351,9 @@ public class Singleton {
 
 ----
 
-最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
+GitHub 上标星 7600+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 7600+ 的 Java 教程](https://tobebetterjavaer.com/overview/)
 
-微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
+
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

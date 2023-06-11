@@ -1,17 +1,18 @@
 ---
 title: Java空指针NullPointerException的传说
-shortTitle: NPE的传说
+shortTitle: 空指针的传说
 category:
   - Java核心
 tag:
   - 异常处理
-description: Java程序员进阶之路，小白的零基础Java教程，从入门到进阶，Java空指针NullPointerException的传说
+description: 本文详细解析了Java编程中的空指针异常（NullPointerException）现象，从产生原因、常见场景到预防方法，为您揭开NullPointerException的神秘面纱。文章还提供了实际代码示例，帮助您理解如何在实际开发中避免空指针异常，提高代码的健壮性和可靠性。
 head:
   - - meta
     - name: keywords
-      content: Java,Java SE,Java基础,Java教程,Java程序员进阶之路,Java入门,教程,java,npe,NullPointerException
+      content: java,npe,NullPointerException
 ---
 
+# 8.4 空指针的传说
 
 **空指针**，号称天下最强刺客。
 
@@ -21,13 +22,13 @@ head:
 
 ... ...
 
-我叫铁柱，我来到这个奇怪的世界已经一年了，我等了一年，穿越附赠的老爷爷、戒指、系统什么的我到现在都没发现。
+我叫王二，我来到这个奇怪的世界已经一年了，我等了一年，穿越附赠的老爷爷、戒指、系统什么的我到现在都没发现。
 
 而且这个世界看起来也太奇怪了，这里好像叫什么 **Java** 大陆，我只知道这个世界的最强者叫做 **Object**，听说是什么道祖级的存在，我也不知道是什么意思，毕竟我现在好像还是个菜鸡，别的主角一年都应该要飞升仙界了吧，我还连个小火球都放不出来。
 
 哦，对了，上面的那段话是我在茶馆喝茶的时候听说书的先生说的，总觉得空指针这个名字怪怪的，好像在什么地方听说过。
 
-我的头痛的毛病又犯了，我已经记不起来我为什么来到这里了，我只记得我的名字叫铁柱，其他的，我只感觉这个奇怪的世界有一种熟悉，但是我什么都记不起来了。
+我的头痛的毛病又犯了，我已经记不起来我为什么来到这里了，我只记得我的名字叫王二，其他的，我只感觉这个奇怪的世界有一种熟悉，但是我什么都记不起来了。
 
 算了，得过且过吧。
 
@@ -223,13 +224,14 @@ Object听到这话，皱了皱眉，他沉默了一会儿，缓缓站起身子�
 
 可是，他为什么要给我，看他刚才的样子都想打我了，又突然给了我这些？还有他一直在说的规则之力又是什么？这座城市为什么又这么诡异？
 
->转载链接：[https://mp.weixin.qq.com/s/PDfd8HRtDZafXl47BCxyGg](https://mp.weixin.qq.com/s/PDfd8HRtDZafXl47BCxyGg)
+>转载链接：[https://mp.weixin.qq.com/s/PDfd8HRtDZafXl47BCxyGg](https://mp.weixin.qq.com/s/PDfd8HRtDZafXl47BCxyGg)，作者：艾小仙
 
 
 ----
 
-最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
+GitHub 上标星 7600+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 7600+ 的 Java 教程](https://tobebetterjavaer.com/overview/)
 
-微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
+
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

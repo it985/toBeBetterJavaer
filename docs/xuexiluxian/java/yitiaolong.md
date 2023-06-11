@@ -83,13 +83,13 @@ Maven 是一个项目管理和自动化构建工具，基于项目对象模型�
 
 “冰冻三尺非一日之寒”，要想把 Java 学好，还是需要花费一番功夫的。Java 语言的知识点非常多，而我们又时间紧迫，意味着只能挑重点、挑实用，不能面面俱到，**一些不常用的知识点可以直接 pass 掉**。
 
-我这里给大家贴一张《Java 程序员进阶之路》的导航地图，大类分为 Java 核心、Java 企业级开发、数据库、计算机基础、求职面试、学习资源等，基本上你要的 Java 学习资源，这里都有，没有的，后面我也会补充上。
+我这里给大家贴一张《Java程序员进阶之路》的导航地图，大类分为 Java 核心、Java 企业级开发、数据库、计算机基础、求职面试、学习资源等，基本上你要的 Java 学习资源，这里都有，没有的，后面我也会补充上。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java/yitiaolong-c80191bf-ab08-4a28-898f-ea7ffff3f966.png)
 
 Java 是一门面向对象的编程语言，所以三大特性：封装、继承、多态是必须要掌握的，然后是异常处理、IO、集合、并发编程和 Java 虚拟机。只要这些内容掌握了，可以说 Java 语言本身的核心知识就全部掌握了。
 
-这些知识该怎么学呢？当然是直接上二哥的 Java 程序员进阶之路了，内容非常的全面和硬核，截图给大家鉴赏一下。
+这些知识该怎么学呢？当然是直接上二哥的 Java程序员进阶之路了，内容非常的全面和硬核，截图给大家鉴赏一下。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java/yitiaolong-a5436c4a-6464-4065-ae0d-50755c4184df.png)
 
@@ -282,7 +282,7 @@ B 站上浙江大学的一个数据结构课非常不错，很系统很经典。
 
 学习的过程，就好像登山一样，大概有 80% 的人在这个过程中会掉队。那么请相信我，只要目标明确，努力加上坚持，再加上一点点好运气，你就能登顶！
 
-最后说一句哈，大家学习 Java，是为了什么，我想大多数不是为了兴趣，是吧？是为了找工作，那么终极的一步，我们需要在找工作之前刷一波面试题，然后找工作的机会也会提升很多。Java 程序员进阶之路上也为大家精心准备了面渣逆袭篇。
+最后说一句哈，大家学习 Java，是为了什么，我想大多数不是为了兴趣，是吧？是为了找工作，那么终极的一步，我们需要在找工作之前刷一波面试题，然后找工作的机会也会提升很多。Java程序员进阶之路上也为大家精心准备了面渣逆袭篇。
 
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java/yitiaolong-314e94ce-aa9d-4f09-831b-d1395c4fc07a.png)
@@ -309,9 +309,10 @@ B 站上浙江大学的一个数据结构课非常不错，很系统很经典。
 
 ---------
 
-最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
+GitHub 上标星 7600+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 7600+ 的 Java 教程](https://tobebetterjavaer.com/overview/)
 
-微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
+
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

@@ -1,39 +1,38 @@
 ---
-title: Java中的构造方法：对象创建时的必经之路
-shortTitle: Java 中的构造方法
-description: Java程序员进阶之路，小白的零基础Java教程，认真聊聊 Java中的构造方法：对象创建时的必经之路
+title: Java构造方法：打开Java对象创建之门的钥匙
+shortTitle: Java构造方法
+description: Java构造方法在对象创建过程中起着至关重要的作用。本文将深入探讨构造方法的原理和用法，帮助您更好地理解Java对象创建过程中的关键环节。学习本文后，您将能够掌握Java构造方法的编写技巧，为编程实践打下坚实的基础。
 category:
   - Java 核心
 tag:
   - 面向对象编程
-head:
-  - - meta
-    - name: keywords
-      content: Java,Java SE,Java基础,Java教程,Java程序员进阶之路,Java入门,教程,Java构造方法,构造方法
 ---
 
+# 5.7 Java构造方法
 
-我对三妹说，“上一节学了 Java 中的方法，接着学构造方法的话，难度就小很多了。”
+“三妹，[上一节](https://tobebetterjavaer.com/oo/method.html)学了 Java 中的方法，接着学构造方法的话，难度就小很多了。”刚吃完中午饭，虽然有些困意，但趁机学个 10 分钟也是不错的，睡眠会更心满意足一些，于是我面露微笑地对三妹说。
 
 “在 Java 中，构造方法是一种特殊的方法，当一个类被实例化的时候，就会调用构造方法。只有在构造方法被调用的时候，对象才会被分配内存空间。每次使用 `new` 关键字创建对象的时候，构造方法至少会被调用一次。”
 
-“如果你在一个类中没有看见构造方法，并不是因为构造方法不存在，而是被缺省了，编译器会给这个类提供一个默认的构造方法。往大的方面说，就是，Java 有两种类型的构造方法：**无参构造方法和有参构造方法**。”
+“如果你在一个类中没有看见构造方法，并不是因为构造方法不存在，而是被缺省了，编译器会给这个类提供一个默认的构造方法。就是说，Java 有两种类型的构造方法：**无参构造方法和有参构造方法**。”
 
-“注意，之所以叫它构造方法，是因为对象在创建的时候，需要通过构造方法初始化值——就是描写对象的那些状态，对应的是类中的字段。”
+“注意，之所以叫它构造方法，是因为对象在创建的时候，需要通过构造方法初始化值——描写对象有哪些初始化状态。”
 
-## 01、创建构造方法的规则有哪些
+“哥，你缓缓，一口气说这么多，也真有你的。”三妹听得聚精会神，但也知道关心她这个既当哥又当老师的二哥了。
+
+### 01、创建构造方法的规则
 
 构造方法必须符合以下规则：
 
 - 构造方法的名字必须和类名一样；
 - 构造方法没有返回类型，包括 void；
-- 构造方法不能是抽象的、静态的、最终的、同步的，也就是说，构造方法不能通过 abstract、static、final、synchronized 关键字修饰。
+- 构造方法不能是抽象的（abstract）、静态的（static）、最终的（final）、同步的（synchronized）。
 
 简单解析一下最后一条规则。
 
-- 由于构造方法不能被子类继承，所以用 final 和 abstract 修饰没有意义；
-- 构造方法用于初始化一个对象，所以用 static 修饰没有意义；
-- 多个线程不会同时创建内存地址相同的同一个对象，所以用 synchronized 修饰没有必要。
+- 由于构造方法不能被子类继承，所以用 final 和 abstract 关键字修饰没有意义；
+- 构造方法用于初始化一个对象，所以用 static 关键字修饰没有意义；
+- 多个线程不会同时创建内存地址相同的同一个对象，所以用 synchronized 关键字修饰没有必要。
 
 构造方法的语法格式如下：
 
@@ -74,10 +73,10 @@ public class Demo {
 
 `public Demo() {}` 才是真正的无参构造方法。
 
-不过，可以使用访问权限修饰符（private、protected、public、default）来修饰构造方法，访问权限修饰符决定了构造方法的创建方式。
+不过，可以使用[访问权限修饰符](https://tobebetterjavaer.com/oo/access-control.html)（private、protected、public、default）来修饰构造方法，访问权限修饰符决定了构造方法的创建方式。
 
 
-## 02、什么是默认构造方法
+### 02、默认构造方法
 
 如果一个构造方法中没有任何参数，那么它就是一个默认构造方法，也称为无参构造方法。
 
@@ -104,7 +103,7 @@ public class Bike {
 一辆自行车被创建
 ```
 
-通常情况下，无参构造方法是可以缺省的，我们开发者并不需要显式的声明无参构造方法，把这项工作交给编译器更轻松一些。
+通常情况下，无参构造方法是可以缺省的，我们开发者并不需要显式的声明无参构造方法，把这项工作交给编译器就可以了。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/object-class/18-01.png)
 
@@ -136,7 +135,7 @@ public class Person {
 在上面的例子中，默认构造方法初始化了 name 和 age 的值，name 是 String 类型，所以默认值为 null，age 是 int 类型，所以默认值为 0。如果没有默认构造方法的话，这项工作就无法完成了。
 
 
-## 03、什么是有参构造方法
+### 03、有参构造方法
 
 有参数的构造方法被称为有参构造方法，参数可以有一个或多个。有参构造方法可以为不同的对象提供不同的值。当然，也可以提供相同的值。
 
@@ -177,9 +176,9 @@ new ParamConstructorPerson("沉默王三",16);
 如果没有有参构造方法的话，就需要通过 setter 方法给字段赋值了。
 
 
-## 04、如何重载构造方法
+### 04、重载构造方法
 
-在 Java 中，构造方法和方法类似，只不过没有返回类型。它也可以像方法一样被重载。构造方法的重载也很简单，只需要提供不同的参数列表即可。编译器会通过参数的数量来决定应该调用哪一个构造方法。
+在 Java 中，构造方法和方法类似，只不过没有返回类型。它也可以像方法一样被[重载](https://tobebetterjavaer.com/basic-extra-meal/override-overload.html)。构造方法的重载也很简单，只需要提供不同的参数列表即可。编译器会通过参数的数量来决定应该调用哪一个构造方法。
 
 ```java
 /**
@@ -218,7 +217,7 @@ public class OverloadingConstrutorPerson {
 创建对象的时候，如果传递的是三个参数，那么就会调用 `OverloadingConstrutorPerson(String name, int age, int sex)` 这个构造方法；如果传递的是两个参数，那么就会调用 `OverloadingConstrutorPerson(String name, int age)` 这个构造方法。
 
 
-## 05、构造方法和方法有什么区别
+### 05、构造方法和方法的区别
 
 构造方法和方法之间的区别还是蛮多的，比如说下面这些：
 
@@ -226,7 +225,7 @@ public class OverloadingConstrutorPerson {
 
 
 
-## 06、如何复制对象
+### 06、复制对象
 
 复制一个对象可以通过下面三种方式完成：
 
@@ -234,7 +233,7 @@ public class OverloadingConstrutorPerson {
 - 通过对象的值
 - 通过 Object 类的 `clone()` 方法
 
-1）通过构造方法
+#### 1）通过构造方法
 
 ```java
 /**
@@ -270,7 +269,7 @@ public class CopyConstrutorPerson {
 
 在上面的例子中，有一个参数为 CopyConstrutorPerson 的构造方法，可以把该参数的字段直接复制到新的对象中，这样的话，就可以在 new 关键字创建新对象的时候把之前的 p1 对象传递过去。
 
-2）通过对象的值
+#### 2）通过对象的值
 
 ```java
 /**
@@ -307,7 +306,7 @@ public class CopyValuePerson {
 
 这种方式比较粗暴，直接拿 p1 的字段值复制给 p2 对象（`p2.name = p1.name`）。
 
-3）通过 Object 类的 `clone()` 方法
+#### 3）通过 Object 类的 `clone()` 方法
 
 ```java
 /**
@@ -343,7 +342,9 @@ public class ClonePerson implements Cloneable {
 
 通过 `clone()` 方法复制对象的时候，ClonePerson 必须先实现 Cloneable 接口的 `clone()` 方法，然后再调用 `clone()` 方法（`ClonePerson p2 = (ClonePerson) p1.clone()`）。
 
-## 07、ending
+>拓展阅读：[浅拷贝与深拷贝](https://tobebetterjavaer.com/basic-extra-meal/deep-copy.html)
+
+### 07、ending
 
 “二哥，我能问一些问题吗？”三妹精神焕发，没有丝毫的疲惫。
 
@@ -364,8 +365,9 @@ public class ClonePerson implements Cloneable {
 ----
 
 
-最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
+GitHub 上标星 7600+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 7600+ 的 Java 教程](https://tobebetterjavaer.com/overview/)
 
-微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
+
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

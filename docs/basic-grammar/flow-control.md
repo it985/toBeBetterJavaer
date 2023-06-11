@@ -1,18 +1,18 @@
 ---
-title: Java流程控制语句（if/switch判断语句和while/do-while/for循环语句）
+title: Java流程控制语句详解：带你轻松学会各类控制结构
 shortTitle: Java流程控制语句
 category:
   - Java核心
 tag:
   - Java语法基础
-description: Java程序员进阶之路，小白的零基础Java教程，Java流程控制语句（if/switch判断语句和while/do-while/for循环语句）
+description: 本文全面讲解了Java流程控制语句，包括if、switch、while、for等结构。通过学习本文，你将了解到Java流程控制语句的基本概念、语法结构和使用场景，帮助你在实际编程过程中更加灵活地运用各类控制结构。
 head:
   - - meta
     - name: keywords
-      content: Java,Java SE,Java基础,Java教程,Java程序员进阶之路,Java入门,教程,Java流程控制语句,Java判断语句,Java循环语句,if,switch,while,do-while,for
+      content: Java, 流程控制语句, if, switch, while, for, 控制结构, 编程基础, 语法结构
 ---
 
-## 3.5 Java流程控制语句
+# 3.7 Java流程控制语句
 
 “二哥，流程控制语句都有哪些呢？”三妹的脸上泛着甜甜的笑容，她开始对接下来要学习的内容充满期待了，这正是我感到欣慰的地方。
 
@@ -21,7 +21,6 @@ head:
 ### 01、if-else 相关
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/control/thirteen-01.png)
-
 
 #### **1）if 语句**
 
@@ -41,13 +40,9 @@ if(布尔表达式){
 来写个示例：
 
 ```java
-public class IfExample {
-    public static void main(String[] args) {
-        int age = 20;
-        if (age < 30) {
-            System.out.println("青春年华");
-        }
-    }
+int age = 20;
+if (age < 30) {
+    System.out.println("青春年华");
 }
 ```
 
@@ -73,19 +68,14 @@ if(布尔表达式){
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/control/thirteen-03.png)
 
-
 来写个示例：
 
 ```java
-public class IfElseExample {
-    public static void main(String[] args) {
-        int age = 31;
-        if (age < 30) {
-            System.out.println("青春年华");
-        } else {
-            System.out.println("而立之年");
-        }
-    }
+int age = 31;
+if (age < 30) {
+    System.out.println("青春年华");
+} else {
+    System.out.println("而立之年");
 }
 ```
 
@@ -98,15 +88,11 @@ public class IfElseExample {
 除了这个例子之外，还有一个判断闰年（被 4 整除但不能被 100 整除或者被 400 整除）的例子：
 
 ```java
-public class LeapYear {
-    public static void main(String[] args) {
-        int year = 2020;
-        if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
-            System.out.println("闰年");
-        } else {
-            System.out.println("普通年份");
-        }
-    }
+int year = 2020;
+if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
+    System.out.println("闰年");
+} else {
+    System.out.println("普通年份");
 }
 ```
 
@@ -119,13 +105,9 @@ public class LeapYear {
 如果执行语句比较简单的话，可以使用三元运算符来代替 if-else 语句，如果条件为 true，返回 ? 后面 : 前面的值；如果条件为 false，返回 : 后面的值。
 
 ```java
-public class IfElseTernaryExample {
-    public static void main(String[] args) {
-        int num = 13;
-        String result = (num % 2 == 0) ? "偶数" : "奇数";
-        System.out.println(result);
-    }
-}
+int num = 13;
+String result = (num % 2 == 0) ? "偶数" : "奇数";
+System.out.println(result);
 ```
 
 输出：
@@ -157,23 +139,18 @@ else{
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/control/thirteen-04.png)
 
-
 来写个示例：
 
 ```java
-public class IfElseIfExample {
-    public static void main(String[] args) {
-        int age = 31;
-        if (age < 30) {
-            System.out.println("青春年华");
-        } else if (age >= 30 && age < 40 ) {
-            System.out.println("而立之年");
-        } else if (age >= 40 && age < 50 ) {
-            System.out.println("不惑之年");
-        } else {
-            System.out.println("知天命");
-        }
-    }
+int age = 31;
+if (age < 30) {
+    System.out.println("青春年华");
+} else if (age >= 30 && age < 40 ) {
+    System.out.println("而立之年");
+} else if (age >= 40 && age < 50 ) {
+    System.out.println("不惑之年");
+} else {
+    System.out.println("知天命");
 }
 ```
 
@@ -190,8 +167,8 @@ if 嵌套语句的格式如下：
 ```java
 if(外侧条件){    
      // 外侧条件为 true 时执行的代码 
-          if(内侧条件){  
-             // 内侧条件为 true 时执行的代码
+    if(内侧条件){  
+        // 内侧条件为 true 时执行的代码
     }    
 }  
 ```
@@ -204,15 +181,11 @@ if(外侧条件){
 来写个示例：
 
 ```java
-public class NestedIfExample {
-    public static void main(String[] args) {
-        int age = 20;
-        boolean isGirl = true;
-        if (age >= 20) {
-            if (isGirl) {
-                System.out.println("女生法定结婚年龄");
-            }
-        }
+int age = 20;
+boolean isGirl = true;
+if (age >= 20) {
+    if (isGirl) {
+        System.out.println("女生法定结婚年龄");
     }
 }
 ```
@@ -225,7 +198,7 @@ public class NestedIfExample {
 
 ### 02、switch 语句
 
-switch 语句用来判断变量与多个值之间的相等性。变量的类型可以是 byte、short、int、long，或者对应的包装器类型 Byte、Short、Integer、Long，以及字符串和枚举。
+switch 语句用来判断变量与多个值之间的相等性。变量的类型可以是 byte、short、int 或者 char，或者对应的包装器类型 Byte、Short、Integer、Character，以及[字符串](https://tobebetterjavaer.com/string/immutable.html)和[枚举](https://tobebetterjavaer.com/basic-extra-meal/enum.html)类型。
 
 来看一下 switch 语句的格式：
 
@@ -245,44 +218,32 @@ default: // 该关键字是可选项
 ```
 
 - 变量可以有 1 个或者 N 个值。
-
 - 值类型必须和变量类型是一致的，并且值是确定的。
-
 - 值必须是唯一的，不能重复，否则编译会出错。
-
 - break 关键字是可选的，如果没有，则执行下一个 case，如果有，则跳出 switch 语句。
-
 - default 关键字也是可选的。
-
-
 
 画个流程图：
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/control/thirteen-06.png)
 
-
-
 来个示例：
 
 ```java
-public class Switch1 {
-    public static void main(String[] args) {
-        int age = 20;
-        switch (age) {
-            case 20 :
-                System.out.println("上学");
-                break;
-            case 24 :
-                System.out.println("苏州工作");
-                break;
-            case 30 :
-                System.out.println("洛阳工作");
-                break;
-            default:
-                System.out.println("未知");
-                break; // 可省略
-        }
-    }
+int age = 20;
+switch (age) {
+    case 20 :
+        System.out.println("上学");
+        break;
+    case 24 :
+        System.out.println("苏州工作");
+        break;
+    case 30 :
+        System.out.println("洛阳工作");
+        break;
+    default:
+        System.out.println("未知");
+        break; // 可省略
 }
 ```
 
@@ -295,26 +256,22 @@ public class Switch1 {
 当两个值要执行的代码相同时，可以把要执行的代码写在下一个 case 语句中，而上一个 case 语句中什么也没有，来看一下示例：
 
 ```java
-public class Switch2 {
-    public static void main(String[] args) {
-        String name = "沉默王二";
-        switch (name) {
-            case "詹姆斯":
-                System.out.println("篮球运动员");
-                break;
-            case "穆里尼奥":
-                System.out.println("足球教练");
-                break;
-            case "沉默王二":
-            case "沉默王三":
-                System.out.println("乒乓球爱好者");
-                break;
-            default:
-                throw new IllegalArgumentException(
-                        "名字没有匹配项");
+String name = "沉默王二";
+switch (name) {
+    case "詹姆斯":
+        System.out.println("篮球运动员");
+        break;
+    case "穆里尼奥":
+        System.out.println("足球教练");
+        break;
+    case "沉默王二":
+    case "沉默王三":
+        System.out.println("乒乓球爱好者");
+        break;
+    default:
+        throw new IllegalArgumentException(
+                "名字没有匹配项");
 
-        }
-    }
 }
 ```
 
@@ -396,12 +353,8 @@ for(初始变量;条件;自增/自减){
 来个示例：
 
 ```java
-public class ForExample {
-    public static void main(String[] args) {
-        for (int i = 0; i < 5; i++) {
-            System.out.println("沉默王三好美啊");
-        }
-    }
+for (int i = 0; i < 5; i++) {
+    System.out.println("沉默王三好美啊");
 }
 ```
 
@@ -424,15 +377,11 @@ public class ForExample {
 “看好了啊。”
 
 ```java
-public class PyramidForExample {
-    public static void main(String[] args) {
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0;j<= i;j++) {
-                System.out.print("❤");
-            }
-            System.out.println();
-        }
+for (int i = 0; i < 5; i++) {
+    for (int j = 0;j<= i;j++) {
+        System.out.print("❤");
     }
+    System.out.println();
 }
 ```
 
@@ -460,18 +409,13 @@ for(元素类型 元素 : 数组或集合){
 }  
 ```
 
-
 来看一下示例：
 
 ```java
-public class ForEachExample {
-    public static void main(String[] args) {
-        String[] strs = {"沉默王二", "一枚有趣的程序员"};
+String[] strs = {"沉默王二", "一枚有趣的程序员"};
 
-        for (String str : strs) {
-            System.out.println(str);
-        }
-    }
+for (String str : strs) {
+    System.out.println(str);
 }
 ```
 
@@ -495,12 +439,8 @@ public class ForEachExample {
 “来，看看就知道了。”
 
 ```java
-public class InfinitiveForExample {
-    public static void main(String[] args) {
-        for(;;){
-            System.out.println("停不下来。。。。");
-        }
-    }
+for(;;){
+    System.out.println("停不下来。。。。");
 }
 ```
 
@@ -532,16 +472,12 @@ while(条件){
 来个示例：
 
 ```java
-public class WhileExample {
-    public static void main(String[] args) {
-        int i = 0;
-        while (true) {
-            System.out.println("沉默王三");
-            i++;
-            if (i == 5) {
-                break;
-            }
-        }
+int i = 0;
+while (true) {
+    System.out.println("沉默王三");
+    i++;
+    if (i == 5) {
+        break;
     }
 }
 ```
@@ -567,12 +503,8 @@ public class WhileExample {
 “来，看看就知道了。”
 
 ```java
-public class InfinitiveWhileExample {
-    public static void main(String[] args) {
-        while (true) {
-            System.out.println("停不下来。。。。");
-        }
-    }
+while (true) {
+    System.out.println("停不下来。。。。");
 }
 ```
 
@@ -604,18 +536,14 @@ do{
 来个示例：
 
 ```java
-public class DoWhileExample {
-    public static void main(String[] args) {
-        int i = 0;
-        do {
-            System.out.println("沉默王三");
-            i++;
-            if (i == 5) {
-                break;
-            }
-        } while (true);
+int i = 0;
+do {
+    System.out.println("沉默王三");
+    i++;
+    if (i == 5) {
+        break;
     }
-}
+} while (true);
 ```
 
 “三妹，你猜猜会输出几次？”
@@ -639,13 +567,9 @@ public class DoWhileExample {
 “来吧，例行公事，就假装看看嘛。”
 
 ```java
-public class InfinitiveDoWhileExample {
-    public static void main(String[] args) {
-        do {
-            System.out.println("停不下来。。。。");
-        } while (true);
-    }
-}
+do {
+    System.out.println("停不下来。。。。");
+} while (true);
 ```
 
 输出：
@@ -669,9 +593,7 @@ break 关键字通常用于中断循环或 switch 语句，它在指定条件下
 
 来画个流程图感受一下：
 
-
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/control/thirteen-12.png)
-
 
 用在 for 循环中的示例：
 
@@ -729,18 +651,18 @@ do {
 
 ```java
 switch (age) {
-        case 20 :
-          System.out.println("上学");
-          break;
-        case 24 :
-          System.out.println("苏州工作");
-          break;
-        case 30 :
-          System.out.println("洛阳工作");
-          break;
-       default:
-         System.out.println("未知");
-         break; // 可省略
+    case 20 :
+        System.out.println("上学");
+        break;
+    case 24 :
+        System.out.println("苏州工作");
+        break;
+    case 30 :
+        System.out.println("洛阳工作");
+        break;
+    default:
+        System.out.println("未知");
+        break; // 可省略
 }
 ```
 
@@ -751,16 +673,12 @@ switch (age) {
 来个示例：
 
 ```java
-public class ContinueDemo {
-    public static void main(String[] args) {
-        for (int i = 1; i <= 10; i++) {
-            if (i == 5) {
-                // 使用 continue 关键字
-                continue;// 5 将会被跳过
-            }
-            System.out.println(i);
-        }
+for (int i = 1; i <= 10; i++) {
+    if (i == 5) {
+        // 使用 continue 关键字
+        continue;// 5 将会被跳过
     }
+    System.out.println(i);
 }
 ```
 
@@ -785,17 +703,13 @@ public class ContinueDemo {
 再来个循环嵌套的例子。
 
 ```java
-public class ContinueInnerDemo {
-    public static void main(String[] args) {
-        for (int i = 1; i <= 3; i++) {
-            for (int j = 1; j <= 3; j++) {
-                if (i == 2 && j == 2) {
-                    //  当i=2，j=2时跳过
-                    continue;
-                }
-                System.out.println(i + " " + j);
-            }
+for (int i = 1; i <= 3; i++) {
+    for (int j = 1; j <= 3; j++) {
+        if (i == 2 && j == 2) {
+            //  当i=2，j=2时跳过
+            continue;
         }
+        System.out.println(i + " " + j);
     }
 }
 ```
@@ -818,18 +732,14 @@ public class ContinueInnerDemo {
 再来看一下 while 循环时 continue 的使用示例：
 
 ```java
-public class ContinueWhileDemo {
-    public static void main(String[] args) {
-        int i = 1;
-        while (i <= 10) {
-            if (i == 5) {
-                i++;
-                continue;
-            }
-            System.out.println(i);
-            i++;
-        }
+int i = 1;
+while (i <= 10) {
+    if (i == 5) {
+        i++;
+        continue;
     }
+    System.out.println(i);
+    i++;
 }
 ```
 
@@ -852,20 +762,15 @@ public class ContinueWhileDemo {
 最后，再来看一下 do-while 循环时 continue 的使用示例：
 
 ```java
-public class ContinueDoWhileDemo {
-    public static void main(String[] args) {
-        int i=1;
-        do{
-            if(i==5){
-                i++;
-                continue;
-            }
-            System.out.println(i);
-            i++;
-        }while(i<=10);
+int i=1;
+do{
+    if(i==5){
+        i++;
+        continue;
     }
-}
-
+    System.out.println(i);
+    i++;
+}while(i<=10);
 ```
 
 输出：
@@ -884,11 +789,14 @@ public class ContinueDoWhileDemo {
 
 注意：同样的，如果把 if 条件中的“i++”省略掉的话，程序就会进入死循环，一直在 continue。
 
+### 08、小结
+
+本文全面讲解了Java流程控制语句，包括if、switch、while、for等结构。通过学习本文，你将了解到Java流程控制语句的基本概念、语法结构和使用场景，帮助你在实际编程过程中更加灵活地运用各类控制结构。
 
 ---
 
-最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
+GitHub 上标星 7600+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 7600+ 的 Java 教程](https://tobebetterjavaer.com/overview/)
 
-微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

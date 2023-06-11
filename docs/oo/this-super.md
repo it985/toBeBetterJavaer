@@ -1,7 +1,7 @@
 ---
-title: Java中this和super的用法总结
-shortTitle: Java中this和super的用法总结
-description: Java程序员进阶之路，小白的零基础Java教程，Java中this和super的用法总结
+title: 详解Java this与super关键字的用法与区别
+shortTitle: Java this和super关键字
+description: 本文详细介绍了Java中的this和super关键字，包括它们的概念、作用以及如何在实际编程中使用。通过对比分析this和super关键字的区别，本文旨在帮助读者深入理解Java面向对象编程中的相关概念，提升编程技能。
 category:
   - Java 核心
 tag:
@@ -9,9 +9,10 @@ tag:
 head:
   - - meta
     - name: keywords
-      content: Java,Java SE,Java基础,Java教程,Java程序员进阶之路,Java入门,教程,this,super
+      content: Java,this,super,java this super,java this,java super,this super,this关键字, super关键字
 ---
 
+# 5.14 Java this和super关键字
 
 “哥，被喊大舅子的感觉怎么样啊？”三妹不怀好意地对我说，她眼睛里充满着不屑。
 
@@ -29,7 +30,7 @@ head:
 - this 可以作为参数在构造方法中传递；
 - this 可以作为方法的返回值，返回当前类的对象。
 
-## 01、 指向当前对象
+### 01、 指向当前对象
 
 “三妹，来看下面这段代码。”话音刚落，我就在键盘上噼里啪啦一阵敲。
 
@@ -113,9 +114,7 @@ public class WithThisStudent {
 
 “这次，实例变量有值了，在构造方法中，`this.xxx` 指向的就是实例变量，而不再是参数本身了。”我慢吞吞地说着，“当然了，如果参数名和实例变量名不同的话，就不必使用 this 关键字，但我建议使用 this 关键字，这样的代码更有意义。”
 
-
-
-## 02、调用当前类的方法
+### 02、调用当前类的方法
 
 “仔细听，三妹，看我敲键盘的速度是不是够快。”
 
@@ -164,7 +163,7 @@ public class InvokeCurrentClassMethod {
 
 “我们可以在一个类中使用 this 关键字来调用另外一个方法，如果没有使用的话，编译器会自动帮我们加上。”我对自己深厚的编程功底充满自信，“在源代码中，`method2()` 在调用 `method1()` 的时候并没有使用 this 关键字，但通过反编译后的字节码可以看得到。”
 
-## 03、调用当前类的构造方法
+### 03、调用当前类的构造方法
 
 “再来看下面这段代码。”
 
@@ -226,7 +225,7 @@ hello
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/keywords/20-01.png)
 
-## 04、作为参数在方法中传递
+### 04、作为参数在方法中传递
 
 “来看下面这段代码。”
 
@@ -259,7 +258,7 @@ com.itwanger.twentyseven.ThisAsParam@77459877
 
 “`method2()` 调用了 `method1()`，并传递了参数 this，`method1()` 中打印了当前对象的字符串。 `main()` 方法中打印了 thisAsParam 对象的字符串。从输出结果中可以看得出来，两者是同一个对象。”
 
-## 05、作为参数在构造方法中传递
+### 05、作为参数在构造方法中传递
 
 “继续来看代码。”
 
@@ -299,7 +298,7 @@ class Data {
 10
 ```
 
-## 06、作为方法的返回值
+### 06、作为方法的返回值
 
 “需要休息会吗？三妹”
 
@@ -345,7 +344,7 @@ hello
 
 “噢噢噢噢。”三妹意味深长地笑了。
 
-## 07、super 关键字
+### 07、super 关键字
 
 “super 关键字的用法主要有三种。”
 
@@ -531,8 +530,9 @@ public class CallParentParamConstrutor {
 ----
 
 
-最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
+GitHub 上标星 7600+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 7600+ 的 Java 教程](https://tobebetterjavaer.com/overview/)
 
-微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
+
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

@@ -1,18 +1,20 @@
 ---
 title: 一文彻底搞懂Java异常处理，YYDS
-shortTitle: 一文彻底搞懂Java异常处理
+shortTitle: Java异常处理全面解析
 category:
   - Java核心
 tag:
   - 异常处理
-description: Java程序员进阶之路，小白的零基础Java教程，从入门到进阶，一文彻底搞懂Java异常处理，YYDS
+description: 本文详细介绍了Java异常处理的基本概念、种类和原则，以及如何使用try-catch-finally和throw、throws关键字进行异常处理。通过实际案例和代码示例，帮助读者掌握Java异常处理的关键技巧，提高编程中的错误检测与处理能力。
 head:
   - - meta
     - name: keywords
-      content: Java,Java SE,Java基础,Java教程,Java程序员进阶之路,Java入门,教程,java,异常处理
+      content: Java,Java异常处理, try-catch-finally, throw, throws,异常处理,java 异常处理
 ---
 
-## 一、什么是异常
+# 8.1 Java异常处理全面解析
+
+### 01、什么是异常
 
 “二哥，今天就要学习异常了吗？”三妹问。
 
@@ -60,7 +62,7 @@ Exception in thread "main" java.lang.ArithmeticException: / by zero
 
 “你看，三妹，这个原生的异常信息对用户来说，显然是不太容易理解的，但对于我们开发者来说，简直不要太直白了——很容易就能定位到异常发生的根源。”
 
-## 二、Exception和Error的区别
+### 02、Exception和Error的区别
 
 “哦，我知道了。下一个问题，我经常看到一些文章里提到 Exception 和 Error，二哥你能帮我解释一下它们之间的区别吗？”三妹问。
 
@@ -76,7 +78,7 @@ Exception 的出现，意味着程序出现了一些在可控范围内的问题�
 
 比如说之前提到的 ArithmeticException，很明显是因为除数出现了 0 的情况，我们可以选择捕获异常，然后提示用户不应该进行除 0 操作，当然了，更好的做法是直接对除数进行判断，如果是 0 就不进行除法运算，而是告诉用户换一个非 0 的数进行运算。
 
-## 三、checked和unchecked异常
+### 03、checked和unchecked异常
 
 “三妹，还能想到其他的问题吗？”
 
@@ -88,7 +90,7 @@ checked 异常（检查型异常）在源代码里必须显式地捕获或者抛
 
 “我先画一幅思维导图给你感受一下。”
 
-![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/exception/gailan-01.png)
+![](https://cdn.tobebetterjavaer.com/studymore/gailan-20230326090207.png)
 
 首先，Exception 和 Error 都继承了 Throwable 类。换句话说，只有 Throwable 类（或者子类）的对象才能使用 throw 关键字抛出，或者作为 catch 的参数类型。
 
@@ -182,7 +184,7 @@ public class Demo2 {
 
 或者说，强制性的 checked 异常可以让我们在编程的时候去思考，遇到这种异常的时候该怎么更优雅的去处理。显然，Socket 编程中，肯定是会遇到 IOException 的，假如 IOException 是非检查型异常，就意味着开发者也可以不考虑，直接跳过，交给 Java 虚拟机来处理，但我觉得这样做肯定更不合适。
 
-## 四、关于 throw 和 throws
+### 04、关于 throw 和 throws
 
 “二哥，你能告诉我 throw 和 throws 两个关键字的区别吗？”三妹问。
 
@@ -270,19 +272,19 @@ public static void myMethod1() throws ArithmeticException, NullPointerException{
 
 示例。
 
-```
+```java
 throws ArithmeticException;
 ```
 
-```
+```java
 throw new ArithmeticException("算术异常");
 ```
 
- 3）throws 关键字出现在方法签名上，而 throw 关键字出现在方法体里。
+3）throws 关键字出现在方法签名上，而 throw 关键字出现在方法体里。
 
 4）throws 关键字在声明异常的时候可以跟多个，用逗号隔开；而 throw 关键字每次只能抛出一个异常。
 
-## 五、关于 try-catch-finally
+### 05、关于 try-catch-finally
 
 “二哥，之前你讲了异常处理机制，这一节讲什么呢？”三妹问。
 
@@ -410,7 +412,7 @@ try {
 }
 ```
 
-在没有 `try-with-resources` 之前，finally 块常用来关闭一些连接资源，比如说 socket、数据库链接、IO 输入输出流等。
+在没有 [`try-with-resources`](https://tobebetterjavaer.com/exception/try-with-resources.html) 之前，finally 块常用来关闭一些连接资源，比如说 socket、数据库链接、IO 输入输出流等。
 
 ```java
 OutputStream osf = new FileOutputStream( "filename" );
@@ -466,10 +468,29 @@ static int test2 () {
 
 至于参数 status 的值也很好理解，如果是异常退出，设置为非 0 即可，通常用 1 来表示；如果是想正常退出程序，用 0 表示即可。
 
+### 06、小结
+
+Java 的异常处理是一种重要的机制，可以帮助我们处理程序执行期间发生的错误❎或异常。
+
+异常分为两类：Checked Exception 和 Unchecked Exception，其中 Checked Exception 需要在代码中显式地处理或声明抛出，而 Unchecked Exception 不需要在代码中显式地处理或声明抛出。异常处理通常使用 try-catch-finally 块来处理，也可以使用 throws 关键字将异常抛出给调用者处理。
+
+下面是 Java 异常处理的一些总结：
+
+- 使用 try-catch 块捕获并处理异常，可以避免程序因异常而崩溃。
+- 可以使用多个 catch 块来捕获不同类型的异常，并进行不同的处理。
+- 可以使用 finally 块来执行一些必要的清理工作，无论是否发生异常都会执行。
+- 可以使用 throw 关键字手动抛出异常，用于在程序中明确指定某些异常情况。
+- 可以使用 throws 关键字将异常抛出给调用者处理，用于在方法签名中声明可能会出现的异常。
+- Checked Exception 通常是由于外部因素导致的问题，需要在代码中显式地处理或声明抛出。
+- Unchecked Exception 通常是由于程序内部逻辑或数据异常导致的，可以不处理或者在需要时进行处理。
+- 在处理异常时，应该根据具体的异常类型进行处理，例如可以尝试重新打开文件、重新建立网络连接等操作。
+- 异常处理应该根据具体的业务需求和设计原则进行，避免过度捕获和处理异常，从而降低程序的性能和可维护性。
+
 ----
 
-最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
+GitHub 上标星 7600+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 7600+ 的 Java 教程](https://tobebetterjavaer.com/overview/)
 
-微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
+
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

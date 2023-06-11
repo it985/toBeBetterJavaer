@@ -5,18 +5,22 @@ category:
   - Java核心
 tag:
   - 数组&字符串
-description: Java程序员进阶之路，小白的零基础Java教程，从入门到进阶，如何优雅地打印Java数组？
+description: 本文将向您展示如何在Java中优雅地打印数组内容。我们将介绍不同的方法来输出数组，包括使用for循环、增强型for循环以及Java内置的Arrays.toString()和Arrays.deepToString()方法。通过本文，您将学会如何简便快捷地打印Java数组，提高编程效率和代码可读性。
 head:
   - - meta
     - name: keywords
-      content: Java,Java SE,Java基础,Java教程,Java程序员进阶之路,Java入门,教程,java数组,打印数组
+      content: Java, 数组打印, 输出数组, Arrays.toString, Arrays.deepToString
 ---
+
+# 4.3 打印Java数组
 
 “哥，[之前听你说，数组也是一个对象](https://tobebetterjavaer.com/array/array.html)，但 Java 中并未明确的定义这样一个类。”看来三妹有在用心地学习。
 
 “是的，因此数组也就没有机会覆盖 `Object.toString()` 方法。如果尝试直接打印数组的话，输出的结果并不是我们预期的结果。”我接着三妹的话继续说。
 
 “那怎么打印数组呢？”三妹心有灵犀地把今天的核心问题提了出来。
+
+### 为什么不能直接打印数组
 
 “首先，我们来看一下，为什么不能直接打印数组，直接打印的话，会出现什么问题。”
 
@@ -59,6 +63,8 @@ public final class String
 
 “好了，不讨论这个了。”我怕话题扯远了，扯到我自己也答不出来就尴尬了，赶紧把三妹的思路拽了回来。
 
+### stream 流打印 Java 数组
+
 “我们来看第一种打印数组的方法，使用时髦一点的[Stream 流](https://tobebetterjavaer.com/java8/stream.html)。”
 
 第一种形式：
@@ -89,7 +95,9 @@ Arrays.stream(cmowers).forEach(System.out::println);
 
 没错，这三种方式都可以轻松胜任本职工作，并且显得有点高大上，毕竟用到了 Stream，以及 [lambda 表达式](https://tobebetterjavaer.com/java8/Lambda.html)。
 
-“当然了，也可以使用比较土的方式，for 循环。甚至 for-each 也行。”
+### for 循环打印 Java 数组
+
+“当然了，也可以使用传统的方式，for 循环。甚至 for-each 也行。”
 
 ```java
 for(int i = 0; i < cmowers.length; i++){
@@ -100,6 +108,8 @@ for (String s : cmowers) {
     System.out.println(s);
 }
 ```
+
+### Arrays 工具类打印 Java 数组
 
 “哥，你难道忘了[上一篇](https://tobebetterjavaer.com/common-tool/arrays.html)在讲 Arrays 工具类的时候，提到过另外一种方法 `Arrays.toString()` 吗？”三妹看我一直说不到点子上，有点着急了。
 
@@ -130,6 +140,8 @@ System.out.println(Arrays.toString(cmowers));
 
 哇，打印格式不要太完美，不多不少！完全是我们预期的结果：`[]` 表明是一个数组，`,` 点和空格用来分割元素。
 
+### Arrays工具类打印二维数组
+
 “哥，那如果我想打印二维数组呢？”
 
 “可以使用 `Arrays.deepToString()` 方法。”
@@ -145,7 +157,7 @@ System.out.println(Arrays.deepToString(deepArray));
 [[沉默, 王二], [一枚有趣的程序员]]
 ```
 
--------
+### POJO 的打印规约
 
 “说到打印，三妹，哥给你提醒一点。阿里巴巴的 Java 开发手册上有这样一条规约，你看。”
 
@@ -166,8 +178,9 @@ System.out.println(Arrays.deepToString(deepArray));
 
 ----
 
-最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
+GitHub 上标星 7600+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 7600+ 的 Java 教程](https://tobebetterjavaer.com/overview/)
 
-微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
+
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

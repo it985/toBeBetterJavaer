@@ -10,11 +10,11 @@ description: MySQL学习资料 | 学习路线 | 注意事项，MySQL需要学什
 head:
   - - meta
     - name: keywords
-      content: MySQL,学习路线
+      content: MySQL,学习路线,mysql教程,mysql面试
 ---
 
 
-MySQL 在校招面试中，被问到的频率非常高；在日常开发中，MySQL 的使用频率也非常高，几乎是 Java 后端开发必须掌握的技术栈，所以 MySQL 也被二哥归纳到了**Java 后端四大件**中。
+MySQL 不管是校招还是社招面试中，被问到的频率都非常高；在日常开发中，MySQL 的使用频率也非常高，几乎是 Java 后端开发必须掌握的技术栈，所以 MySQL 也被二哥归纳到了**Java 后端四大件**中。
 
 ## 第一阶段：SQL
 
@@ -112,7 +112,7 @@ SQL 学完，再学 MySQL 就会更加丝滑，学习曲线会平滑一些。
 
 >[https://t.zsxq.com/04eMf6AMZ](https://t.zsxq.com/04eMf6AMZ)
 
-Windows 的话，在 Java 程序员进阶之路上分享过破解方法：
+Windows 的话，在 Java程序员进阶之路上分享过破解方法：
 
 >[https://tobebetterjavaer.com/nice-article/itmind/navicatzxbwindowspjbjc.html](https://tobebetterjavaer.com/nice-article/itmind/navicatzxbwindowspjbjc.html)
 
@@ -200,7 +200,7 @@ Windows 的话，在 Java 程序员进阶之路上分享过破解方法：
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-5338019d-a197-4438-8c0e-934a45794d91.png)
 
->星球同学可以到星球的百度网盘里取，地址在《Java 程序员进阶之路》知识星球的[置顶链接](https://t.zsxq.com/07N3NbmEe)里。
+>星球同学可以到星球的百度网盘里取，地址在《Java程序员进阶之路》知识星球的[置顶链接](https://t.zsxq.com/07N3NbmEe)里。
 
 学完以上这些，MySQL 的能力基本上会有质的飞跃，也就会有一种豁然开朗的感觉。当然，这部分学习起来十分吃力，主要是很多内容没有实际的应用场景。但最起码有个印象，万一用到了，再系统的翻翻书，看看网上的案例就会好很多。
 
@@ -214,7 +214,7 @@ Windows 的话，在 Java 程序员进阶之路上分享过破解方法：
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/mysql-eb464848-e5d9-4611-8b32-2fe799e7ca68.png)
 
 
-## 第三阶段：面试突击/实战运用
+## 第四阶段：面试突击/实战运用
 
 学习可以是功利性质的（当然也可以是因为纯粹的热爱），如果不是为了高薪，我们又何苦学这么多呢？
 
@@ -233,9 +233,10 @@ Windows 的话，在 Java 程序员进阶之路上分享过破解方法：
 
 ----
 
-最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
+GitHub 上标星 7600+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 7600+ 的 Java 教程](https://tobebetterjavaer.com/overview/)
 
-微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
+
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)
 

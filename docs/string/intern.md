@@ -1,17 +1,18 @@
 ---
-title: 深入解析String.intern()方法
-shortTitle: 深入解析String.intern()方法
+title: Java 字符串优化：详解 String.intern() 方法
+shortTitle: 详解 String.intern 方法
 category:
   - Java核心
 tag:
   - 数组&字符串
-description: Java程序员进阶之路，小白的零基础Java教程，从入门到进阶，深入解析String.intern()方法
+description: 本文详细解析了 Java 中 String.intern() 方法的工作原理和应用场景。了解 String.intern() 如何优化字符串处理性能，减少内存开销，并探讨其在实际开发中的使用技巧。深入了解字符串常量池和 String.intern() 方法之间的关联，以更好地应用于 Java 编程。
 head:
   - - meta
     - name: keywords
-      content: Java,Java SE,Java基础,Java教程,Java程序员进阶之路,Java入门,教程,java字符串,String,intern
+      content: Java,字符串,String,intern,string intern,java intern,java string intern,String.intern
 ---
 
+# 4.7 详解 String.intern() 方法
 
 “哥，你发给我的那篇文章我看了，结果直接把我给看得不想学 Java 了！”三妹气冲冲地说。
 
@@ -45,7 +46,9 @@ String s1 = new String("二哥") + new String("三妹");
 
 这个变化也直接影响了  `String.intern()` 方法在执行时的策略，Java 7 之前，执行 `String.intern()` 方法的时候，不管对象在堆中是否已经创建，字符串常量池中仍然会创建一个内容完全相同的新对象； Java 7 之后呢，由于字符串常量池放在了堆中，执行 `String.intern()` 方法的时候，如果对象在堆中已经创建了，字符串常量池中就不需要再创建新的对象了，而是直接保存堆中对象的引用，也就节省了一部分的内存空间。
 
-“三妹，来猜猜这段代码输出的结果吧。”我说。
+“还没有理解清楚，二哥”，三妹很苦恼。
+
+“嗯。。。别怕，三妹，先来猜猜这段代码输出的结果吧。”我说。
 
 ```java
 String s1 = new String("二哥三妹");
@@ -91,7 +94,7 @@ System.out.println(s1 == s2);
 
 “为啥呀？”三妹迫切地想要知道答案。
 
-第一行代码，会在字符串常量池中创建两个对象，一个是“二哥”，一个是“三妹”，然后在堆中会创建两个匿名对象“二哥”和“三妹”（可以暂时忽略），最后还有一个“二哥三妹”的对象，s1 引用的是堆中“二哥三妹”这个对象。
+第一行代码，会在字符串常量池中创建两个对象，一个是“二哥”，一个是“三妹”，然后在堆中会创建两个匿名对象“二哥”和“三妹”，最后还有一个“二哥三妹”的对象（稍后会解释），s1 引用的是堆中“二哥三妹”这个对象。
 
 第二行代码，对 s1 执行 `intern()` 方法，该方法会从字符串常量池中查找“二哥三妹”这个对象是否存在，此时不存在的，但堆中已经存在了，所以字符串常量池中保存的是堆中这个“二哥三妹”对象的引用，也就是说，s2 和 s1 的引用地址是相同的，所以输出的结果为 true。
 
@@ -105,7 +108,30 @@ true
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/string/intern-02.png)
 
-“哇，我明白了！”三妹长舒一口气，大有感慨 intern 也没什么难理解的意味。
+“哇，我明白了！”三妹长舒一口气，大有感慨 intern 也没什么难理解的意味，“不过，我有一个疑惑，“二哥三妹”这个对象是什么时候创建的呢？”
+
+“三妹，不错嘛，能抓住问题的关键。再来解释一下 `String s1 = new String("二哥") + new String("三妹")` 这行代码。”我对三妹的表现非常开心。
+
+1. 创建 "二哥" 字符串对象，存储在字符串常量池中。
+2. 创建 "三妹" 字符串对象，存储在字符串常量池中。
+3. 执行 `new String("二哥")`，在堆上创建一个字符串对象，内容为 "二哥"。
+4. 执行 `new String("三妹")`，在堆上创建一个字符串对象，内容为 "三妹"。
+5. 执行 `new String("二哥") + new String("三妹")`，会创建一个 StringBuilder 对象，并将 "二哥" 和 "三妹" 追加到其中，然后调用 StringBuilder 对象的 toString() 方法，将其转换为一个新的字符串对象，内容为 "二哥三妹"。这个新的字符串对象存储在堆上。
+
+也就是说，当编译器遇到 `+` 号这个操作符的时候，会将 `new String("二哥") + new String("三妹")` 这行代码编译为以下代码：
+
+```
+new StringBuilder().append("二哥").append("三妹").toString();
+```
+
+实际执行过程如下：
+
+- 创建一个 StringBuilder 对象。
+- 在 StringBuilder 对象上调用 append("二哥")，将 "二哥" 追加到 StringBuilder 中。
+- 在 StringBuilder 对象上调用 append("三妹")，将 "三妹" 追加到 StringBuilder 中。
+- 在 StringBuilder 对象上调用 toString() 方法，将 StringBuilder 转换为一个新的字符串对象，内容为 "二哥三妹"。
+
+关于 [StringBuilder](https://tobebetterjavaer.com/string/builder-buffer.html)，我们随后会详细地讲到。今天先了解到这。
 
 不过需要注意的是，尽管 intern 可以确保所有具有相同内容的字符串共享相同的内存空间，但也不要烂用 intern，因为任何的缓存池都是有大小限制的，不能无缘无故就占用了相对稀缺的缓存空间，导致其他字符串没有坑位可占。
 
@@ -119,8 +145,9 @@ true
 
 ---
 
-最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
+GitHub 上标星 7600+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 7600+ 的 Java 教程](https://tobebetterjavaer.com/overview/)
 
-微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
+
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

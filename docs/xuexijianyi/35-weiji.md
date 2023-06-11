@@ -2,7 +2,7 @@
 title: 程序员 35 岁危机，如何破局 ？
 shortTitle: 程序员 35 岁危机，如何破局 ？
 description: 工作可以是事业、是热爱，也可以只是一份工作，给自己留出转身的空间很有必要！
-tags:
+tag:
   - 学习建议
 category:
   - 学习建议
@@ -15,7 +15,7 @@ head:
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-chengxyswjrhpj-a1c73ba1-4f12-4bb9-a64b-14bb7cc86ec5.png)
 
 作者：沉默王二<br>
-Java 程序员进阶之路：https://tobebetterjavaer.com
+Java程序员进阶之路：https://tobebetterjavaer.com
 
 大家好，我是二哥呀！今天周六，咱精神就不要绷那么紧了，来谈一个超级“轻松”的话题：35 岁中年危机。
 
@@ -289,8 +289,9 @@ IT 行业的技术更新换代非常快，对个人综合能力要求非常高�
 
 ----
 
-最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
+GitHub 上标星 7600+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 7600+ 的 Java 教程](https://tobebetterjavaer.com/overview/)
 
-微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
+
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

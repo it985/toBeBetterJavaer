@@ -26,6 +26,7 @@ export const sidebarConfig = sidebar({
     "webstormjhmwebstormwdzsjhmxbxt",
     "visualstudiopxbazjcnfvisualstudiojhmmyxbxt",
     "sublimetextzcmpjazjcqckyxbxt",
+    "termius-macos",
   ],
   "/pdf/": [
     "java",
@@ -52,6 +53,8 @@ export const sidebarConfig = sidebar({
         "jvm",
       ],
     },
+    "mysql",
+    "redis",
     "c",
     "ccc",
     "python",
@@ -62,7 +65,6 @@ export const sidebarConfig = sidebar({
     "lanqiaobei",
     "bigdata",
     "android",
-    "mysql",
     "donet",
   ],
   "/sidebar/sanfene/": [
@@ -78,6 +80,7 @@ export const sidebarConfig = sidebar({
     "os",
     "network",
     "rocketmq",
+    "fenbushi",
   ],
   // 必须放在最后面
   "/": [
@@ -86,17 +89,18 @@ export const sidebarConfig = sidebar({
       link: "home",
     },
     {
-      text: "二、Java核心",
+      text: "二、Java基础",
       collapsible: true,
       children: [
+        // readme小写一定要带上.md，否则找不到
+        // Java核心开始
         {
           prefix: "overview/",
           text: "2.1 Java概述及环境配置",
           collapsible: true,
           children: [
+          "readme.md",
           "what-is-java",
-          "java-history",
-          "java-can-do-what",
           "jdk-install-config",
           "IDEA-install-config",
           "hello-world",
@@ -110,6 +114,7 @@ export const sidebarConfig = sidebar({
           "basic-grammar/javadoc",
           "basic-grammar/basic-data-type",
           "basic-grammar/type-cast",
+          "basic-extra-meal/int-cache",
           "basic-grammar/operator",
           "basic-grammar/flow-control",
           ],
@@ -119,10 +124,13 @@ export const sidebarConfig = sidebar({
           collapsible: true,
           children: [
           "array/array",
+          "array/double-array",
           "array/print",
+          "string/string-source",
           "string/immutable",
           "string/constant-pool",
           "string/intern",
+          "string/builder-buffer",
           "string/equals",
           "string/join",
           "string/split",
@@ -136,32 +144,35 @@ export const sidebarConfig = sidebar({
           "oo/package",
           "oo/var",
           "oo/method",
+          "basic-extra-meal/varables",
+          "oo/native-method",
           "oo/construct",
           "oo/access-control",
           "oo/code-init",
           "oo/abstract",
           "oo/interface",
-          "oo/abstract-vs-interface",
           "oo/inner-class",
+          "oo/encapsulation-inheritance-polymorphism",
           "oo/this-super",
-          "basic-extra-meal/override-overload",
           "oo/static",
           "oo/final",
-          "oo/encapsulation",
-          "oo/extends-bigsai",
-          "oo/polymorphism",
-          
+          "basic-extra-meal/instanceof",
+          "basic-extra-meal/immutable",
+          "basic-extra-meal/override-overload",
+          "basic-extra-meal/annotation",
+          "basic-extra-meal/enum",
           ],
         },
         {
           text: "2.5 集合框架（容器）",
           collapsible: true,
           children: [
-          
           "collection/gailan",
+          "collection/time-complexity",
           "collection/arraylist",
           "collection/linkedlist",
           "collection/list-war-2",
+          "basic-extra-meal/generic",
           "collection/iterator-iterable",
           "collection/fail-fast",
           "collection/hashmap",
@@ -169,12 +180,11 @@ export const sidebarConfig = sidebar({
           "collection/treemap",
           "collection/arraydeque",
           "collection/PriorityQueue",
-          "collection/WeakHashMap",
-         
+          "basic-extra-meal/comparable-omparator",
           ],
         },
         {
-          text: "2.6 IO",
+          text: "2.6 Java IO",
           collapsible: true,
           prefix:"io/",
           children: [
@@ -196,9 +206,10 @@ export const sidebarConfig = sidebar({
           prefix:"exception/",
           children: [
           "gailan",
-          "try-with-resouces",
+          "try-with-resources",
           "shijian",
           "npe",
+          "try-catch-xingneng",
           ],
         },
         {
@@ -206,11 +217,14 @@ export const sidebarConfig = sidebar({
           collapsible: true,
           prefix:"common-tool/",
           children: [
-          "arrays",
-          "collections",
-          "hutool",
-          "guava",
-          "utils",
+            "scanner",
+            "arrays",
+            "StringUtils",
+            "Objects",
+            "collections",
+            "hutool",
+            "guava",
+            "utils",
           ],
         },
         {
@@ -221,56 +235,45 @@ export const sidebarConfig = sidebar({
           "stream",
           "optional",
           "Lambda",
+          "java14",
           ],
         },
         {
-          text: "2.10 Java重要知识点",
-          prefix:"basic-extra-meal/",
-          collapsible: true,
-          children: [
-            "basic-extra-meal/java-naming",
-          "java-unicode",
-          "int-cache",
-          "box",
-          "deep-copy",
-          "hashcode",
-          "equals-hashcode",
-          "Overriding",
-          "pass-by-value",
-          "comparable-omparator",
-          "jdk9-char-byte-string",
-          "jdk-while-for-wuxian-xunhuan",
-          "class-object",
-          "instanceof",
-          "instanceof-jvm",
-          "immutable",
-          "varables",
-          "generic",
-          "true-generic",
-          "annotation",
-          "enum",
-          "fanshe",
-          ],
-        },
-        {
-          text: "2.11 网络编程",
+          text: "2.10 网络编程",
           collapsible: true,
           prefix: "socket/",
           children: [
+            "network-base",
             "socket",
             "http",
           ],
         },
         {
-          text: "2.12 NIO",
+          text: "2.11 NIO",
           collapsible: true,
           prefix: "nio/",
           children: [
-            "why",
-            "rumen",
-            "moxing",
-            "network-connect",
+            "nio-better-io",
             "BIONIOAIO",
+            "buffer-channel",
+            "paths-files",
+            "network-connect",
+            "moxing",
+          ],
+        },
+        {
+          text: "2.12 Java重要知识点",
+          prefix:"basic-extra-meal/",
+          collapsible: true,
+          children: [
+          "java-naming",
+          "java-unicode",
+          "box",
+          "deep-copy",
+          "hashcode",
+          "pass-by-value",
+          "true-generic",
+          "fanshe",
           ],
         },
         {
@@ -279,6 +282,7 @@ export const sidebarConfig = sidebar({
           prefix: "thread/",
           children: [
           "wangzhe-thread",
+          "callable-future-futuretask",
           "thread-state-and-method",
           "thread-group-and-thread-priority",
           "why-need-thread",
@@ -335,13 +339,13 @@ export const sidebarConfig = sidebar({
           "oom",
           "cpu-percent-100",
           "zongjie",
-          
           ],
         },
+        //Java核心结束
       ],
     },
     {
-      text: "三、Java企业级开发",
+      text: "三、Java进阶",
       collapsible: true,
       children: [
         {
@@ -559,11 +563,11 @@ export const sidebarConfig = sidebar({
         {
           text: "MySQL",
           collapsible: true,
+          prefix: "mysql/",
           children: [
-            {
-              text: "MySQL和Redis数据一致性",
-              link: "mysql/redis-shuju-yizhixing"
-            },
+            "redis-shuju-yizhixing",
+            "lijie-shiwu",
+            "shiwu-shixian",
           ],
         },
         {
@@ -615,8 +619,10 @@ export const sidebarConfig = sidebar({
           children: [
             "java-34",
             "java-hashmap-13",
-            "redis-12",
             "mysql-60",
+            "mysql-suoyin-15",
+            "redis-12",
+            "nginx-40",
             "dubbo-17",
             "kafka-40",
             "java-basic-baguwen",
@@ -656,6 +662,7 @@ export const sidebarConfig = sidebar({
           prefix: "cityselect/",
           collapsible: true,
           children: [
+            "wuhan",
             "beijing",
             "chengdu",
             "guangzhou",

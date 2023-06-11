@@ -1,18 +1,18 @@
 ---
-title: 浅入浅出Java数组
-shortTitle: Java数组
+title: 掌握Java数组：一个非常特殊的对象
+shortTitle: 掌握Java数组
 category:
   - Java核心
 tag:
   - 数组&字符串
-description: Java程序员进阶之路，小白的零基础Java教程，从入门到进阶，Java数组
+description: 本文详细介绍了Java数组，包括数组的基本概念、创建方法、初始化方法以及常用操作。学习本文内容，您将掌握Java数组的定义、如何创建和初始化数组，以及如何进行数组元素的添加、删除、查询等操作，为您的Java编程之旅打下坚实基础。
 head:
   - - meta
     - name: keywords
-      content: Java,Java SE,Java基础,Java教程,Java程序员进阶之路,Java入门,教程,java数组,数组
+      content: Java, 数组, 创建数组, 初始化数组, 数组操作
 ---
 
-## 4.1 Java数组
+# 4.1 掌握Java数组
 
 “二哥，我看你公众号的一篇文章里提到，[ArrayList](https://tobebetterjavaer.com/collection/arraylist.html) 的内部是用数组实现的，我就对数组非常感兴趣，想深入地了解一下，今天终于到这个环节了，好期待呀！”三妹的语气里显得很兴奋。
 
@@ -179,7 +179,15 @@ for (int element : anArray) {
 List<Integer> aList = Arrays.asList(anArray);
 ```
 
-但需要注意的是，该方法返回的 ArrayList 并不是 `java.util.ArrayList`，它其实是  Arrays 类的一个内部类：
+不过需要注意的是，Arrays.asList 的参数需要是 Integer 数组，而 anArray 目前是 int 类型，我们需要换另外一种方式。
+
+```java
+List<Integer> aList = Arrays.stream(anArray).boxed().collect(Collectors.toList());
+```
+
+这又涉及到了 Java [流](https://tobebetterjavaer.com/java8/stream.html)的知识，后面会讲到。
+
+还有一个需要注意的是，Arrays.asList 方法返回的 ArrayList 并不是 `java.util.ArrayList`，它其实是  Arrays 类的一个内部类：
 
 ```java
 private static class ArrayList<E> extends AbstractList<E>
@@ -256,8 +264,9 @@ int index = Arrays.binarySearch(anArray, 4);
 
 ----
 
-最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
+GitHub 上标星 7600+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 7600+ 的 Java 教程](https://tobebetterjavaer.com/overview/)
 
-微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
+
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

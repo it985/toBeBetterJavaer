@@ -1,7 +1,7 @@
 ---
-title: 这次彻底搞清楚了 Java 的三大特征之一：封装
-shortTitle: 这次彻底搞清楚 Java 封装
-description: Java程序员进阶之路，小白的零基础Java教程，认真聊聊 Java的三大特征：封装
+title: 聊聊Java封装：Java面向对象核心概念
+shortTitle: Java封装
+description: 本文详细介绍了Java封装的概念和重要性。封装是Java面向对象编程的核心之一，通过封装可以保护类内部的数据，实现高内聚低耦合。文章将讨论如何通过访问权限控制、类设计等技巧来实现封装，以提高代码质量和可维护性。
 category:
   - Java 核心
 tag:
@@ -9,10 +9,14 @@ tag:
 head:
   - - meta
     - name: keywords
-      content: Java,Java SE,Java基础,Java教程,Java程序员进阶之路,Java入门,教程,java封装
+      content: Java,封装
 ---
 
-## 关于封装
+# 5.13 Java封装
+
+“三妹，准备好了没，我们这节来讲 Java 封装，算是 Java 的三大特征之一，理清楚了，对以后的编程有较大的帮助。”我对三妹说。
+
+“好的，哥，准备好了。”三妹一边听我说，一边迅速地打开了 XMind，看来一边学习一边总结思维导图这个高效的学习方式三妹已经牢记在心了。
 
 封装从字面上来理解就是包装的意思，专业点就是信息隐藏，**是指利用抽象将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体**。
 
@@ -27,9 +31,11 @@ head:
 - 3、可以对成员进行更精确的控制。
 - 4、隐藏信息，实现细节。
 
-首先我们先来看两个类：Husband.java、Wife.java
+首先我们先来看两个类。
 
-```
+Husband.java
+
+```java
 public class Husband {
     
     /*
@@ -74,7 +80,9 @@ public class Husband {
 }
 ```
 
-```
+Wife.java
+
+```java
 public class Wife {
     private String name;
     private int age;
@@ -112,7 +120,9 @@ public class Wife {
 }
 ```
 
-可以看得出， Husband 类里面的 wife 属性是没有 getter()的，同时 Wife  类的 age 属性也是没有 getter()方法的。至于理由我想各位都懂的，男人嘛深屋藏娇妻嘛，还有就是没有哪个女人愿意别人知道她的年龄的。
+可以看得出， Husband 类里面的 wife 属性是没有 `getter()`的，同时 Wife  类的 age 属性也是没有 `getter()`方法的。至于理由我想三妹你是懂的。
+
+没有哪个女人愿意别人知道她的年龄。
 
 所以封装把一个对象的属性私有化，同时提供一些可以被外界访问的属性的方法，如果不想被外界方法，我们大可不必提供方法给外界访问。
 
@@ -124,9 +134,9 @@ public class Wife {
 
 但是如果没有门窗，一个包裹的严严实实的黑盒子，又有什么存在的意义呢？所以通过门窗别人也能够看到里面的风景。所以说门窗就是房子对象留给外界访问的接口。
 
-通过这个我们还不能真正体会封装的好处。现在我们从程序的角度来分析封装带来的好处。如果我们不使用封装，那么该对象就没有 setter()和 getter()，那么 Husband 类应该这样写：
+通过这个我们还不能真正体会封装的好处。现在我们从程序的角度来分析封装带来的好处。如果我们不使用封装，那么该对象就没有 `setter()`和 `getter()`，那么 Husband 类应该这样写：
 
-```
+```java
 public class Husband {
     public String name ;
     public String sex ;
@@ -137,16 +147,16 @@ public class Husband {
 
 我们应该这样来使用它：
 
-```
+```java
 Husband husband = new Husband();
 husband.age = 30;
 husband.name = "张三";
 husband.sex = "男";    //貌似有点儿多余
 ```
 
-但是那哪天如果我们需要修改 Husband，例如将 age 修改为 String 类型的呢？你只有一处使用了这个类还好，如果你有几十个甚至上百个这样地方，你是不是要改到崩溃。如果使用了封装，我们完全可以不需要做任何修改，只需要稍微改变下 Husband 类的 setAge()方法即可。
+但是哪天如果我们需要修改 Husband，例如将 age 修改为 String 类型的呢？你只有一处使用了这个类还好，如果你有几十个甚至上百个这样地方，你是不是要改到崩溃。如果使用了封装，我们完全可以不需要做任何修改，只需要稍微改变下 Husband 类的 `setAge()`方法即可。
 
-```
+```java
 public class Husband {
     
     /*
@@ -172,7 +182,7 @@ public class Husband {
 }
 ```
 
-其他的地方依然这样引用( husband.setAge(22) )保持不变。
+其他的地方依然这样引用( `husband.setAge(22)` )保持不变。
 
 到了这里我们确实可以看出，**封装确实可以使我们更容易地修改类的内部实现，而无需修改使用了该类的代码**。
 
@@ -180,7 +190,7 @@ public class Husband {
 
 还是那个 Husband，一般来说我们在引用这个对象的时候是不容易出错的，但是有时你迷糊了，写成了这样：
 
-```
+```java
 Husband husband = new Husband();
 husband.age = 300;
 ```
@@ -189,7 +199,7 @@ husband.age = 300;
 
 但是使用封装我们就可以避免这个问题，我们对 age 的访问入口做一些控制(setter)如：
 
-```
+```java
 public class Husband {
     
     /*
@@ -219,9 +229,9 @@ public class Husband {
 }
 ```
 
-上面都是对 setter 方法的控制，其实通过封装我们也能够对对象的出口做出很好的控制。例如性别在数据库中一般都是以 1、0 的方式来存储的，但是在前台我们又不能展示 1、0，这里我们只需要在 getter()方法里面做一些转换即可。
+上面都是对 setter 方法的控制，其实通过封装我们也能够对对象的出口做出很好的控制。例如性别在数据库中一般都是以 1、0 的方式来存储的，但是在前台我们又不能展示 1、0，这里我们只需要在 `getter()`方法里面做一些转换即可。
 
-```
+```java
 public String getSexName() {
     if("0".equals(sex)){
         sexName = "女";
@@ -229,16 +239,13 @@ public String getSexName() {
     else if("1".equals(sex)){
         sexName = "男";
     }
-    else{
-        sexName = "人妖???";
-    }
     return sexName;
 }
 ```
 
 在使用的时候我们只需要使用 sexName 即可实现正确的性别显示。同理也可以用于针对不同的状态做出不同的操作。
 
-```
+```java
 public String getCzHTML(){
     if("1".equals(zt)){
         czHTML = "<a href='javascript:void(0)' onclick='qy("+id+")'>启用</a>";
@@ -250,15 +257,18 @@ public String getCzHTML(){
 }
 ```
 
-好了，关于封装我们就暂时聊这么多。
+“好了，关于封装我们就暂时就聊这么多吧。”我喝了一口普洱茶后，对三妹说。
+
+“好的，哥，我懂了。”
 
 > 参考链接：[https://www.cnblogs.com/chenssy/p/3351835.html](https://www.cnblogs.com/chenssy/p/3351835.html)，整理：沉默王二
 
 
 ----
 
-最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
+GitHub 上标星 7600+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 7600+ 的 Java 教程](https://tobebetterjavaer.com/overview/)
 
-微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
+
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

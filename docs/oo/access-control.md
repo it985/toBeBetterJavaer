@@ -1,7 +1,7 @@
 ---
-title: 聊一聊Java中的访问权限修饰符
-shortTitle: 聊一聊Java中的访问权限修饰符
-description: Java程序员进阶之路，小白的零基础Java教程，聊一聊Java中的访问权限修饰符
+title: Java访问权限修饰符：掌握封装的核心原则
+shortTitle: Java访问权限修饰符
+description: 访问权限修饰符在Java编程中扮演着重要角色，它们有助于实现代码的封装与模块化。本文将详细解析Java中的四种访问权限修饰符：public、private、protected和默认（package-private），探讨它们的使用场景和作用。学习本文后，您将能够灵活运用访问权限修饰符，编写出高质量的Java代码。
 category:
   - Java 核心
 tag:
@@ -9,11 +9,16 @@ tag:
 head:
   - - meta
     - name: keywords
-      content: Java,Java SE,Java基础,Java教程,Java程序员进阶之路,Java入门,教程,Java访问权限修饰符,public,private,protected,访问权限修饰符
+      content: Java,访问权限修饰符,public,private,protected
 ---
 
+# 5.8 Java访问权限修饰符
 
-我们先来讨论一下为什么需要访问权限控制。考虑两个场景：
+“我们先来讨论一下为什么需要访问权限控制。其实之前我们在讲[类和对象](https://tobebetterjavaer.com/oo/object-class.html)的时候有提到，今天我们来详细地聊一聊，三妹。”我开门见山地说，“三妹，你打开思维导图，记得做笔记哦。”
+
+“好的。”三妹应声回答。
+
+考虑两个场景：
 
 场景 1：工程师 A 编写了一个类 ClassA，但是工程师 A 并不希望 ClassA 被其他类都访问到，该如何处理呢？
 
@@ -30,20 +35,19 @@ head:
 
 类只可以用默认访问权限和 public 修饰。比如说：
 
-```
+```java
 public class Wanger{}
 ```
 
 或者
 
-```
+```java
 class Wanger{}
 ```
 
 但变量和方法则都可以修饰。
 
-
-## 1. 修饰类
+### 1. 修饰类
 
 - 默认访问权限（包访问权限）：用来修饰类的话，表示该类只对同一个包中的其他类可见。
 - public：用来修饰类的话，表示该类对其他所有的类都可见。
@@ -53,7 +57,7 @@ class Wanger{}
 
 Main.java:
 
-```
+```java
 package com.tobetterjavaer.test1;
 
 public class Main {
@@ -68,7 +72,7 @@ public class Main {
 
 People.java
 
-```
+```java
 package com.tobetterjavaer.test1;
 
 class People {//默认访问权限（包访问权限）
@@ -95,7 +99,7 @@ class People {//默认访问权限（包访问权限）
 
 People.java
 
-```
+```java
 package com.tobetterjavaer.test2;
 
 class People {//默认访问权限（包访问权限）
@@ -128,7 +132,7 @@ class People {//默认访问权限（包访问权限）
 
 正如上图的快速修正提示所示，将 People 类的默认访问权限更改为 public 的话，People 类对于 Main 类便可见了。
 
-## 2. 修饰类的方法和变量
+### 2. 修饰方法和变量
 
 - 默认访问权限（包访问权限）：如果一个类的方法或变量被包访问权限修饰，也就意味着只能在同一个包中的其他类中显示地调用该类的方法或者变量，在不同包中的类中不能显式地调用该类的方法或变量。
 - private：如果一个类的方法或者变量被 private 修饰，那么这个类的方法或者变量只能在该类本身中被访问，在类外以及其他类中都不能显式的进行访问。
@@ -142,7 +146,7 @@ Main.java 没有变化
 
 People.java
 
-```
+```java
 package com.tobebetterjavaer.test1;
 
 public class People {
@@ -167,7 +171,7 @@ public class People {
 
 但是如果 People 类和 Main 类不在同一个包中：
 
-```
+```java
 package com.tobebetterjavaer.test2;    //与Main类处于不同包中
 
 public class People {
@@ -200,7 +204,7 @@ public class People {
 
 People.java
 
-```
+```java
 package com.tobebetterjavaer.test1;
 
 public class People {
@@ -225,7 +229,7 @@ public class People {
 
 如果 People 类和 Main 类处于不同包中：
 
-```
+```java
 package com.tobebetterjavaer.test2;
 
 public class People {
@@ -254,7 +258,7 @@ public class People {
 
 如果在 com.cxh.test1 中定一个类 Man 继承 People，则可以在类 Man 中显示调用方法 getName 和 setName：
 
-```
+```java
 package com.tobebetterjavaer.test1;
 
 import com.tobebetterjavaer.test2.People;
@@ -279,14 +283,19 @@ public class Man extends People {
 
 另外，如果还存在其他类，这些类在包外是不可见的。如果源代码文件没有 public 类，则源代码文件的名称可以随意命名。
 
->原文链接：[https://www.cnblogs.com/dolphin0520/p/3734915.html](https://www.cnblogs.com/dolphin0520/p/3734915.html) 作者: Matrix海子，编辑：沉默王二
+“三妹，理解了吧？”我问三妹。
 
+“是的，很简单，换句话说，不想让别人看的就 private，想让人看的就 public，想同一个班级/部门看的就默认，想让下一级看的就 protected，对吧？哥”三妹很自信地回答。
+
+“不错不错，总结得有那味了。”
+
+>原文链接：[https://www.cnblogs.com/dolphin0520/p/3734915.html](https://www.cnblogs.com/dolphin0520/p/3734915.html) 作者: Matrix海子，编辑：沉默王二
 
 ----
 
+GitHub 上标星 7600+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 7600+ 的 Java 教程](https://tobebetterjavaer.com/overview/)
 
-最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
 
-微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

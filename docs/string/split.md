@@ -1,16 +1,18 @@
 ---
-title: 如何在Java中优雅地分割String字符串？
-shortTitle: Java字符串分割
+title: 如何在Java中拆分字符串：详解String类的split()方法
+shortTitle: String拆分
 category:
   - Java核心
 tag:
   - 数组&字符串
-description: Java程序员进阶之路，小白的零基础Java教程，从入门到进阶，如何在Java中优雅地分割String字符串？
+description: 在Java编程中，字符串分割是常见的操作。本文详细讲解了如何使用String类中的split()方法来分割字符串，以及如何利用正则表达式进行高级分割。掌握字符串分割技巧，让你在处理文本数据时更加高效和灵活。
 head:
   - - meta
     - name: keywords
-      content: Java,Java SE,Java基础,Java教程,Java程序员进阶之路,Java入门,教程,java字符串,String,拆分字符串
+      content: Java,字符串,String,字符串拆分
 ---
+
+# 4.11 String拆分
 
 “哥，我感觉字符串拆分没什么可讲的呀，直接上 String 类的 `split()` 方法不就可以了！”三妹毫不客气地说。
 
@@ -223,8 +225,9 @@ if (cmower.contains("，")) {
 
 ---
 
-最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
+GitHub 上标星 7600+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 7600+ 的 Java 教程](https://tobebetterjavaer.com/overview/)
 
-微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
+
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

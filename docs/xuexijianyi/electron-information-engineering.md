@@ -1,7 +1,7 @@
 ---
 title: 电子信息工程最好的出路的是什么？
 shortTitle: 电子信息工程最好的出路的是什么？
-tags:
+tag:
   - 学习建议
 category:
   - 学习建议
@@ -96,7 +96,7 @@ IC 就是半导体元件产品的统称，主要分为数字 IC 和模拟 IC。�
 
 ### 一、Java 语言基础
 
-初学者可以到通过《[Java 程序员进阶之路](https://tobebetterjavaer.com)》进行学习，也就是本站，这是一个风趣幽默、通俗易懂的 Java 教程，对 Java 初学者极度友好和舒适，内容包括但不限于 Java 语法、Java 集合框架、Java IO、Java 并发编程、Java 虚拟机等核心知识点。
+初学者可以到通过《[Java程序员进阶之路](https://tobebetterjavaer.com)》进行学习，也就是本站，这是一个风趣幽默、通俗易懂的 Java 教程，对 Java 初学者极度友好和舒适，内容包括但不限于 Java 语法、Java 集合框架、Java IO、Java 并发编程、Java 虚拟机等核心知识点。
 
 >更详细的学习路线戳：[https://tobebetterjavaer.com/xuexiluxian/java/yitiaolong.html](https://tobebetterjavaer.com/xuexiluxian/java/yitiaolong.html)
 
@@ -298,8 +298,9 @@ IoC（Inverse of Control），也就是控制反转，是一种设计思想，�
 
 ----
 
-最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
+GitHub 上标星 7600+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 7600+ 的 Java 教程](https://tobebetterjavaer.com/overview/)
 
-微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **111** 即可免费领取。
+
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)
