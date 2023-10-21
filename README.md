@@ -1,23 +1,23 @@
 
 <p align="center">
-  <a href="https://tobebetterjavaer.com">
-    <img src="https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/logo.png" width="200px" alt="Java程序员进阶之路">
+  <a href="https://javabetter.cn">
+    <img src="https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/logo.png" width="200px" alt="二哥的Java进阶之路">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://tobebetterjavaer.com/blog.html" target="_blank"><img src="https://img.shields.io/badge/博客-在线阅读-green.svg?style=for-the-badge"></a>
+  <a href="https://javabetter.cn/blog.html" target="_blank"><img src="https://img.shields.io/badge/博客-在线阅读-green.svg?style=for-the-badge"></a>
   <a href="#联系方式" target="_blank"><img src="https://img.shields.io/badge/公众号-沉默王二-brightgreen.svg?style=for-the-badge"></a>
-  <a href="https://tobebetterjavaer.com/zhishixingqiu/" target="_blank"><img src="https://img.shields.io/badge/学习圈子-立即加入-critical?style=for-the-badge"></a>
-  <a href="https://tobebetterjavaer.com/download/java.html" target="_blank"><img src="https://img.shields.io/badge/计算机经典电子书-下载-yellow.svg?style=for-the-badge" alt="无套路下载"></a>
-  <a href="https://github.com/itwanger/toBeBetterJavaer" target="_blank"><img alt="Java程序员进阶之路" src="https://img.shields.io/github/stars/itwanger/toBeBetterJavaer?style=for-the-badge"></a><br><br>
+  <a href="https://javabetter.cn/zhishixingqiu/" target="_blank"><img src="https://img.shields.io/badge/学习圈子-立即加入-critical?style=for-the-badge"></a>
+  <a href="https://javabetter.cn/download/java.html" target="_blank"><img src="https://img.shields.io/badge/计算机经典电子书-下载-yellow.svg?style=for-the-badge" alt="无套路下载"></a>
+  <a href="https://github.com/itwanger/toBeBetterJavaer" target="_blank"><img alt="二哥的Java进阶之路" src="https://img.shields.io/github/stars/itwanger/toBeBetterJavaer?style=for-the-badge"></a><br><br>
   <a href="https://github.com/itwanger/toBeBetterJavaer">Github</a> |
   <a href="https://gitee.com/itwanger/toBeBetterJavaer">Gitee</a>
 </p>
 
 # 为什么会有这个开源知识库
 
-> 知识库取名 **toBeBetterJavaer**，即 **To Be Better Javaer**，意为「成为一名更好的 Java 程序员」，是我自学 Java 以来所有原创文章和学习资料的大聚合。内容包括 Java 基础、Java 并发编程、Java 虚拟机、Java 企业级开发、Java 面试等核心知识点。据说每一个优秀的 Java 程序员都喜欢她，风趣幽默、通俗易懂。学 Java，就认准 Java程序员进阶之路😄。
+> 知识库取名 **toBeBetterJavaer**，即 **To Be Better Javaer**，意为「成为一名更好的 Java 程序员」，是我自学 Java 以来所有原创文章和学习资料的大聚合。内容包括 Java 基础、Java 并发编程、Java 虚拟机、Java 企业级开发、Java 面试等核心知识点。据说每一个优秀的 Java 程序员都喜欢她，风趣幽默、通俗易懂。学 Java，就认准 二哥的Java进阶之路😄。
 >  
 >  知识库旨在为学习 Java 的小伙伴提供一系列：
 >  - **优质的原创 Java 教程**
@@ -32,8 +32,9 @@
 > 
 > 推荐你通过在线阅读网站进行阅读，体验更好，速度更快！
 > 
-> - [**Java程序员进阶之路在线阅读网站（新版，推荐👍）**](https://tobebetterjavaer.com/)
-> - [技术派之Java程序员进阶之路专栏](https://paicoding.com/column/5/1)（二哥的另外一个网站）
+> - [**二哥的Java进阶之路在线网站（新域名：javabetter.cn 好记，推荐👍）**](https://javabetter.cn)
+> - [老版 Java 程序员进阶之路在线网址（老域名 tobebetterjavaer.com 难记）](https://tobebetterjavaer.com)
+> - [技术派之二哥的Java进阶之路专栏](https://paicoding.com/column/5/1)
 >
 > 如果你更喜欢离线的 PDF 版本，戳这个链接获取[👍二哥的 Java 进阶之路.pdf](docs/overview/readme.md)
 
@@ -43,6 +44,17 @@
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/tobebetterjavaer-map.png)
 
+一个人可以走得很快，但一群人才能走得更远。[二哥的编程星球](https://javabetter.cn/zhishixingqiu/)已经有 **3400 多名** 球友加入了，如果你也需要一个良好的学习环境，[戳链接](https://javabetter.cn/zhishixingqiu/)加入我们吧！这是一个**编程学习指南 + Java项目实战 + LeetCode刷题的私密圈子**，你可以阅读星球专栏、向二哥提问、帮你制定学习计划、和球友一起打卡成长。
+
+<a href="https://javabetter.cn/zhishixingqiu/">
+  <img src="https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/map.png">
+</a>
+
+知识图谱里已经沉淀了非常多优质的内容，**相信能帮助你走的更快、更稳、更远**。下面 👇🏻 是二哥最近一直在做的三件大事，对你的求职和学习都会很有帮助：
+
+- ✌️：[官宣：二哥的Java面试指南+八股文发布了~](https://javabetter.cn/zhishixingqiu/mianshi.html)
+- ✌️：[官宣：二哥的实战项目技术派上线了~](https://mp.weixin.qq.com/s/B2VOZxj0HnKrO8GFIAggQg)
+- ✌️：[官宣：二哥的前端React项目2.0上线了~](https://mp.weixin.qq.com/s/MSFOGhBupTgpSSt6UDfRug)
 
 # 学习路线
 
@@ -82,14 +94,7 @@
 - [面渣逆袭（计算机网络八股文面试题）必看👍](docs/sidebar/sanfene/network.md)
 - [面渣逆袭（RocketMQ八股文面试题）必看👍](docs/sidebar/sanfene/rocketmq.md)
 - [面渣逆袭（分布式面试题八股文）必看👍](docs/sidebar/sanfene/fenbushi.md)
-
-# 知识库的学习圈子
-
-一个人可以走得很快，但一群人才能走得更远。[知识库的学习圈子](https://tobebetterjavaer.com/zhishixingqiu/)已经有 **2000 多名** 小伙伴加入了，如果你也需要一个良好的学习氛围，[戳链接](https://tobebetterjavaer.com/zhishixingqiu/)加入我们吧！这是一个编程学习指南+ Java 项目实战+ LeetCode 刷题的私密圈子，你可以阅读知识库的配套专栏、向作者提问、帮你制定学习计划、和其他小伙伴一起打卡成长。里面已经沉淀了非常多优质的内容，**相信能帮助你走的更快、更稳、更远**。
-
-<a href="https://tobebetterjavaer.com/zhishixingqiu/">
-  <img src="https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/map.png">
-</a>
+- [面渣逆袭（微服务面试题八股文）必看👍](docs/sidebar/sanfene/weifuwu.md)
 
 # Java基础
 
@@ -98,54 +103,53 @@
 
 ## Java概述及环境配置
 
-- [《二哥Java进阶之路》小册简介](docs/overview/readme.md)
-- [一文让你彻底了解Java（简史、特性、前景）](docs/overview/what-is-java.md)
-- [Windows和macOS下安装JDK教程：原生安装与包管理器（高级）](docs/overview/jdk-install-config.md)
-- [提升Java开发效率：在macOS和Windows上轻松安装Intellij IDEA](docs/overview/IDEA-install-config.md)
-- [Java新手入门：使用IDEA编写第一个程序Hello World](docs/overview/hello-world.md)
-
+- [《二哥的Java进阶之路》小册简介](docs/overview/readme.md)
+- [Java简史、特性、前景](docs/overview/what-is-java.md)
+- [Windows和macOS下安装JDK教程](docs/overview/jdk-install-config.md)
+- [在macOS和Windows上安装Intellij IDEA](docs/overview/IDEA-install-config.md)
+- [编写第一个程序Hello World](docs/overview/hello-world.md)
 
 ## Java基础语法
 
-- [Java编程基础：48个关键字及2个保留字全解析](docs/basic-extra-meal/48-keywords.md)
-- [了解Java注释：单行、多行与文档注释的使用方法](docs/basic-grammar/javadoc.md)
-- [Java数据类型全解析：基本数据类型与引用数据类型](docs/basic-grammar/basic-data-type.md)
-- [Java数据类型转换：自动类型转换与强制类型转换](docs/basic-grammar/type-cast.md)
+- [48个关键字及2个保留字全解析](docs/basic-extra-meal/48-keywords.md)
+- [了解Java注释](docs/basic-grammar/javadoc.md)
+- [基本数据类型与引用数据类型](docs/basic-grammar/basic-data-type.md)
+- [自动类型转换与强制类型转换](docs/basic-grammar/type-cast.md)
 - [Java基本数据类型缓存池剖析（IntegerCache）](docs/basic-extra-meal/int-cache.md)
-- [Java运算符详解：掌握各类运算符的使用与技巧](docs/basic-grammar/operator.md)
-- [Java流程控制语句详解：带你轻松学会各类控制结构](docs/basic-grammar/flow-control.md)
+- [Java运算符详解](docs/basic-grammar/operator.md)
+- [Java流程控制语句详解](docs/basic-grammar/flow-control.md)
 
 ## 数组&字符串
 
-- [掌握Java数组：一个非常特殊的对象](docs/array/array.md)
-- [掌握 Java二维数组：从基本概念到实际应用](docs/array/double-array.md)
+- [掌握Java数组](docs/array/array.md)
+- [掌握 Java二维数组](docs/array/double-array.md)
 - [如何优雅地打印Java数组？](docs/array/print.md)
-- [深入解读String类源码及其应用技巧](docs/string/string-source.md)
-- [为什么Java字符串String是不可变的？](docs/string/immutable.md)
+- [深入解读String类源码](docs/string/string-source.md)
+- [为什么Java字符串是不可变的？](docs/string/immutable.md)
 - [深入理解Java字符串常量池](docs/string/constant-pool.md)
-- [Java 字符串优化：详解 String.intern() 方法](docs/string/intern.md)
-- [聊聊 Java String、StringBuilder、StringBuffer 三兄弟](docs/string/builder-buffer.md)
-- [字符串相等判断：Java中的equals()与==的区别与用法](docs/string/equals.md)
-- [最优雅的Java字符串String拼接是哪种方式？](docs/string/join.md)
-- [如何在Java中拆分字符串：详解String类的split()方法](docs/string/split.md)
+- [详解 String.intern() 方法](docs/string/intern.md)
+- [String、StringBuilder、StringBuffer](docs/string/builder-buffer.md)
+- [Java中equals()与==的区别](docs/string/equals.md)
+- [最优雅的Java字符串拼接是哪种方式？](docs/string/join.md)
+- [如何在Java中拆分字符串？](docs/string/split.md)
 
 ## Java面向对象编程
 
-- [Java面向对象编程基础：探讨类和对象的概念与实现](docs/oo/object-class.md)
-- [Java中的包：如何创建、导入和使用 package 来优化代码结构](docs/oo/package.md)
-- [Java变量：了解局部变量、成员变量、静态变量和常量的特点与用途](docs/oo/var.md)
-- [Java方法：实例方法、静态方法与抽象方法的区别与应用](docs/oo/method.md)
-- [Java可变参数详解：实现更灵活的方法调用](docs/basic-extra-meal/varables.md)
+- [类和对象](docs/oo/object-class.md)
+- [Java中的包](docs/oo/package.md)
+- [Java变量](docs/oo/var.md)
+- [Java方法](docs/oo/method.md)
+- [Java可变参数详解](docs/basic-extra-meal/varables.md)
 - [手把手教你用 C语言实现 Java native 本地方法](docs/oo/native-method.md)
-- [Java构造方法：打开Java对象创建之门的钥匙](docs/oo/construct.md)
-- [Java访问权限修饰符：掌握封装的核心原则](docs/oo/access-control.md)
-- [Java代码初始化块：了解实例初始化和静态初始化的过程](docs/oo/code-init.md)
-- [Java抽象类，看这一篇就够了，豁然开朗](docs/oo/abstract.md)
-- [Java接口，看这一篇就够了，简单易懂](docs/oo/interface.md)
-- [Java内部类：成员内部类、局部内部类、匿名内部类、静态内部类](docs/oo/inner-class.md)
+- [Java构造方法](docs/oo/construct.md)
+- [Java访问权限修饰符](docs/oo/access-control.md)
+- [Java代码初始化块](docs/oo/code-init.md)
+- [Java抽象类](docs/oo/abstract.md)
+- [Java接口](docs/oo/interface.md)
+- [Java内部类](docs/oo/inner-class.md)
 - [深入理解Java三大特性：封装、继承和多态](docs/oo/encapsulation-inheritance-polymorphism.md)
-- [详解Java this与super关键字的用法与区别](docs/oo/this-super.md)
-- [详解Java static 关键字的作用：静态变量、静态方法、静态代码块、静态内部类](docs/oo/static.md)
+- [详解Java this与super关键字](docs/oo/this-super.md)
+- [详解Java static 关键字](docs/oo/static.md)
 - [详解Java final 关键字](docs/oo/final.md)
 - [掌握Java instanceof关键字](docs/basic-extra-meal/instanceof.md)
 - [聊聊Java中的不可变对象](docs/basic-extra-meal/immutable.md)
@@ -156,23 +160,23 @@
 ## 集合框架（容器）
 
 - [Java集合框架：List、Set、Map、队列——全面解析](docs/collection/gailan.md)
-- [时间复杂度：评估 Java集合框架的执行效率](docs/collection/time-complexity.md)
-- [深入探讨 Java ArrayList：从源码分析到实践应用](docs/collection/arraylist.md)
-- [深入探讨 Java LinkedList：从源码分析到实践应用](docs/collection/linkedlist.md)
-- [ArrayList和LinkedList的区别：如何选择？](docs/collection/list-war-2.md)
-- [Java 泛型深入解析：理解泛型原理与实际应用方法](docs/basic-extra-meal/generic.md)
+- [时间复杂度](docs/collection/time-complexity.md)
+- [深入探讨 Java ArrayList](docs/collection/arraylist.md)
+- [深入探讨 Java LinkedList](docs/collection/linkedlist.md)
+- [ArrayList和LinkedList的区别](docs/collection/list-war-2.md)
+- [Java 泛型深入解析](docs/basic-extra-meal/generic.md)
 - [Java迭代器Iterator和Iterable有什么区别？](docs/collection/iterator-iterable.md)
-- [阿里Java开发规约：禁止在foreach里执行元素的删除操作](docs/collection/fail-fast.md)
-- [Java HashMap详解：源码分析与实际应用指南](docs/collection/hashmap.md)
-- [Java LinkedHashMap详解：从源码分析到实践应用](docs/collection/linkedhashmap.md)
-- [Java TreeMap详解：从源码分析到实践应用](docs/collection/treemap.md)
-- [Java 双端队列 ArrayDeque详解：从源码分析到实践应用](docs/collection/arraydeque.md)
-- [Java 优先级队列PriorityQueue详解：从源码分析到实践应用](docs/collection/PriorityQueue.md)
+- [为什么禁止在foreach里执行元素的删除操作？](docs/collection/fail-fast.md)
+- [Java HashMap详解](docs/collection/hashmap.md)
+- [Java LinkedHashMap详解](docs/collection/linkedhashmap.md)
+- [Java TreeMap详解](docs/collection/treemap.md)
+- [Java 双端队列 ArrayDeque详解](docs/collection/arraydeque.md)
+- [Java 优先级队列PriorityQueue详解](docs/collection/PriorityQueue.md)
 - [Java Comparable和Comparator的区别](docs/basic-extra-meal/comparable-omparator.md)
 
 ## Java IO
 
-- [深入了解 Java IO：各种流的分类与实际应用](docs/io/shangtou.md)
+- [深入了解 Java IO](docs/io/shangtou.md)
 - [Java File：IO 流的起点与终点](docs/io/file-path.md)
 - [Java 字节流：Java IO 的基石](docs/io/stream.md)
 - [Java 字符流：Reader和Writer的故事](docs/io/reader-writer.md)
@@ -181,7 +185,7 @@
 - [Java 打印流：PrintStream & PrintWriter](docs/io/print.md)
 - [Java 序列流：Java 对象的序列化和反序列化](docs/io/serialize.md)
 - [Java Serializable 接口：明明就一个空的接口嘛](docs/io/Serializbale.md)
-- [深入探讨 Java transient 关键字：掌控序列化时的字段选择权](docs/io/transient.md)
+- [深入探讨 Java transient 关键字](docs/io/transient.md)
 
 ## 异常处理
 
@@ -228,46 +232,47 @@
 
 - [Java命名规范：编写可读性强的代码](docs/basic-extra-meal/java-naming.md)
 - [解决中文乱码：字符编码全攻略 - ASCII、Unicode、UTF-8、GB2312详解](docs/basic-extra-meal/java-unicode.md)
-- [深入浅出Java拆箱与装箱：理解自动类型转换与包装类的关系](docs/basic-extra-meal/box.md)
-- [深入理解Java浅拷贝与深拷贝：实战案例与技巧](docs/basic-extra-meal/deep-copy.md)
-- [Java hashCode方法解析：C++实现的高效本地方法](docs/basic-extra-meal/hashcode.md)
+- [深入浅出Java拆箱与装箱](docs/basic-extra-meal/box.md)
+- [深入理解Java浅拷贝与深拷贝](docs/basic-extra-meal/deep-copy.md)
+- [Java hashCode方法解析](docs/basic-extra-meal/hashcode.md)
 - [Java到底是值传递还是引用传递？](docs/basic-extra-meal/pass-by-value.md)
-- [Java 泛型背后的秘密：为什么无法实现真正的泛型？](docs/basic-extra-meal/true-generic.md)
-- [Java 反射详解：动态创建实例、调用方法和访问字段](docs/basic-extra-meal/fanshe.md)
+- [为什么无法实现真正的泛型？](docs/basic-extra-meal/true-generic.md)
+- [Java 反射详解](docs/basic-extra-meal/fanshe.md)
 
 ## Java并发编程
 
-- [室友打了一把王者就学会了创建Java线程的3种方式](docs/thread/wangzhe-thread.md)
-- [聊聊可以返回结果的创建线程的三个关键类：Callable、Future和FutureTask](docs/thread/callable-future-futuretask.md)
-- [Java线程的6种状态及切换(透彻讲解)](docs/thread/thread-state-and-method.md)
-- [线程组是什么？线程优先级如何设置？](docs/thread/thread-group-and-thread-priority.md)
-- [进程与线程的区别是什么？](docs/thread/why-need-thread.md)
-- [并发编程带来了哪些问题？](docs/thread/thread-bring-some-problem.md)
-- [全面理解Java的内存模型（JMM）](docs/thread/jmm.md)
-- [Java并发编程volatile关键字解析](docs/thread/volatile.md)
-- [Java中的synchronized锁的到底是什么？](docs/thread/synchronized.md)
-- [Java实现CAS的原理](docs/thread/cas.md)
-- [Java并发AQS详解](docs/thread/aqs.md)
-- [大致了解下Java的锁接口和锁](docs/thread/lock.md)
-- [公司空降一个美团大佬，彻底把Java中的锁”讲清楚了](docs/thread/suo.md)
-- [Java 15 终于把难搞的偏向锁移除了](docs/thread/pianxiangsuo.md)
-- [深入理解Java并发重入锁ReentrantLock](docs/thread/reentrantLock.md)
-- [深入理解Java并发读写锁ReentrantReadWriteLock](docs/thread/ReentrantReadWriteLock.md)
-- [深入理解Java并发线程协作类Condition](docs/thread/condition.md)
-- [深入理解Java并发线程线程阻塞唤醒类LockSupport](docs/thread/LockSupport.md)
-- [简单聊聊Java的并发集合容器](docs/thread/map.md)
-- [吊打Java并发面试官之ConcurrentHashMap](docs/thread/ConcurrentHashMap.md)
-- [吊打Java并发面试官之ConcurrentLinkedQueue](docs/thread/ConcurrentLinkedQueue.md)
-- [吊打Java并发面试官之CopyOnWriteArrayList](docs/thread/CopyOnWriteArrayList.md)
-- [吊打Java并发面试官之ThreadLocal](docs/thread/ThreadLocal.md)
-- [吊打Java并发面试官之BlockingQueue](docs/thread/BlockingQueue.md)
-- [面试必备：Java线程池](docs/thread/pool.md)
-- [为什么阿里巴巴要禁用Executors创建线程池？](docs/thread/ali-executors.md)
-- [深入剖析Java计划任务ScheduledThreadPoolExecutor](docs/thread/ScheduledThreadPoolExecutor.md)
-- [Java atomic包中的原子操作类总结](docs/thread/atomic.md)
-- [Java并发编程通信工具类CountDownLatch等一网打尽](docs/thread/CountDownLatch.md)
-- [深入理解Java并发编程之Fork/Join框架](docs/thread/fork-join.md)
-- [从根上理解生产者-消费者模式](docs/thread/shengchanzhe-xiaofeizhe.md)
+- [并发编程小册简介](docs/thread/readme.md)
+- [Java多线程入门](docs/thread/wangzhe-thread.md)
+- [获取线程的执行结果](docs/thread/callable-future-futuretask.md)
+- [Java线程的6种状态及切换](docs/thread/thread-state-and-method.md)
+- [线程组和线程优先级](docs/thread/thread-group-and-thread-priority.md)
+- [进程与线程的区别](docs/thread/why-need-thread.md)
+- [多线程带来了哪些问题？](docs/thread/thread-bring-some-problem.md)
+- [Java的内存模型（JMM）](docs/thread/jmm.md)
+- [volatile关键字解析](docs/thread/volatile.md)
+- [synchronized关键字解析](docs/thread/synchronized-1.md)
+- [synchronized的四种锁状态](docs/thread/synchronized.md)
+- [深入浅出偏向锁](docs/thread/pianxiangsuo.md)
+- [CAS详解](docs/thread/cas.md)
+- [AQS详解](docs/thread/aqs.md)
+- [锁分类和 JUC](docs/thread/lock.md)
+- [重入锁ReentrantLock](docs/thread/reentrantLock.md)
+- [读写锁ReentrantReadWriteLock](docs/thread/ReentrantReadWriteLock.md)
+- [等待通知条件Condition](docs/thread/condition.md)
+- [线程阻塞唤醒类LockSupport](docs/thread/LockSupport.md)
+- [Java的并发容器](docs/thread/map.md)
+- [并发容器ConcurrentHashMap](docs/thread/ConcurrentHashMap.md)
+- [非阻塞队列ConcurrentLinkedQueue](docs/thread/ConcurrentLinkedQueue.md)
+- [阻塞队列BlockingQueue](docs/thread/BlockingQueue.md)
+- [并发容器CopyOnWriteArrayList](docs/thread/CopyOnWriteArrayList.md)
+- [本地变量ThreadLocal](docs/thread/ThreadLocal.md)
+- [线程池](docs/thread/pool.md)
+- [定时任务ScheduledThreadPoolExecutor](docs/thread/ScheduledThreadPoolExecutor.md)
+- [原子操作类Atomic](docs/thread/atomic.md)
+- [魔法类 Unsafe](docs/thread/Unsafe.md)
+- [通信工具类](docs/thread/CountDownLatch.md)
+- [Fork/Join](docs/thread/fork-join.md)
+- [生产者-消费者模式](docs/thread/shengchanzhe-xiaofeizhe.md)
 
 
 ## Java虚拟机
@@ -521,8 +526,7 @@
 
 # 知识库搭建
 
-> 从购买阿里云服务器+域名购买+域名备案+HTTP 升级到 HTTPS，全方面记录《Java程序员进阶之路》知识库的诞生和改进过程，涉及到 docsify、Git、Linux 命令、GitHub 仓库等实用知识点。
-
+> 从购买阿里云服务器+域名购买+域名备案+HTTP 升级到 HTTPS，全方面记录《二哥的Java进阶之路》知识库的诞生和改进过程，涉及到 docsify、Git、Linux 命令、GitHub 仓库等实用知识点。
 
 - [购买云服务器](docs/szjy/buy-cloud-server.md)
 - [安装宝塔面板](docs/szjy/install-baota-mianban.md)
@@ -531,12 +535,22 @@
 - [给域名配置HTTPS证书](docs/szjy/https-domain.md)
 - [使用docsify+Git+GitHub+码云+阿里云服务器搭建知识库网站](docs/szjy/tobebetterjavaer-wangzhan-shangxian.md)
 
+本知识库使用 VuePress 搭建，并基于[VuePress Theme Hope](https://theme-hope.vuejs.press/zh/)主题，你可以把[仓库](https://github.com/itwanger/toBeBetterJavaer)拉到本地后直接通过 `npm run docs:dev` 跑起来。
+
+>前提是你已经安装好 node.js 和 npm 环境。
+
+![](https://cdn.tobebetterjavaer.com/stutymore/README-20230829162211.png)
+
+点击链接就可以在本地看到运行后的效果了。
+
+![](https://cdn.tobebetterjavaer.com/stutymore/README-20230829162301.png)
+
 
 # 联系作者
 
 >- 作者是一名普通普通普通普通三连的 Java 后端开发者，热爱学习，热爱分享
 >- 参加工作以后越来越理解交流和分享的重要性，在不停地汲取营养的同时，也希望帮助到更多的小伙伴们
->- Java程序员进阶之路，不仅是作者自学 Java 以来所有的原创文章和学习资料的大聚合，更是作者向这个世界传播知识的一个窗口。
+>- 二哥的Java进阶之路，不仅是作者自学 Java 以来所有的原创文章和学习资料的大聚合，更是作者向这个世界传播知识的一个窗口。
 
 ## 心路历程
 
@@ -549,11 +563,14 @@
 
 ### 原创公众号
 
-最近整理了一份牛逼的学习资料，包括但不限于Java基础部分（JVM、Java集合框架、多线程），还囊括了 **数据库、计算机网络、算法与数据结构、设计模式、框架类Spring、Netty、微服务（Dubbo，消息队列） 网关** 等等等等……详情戳：[可以说是2022年全网最全的学习和找工作的PDF资源了](https://tobebetterjavaer.com/pdf/programmer-111.html)
+![](https://itwanger-oss.oss-cn-beijing.aliyuncs.com/paicoding/1_995464436_171_85_3_731480121_1577da7e9942707dbf727407411f7288_dd680c35.png)
 
-关注二哥的原创公众号 **沉默王二**，回复**111** 即可免费领取。
+GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 9300+ 的 Java 教程](https://javabetter.cn/overview/)
 
-![](http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xingbiaogongzhonghao.png)
+
+微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
+
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)
     
     
 ### star趋势图
@@ -569,7 +586,7 @@
 
 ### 捐赠鼓励
 
-开源不易，如果《Java程序员进阶之路》对你有些帮助，可以请作者喝杯咖啡，算是对开源做出的一点点鼓励吧！
+开源不易，如果《二哥的Java进阶之路》对你有些帮助，可以请作者喝杯咖啡，算是对开源做出的一点点鼓励吧！
 
 <div align="left">
     <img src="https://itwanger-oss.oss-cn-beijing.aliyuncs.com/tobebetterjavaer/images/weixin-zhifu.png" width="260px">
@@ -579,6 +596,29 @@
 
 时间|小伙伴|赞赏金额
 ---|---|---
+2023-08-21|*氏|2元
+2023-08-18|*寻|1元
+2023-08-03|*寻|10.24元
+2023-08-02|*,|1元
+2023-07-24|m*l|3元
+2023-07-20|lzy|6元
+2023-07-14|s*!|2元
+2023-07-02|*晴|1元
+2023-06-26|*雨|6.66元
+2023-06-21|*航|6元
+2023-06-21|*狼|3元
+2023-06-19|*定|2元
+2023-06-18|*道|5元
+2023-06-16|* 文|1元
+2023-06-14|G*e|66.6元
+2023-06-07|*.|0.5元
+2023-05-23|*W|5元
+2023-05-19|*飞|6元
+2023-05-10|c*r|1元
+2023-04-26|r*J|10.24元
+2023-04-22|*明|1元
+2023-04-09|* 刀|10元
+2023-04-03|*意|0.02元
 2023--03-17|*昌|8 元
 2023-03-16|~*~|66.6 元
 2023-03-15|*枫|6.6 元
@@ -652,7 +692,6 @@
 2021-05-04|*学|169 元
 2021-04-29|p*e|2 元
 2021-04-28|追风筝的神|1 元
-
 
 ### 参与贡献
 

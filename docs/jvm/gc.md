@@ -5,11 +5,11 @@ category:
   - Java核心
 tag:
   - Java虚拟机
-description: Java程序员进阶之路，小白的零基础Java教程，从入门到进阶，咱们从头到尾说一次Java垃圾回收
+description: 二哥的Java进阶之路，小白的零基础Java教程，从入门到进阶，咱们从头到尾说一次Java垃圾回收
 head:
   - - meta
     - name: keywords
-      content: Java,JavaSE,教程,Java程序员进阶之路,jvm,Java虚拟机,垃圾回收,gc
+      content: Java,JavaSE,教程,二哥的Java进阶之路,jvm,Java虚拟机,垃圾回收,gc
 ---
 
 # 咱们从头到尾说一次Java垃圾回收
@@ -48,7 +48,17 @@ head:
 
 引用计数算法是将垃圾回收分摊到整个应用程序的运行当中了，而不是在进行垃圾收集时，要挂起整个应用的运行，直到对堆中所有对象的处理都结束。因此，采用引用计数的垃圾收集不属于严格意义上的"Stop-The-World"的垃圾收集机制。
 
-看似很美好，但我们知道JVM的垃圾回收就是"Stop-The-World"的，那是什么原因导致我们最终放弃了引用计数算法呢？看下面的例子。
+"Stop The World"是Java垃圾收集（GC）中的一个重要的概念。在垃圾收集过程中，JVM会暂停所有的用户线程，这种暂停被称为"Stop The World"事件。
+
+这么做的主要原因是为了防止在垃圾收集过程中，用户线程修改了堆中的对象，导致垃圾收集器无法准确地收集垃圾。
+
+值得注意的是，"Stop The World"事件会对Java应用的性能产生影响。如果停顿时间过长，就会导致应用的响应时间变长，对于对实时性要求较高的应用，如交易系统、游戏服务器等，这种情况是不能接受的。
+
+因此，在选择和调优垃圾收集器时，需要考虑其停顿时间。Java中的一些垃圾收集器，如G1和ZGC，尽可能地减少了"Stop The World"的时间，通过并发的垃圾收集，提高了应用的响应性能。
+
+总的来说，"Stop The World"是Java垃圾收集中必须面对的一个挑战，其目标是在保证内存的有效利用和应用的响应性能之间找到一个平衡。
+
+引用计数算法看似很美好，但我们知道JVM的垃圾回收是"Stop-The-World"的，那是什么原因导致我们最终放弃了引用计数算法呢？看下面的例子。
 
 ```java
 public class ReferenceCountingGC {
@@ -239,7 +249,7 @@ Survivor 区相当于是 Eden 区和 Old 区的一个缓冲，类似于我们交
 
 ----
 
-GitHub 上标星 7600+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 7600+ 的 Java 教程](https://tobebetterjavaer.com/overview/)
+GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 9300+ 的 Java 教程](https://javabetter.cn/overview/)
 
 
 微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
