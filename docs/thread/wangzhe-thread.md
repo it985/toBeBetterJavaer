@@ -252,6 +252,41 @@ t3.start();
 
 如果其他线程都执行完毕，main 方法（主线程）也执行完毕，JVM 就会退出，也就是停止运行。如果 JVM 都停止运行了，守护线程自然也就停止了。
 
+### 4）yield()
+
+yield() 方法是一个静态方法，用于暗示当前线程愿意放弃其当前的时间片，允许其他线程执行。然而，它只是向线程调度器提出建议，调度器可能会忽略这个建议。具体行为取决于操作系统和 [JVM](https://javabetter.cn/jvm/what-is-jvm.html) 的线程调度策略。
+
+```java
+class YieldExample {
+    public static void main(String[] args) {
+        Thread thread1 = new Thread(YieldExample::printNumbers, "刘备");
+        Thread thread2 = new Thread(YieldExample::printNumbers, "关羽");
+
+        thread1.start();
+        thread2.start();
+    }
+
+    private static void printNumbers() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(Thread.currentThread().getName() + ": " + i);
+
+            // 当 i 是偶数时，当前线程暂停执行
+            if (i % 2 == 0) {
+                System.out.println(Thread.currentThread().getName() + " 让出控制权...");
+                Thread.yield();
+            }
+        }
+    }
+}
+```
+
+运行结果：
+
+![](https://cdn.tobebetterjavaer.com/stutymore/wangzhe-thread-20240110111338.png)
+
+从这个结果可以看得出来，即便有时候让出了控制权，其他线程也不一定会执行。
+
+
 ## 小结
 
 本文主要介绍了 Java 多线程的创建方式，以及线程的一些常用方法。最后再来看一下线程的生命周期吧，一图胜千言。
@@ -260,7 +295,7 @@ t3.start();
 
 ---
 
-GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第二份 PDF 《[并发编程小册](https://javabetter.cn/thread/)》终于来了！包括线程的基本概念和使用方法、Java的内存模型、sychronized、volatile、CAS、AQS、ReentrantLock、线程池、并发容器、ThreadLocal、生产者消费者模型等面试和开发必须掌握的内容，共计 15 万余字，200+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，二哥的并发编程进阶之路.pdf](https://javabetter.cn/thread/)
+GitHub 上标星 10000+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第二份 PDF 《[并发编程小册](https://javabetter.cn/thread/)》终于来了！包括线程的基本概念和使用方法、Java的内存模型、sychronized、volatile、CAS、AQS、ReentrantLock、线程池、并发容器、ThreadLocal、生产者消费者模型等面试和开发必须掌握的内容，共计 15 万余字，200+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，二哥的并发编程进阶之路.pdf](https://javabetter.cn/thread/)
 
 [加入二哥的编程星球](https://javabetter.cn/thread/)，在星球的第二个置顶帖「[知识图谱](https://javabetter.cn/thread/)」里就可以获取 PDF 版本。
 

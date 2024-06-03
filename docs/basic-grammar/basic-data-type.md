@@ -61,11 +61,11 @@ public class LocalVar {
 0
 ```
 
-瞧见没，int 作为成员变量时或者静态变量时的默认值是 0。那不同的基本数据类型，是有不同的默认值和大小的，来个表格感受下。
+瞧见没，int 作为成员变量时或者静态变量时的默认值是 0。那不同的基本数据类型，是有不同的默认值和占用大小的，来个表格感受下。
 
 | 数据类型 | 默认值   | 大小   |
 | -------- | -------- | ------ |
-| boolean  | false    | 1 比特 |
+| boolean  | false    | 不确定 |
 | char     | '\u0000' | 2 字节 |
 | byte     | 0        | 1 字节 |
 | short    | 0        | 2 字节 |
@@ -109,6 +109,92 @@ boolean hasMoney = true;
 boolean hasGirlFriend = false;
 ```
 
+根据 Java 语言规范，boolean 类型只有两个值 true 和 false，但在语言层面，Java 没有明确规定 boolean 类型的大小。
+
+那经过我的调查，发现有两种论调。
+
+我们先来看论调一。
+
+对于单独使用的 boolean 类型，JVM 并没有提供专用的字节码指令，而是使用 int 相关的指令 istore 来处理，那么 int 明确是 4 个字节，所以此时的 boolean 也占用 4 个字节。
+
+对于作为数组来使用的 boolean 类型，JVM 会按照 byte 的指令来处理（bastore），那么已知 byte 类型占用 1 个字节，所以此时的 boolean 也占用 1 个字节。
+
+![二哥的 Java 进阶之路：javap 验证](https://cdn.tobebetterjavaer.com/stutymore/basic-data-type-20240602170355.png)
+
+论调二，布尔具体占用的大小是不确定的，取决于 JVM 的具体实现。
+
+>boolean: The boolean data type has only two possible values: true and false. Use this data type for simple flags that track true/false conditions. This data type represents one bit of information, but its "size" isn't something that's precisely defined.
+
+可以通过 JOL 工具打印出对象的内存布局，展示 boolean 单独使用和作为数组使用时在内存中的实际占用大小。
+
+```java
+public class BooleanSizeExample {
+    public static void main(String[] args) {
+        boolean singleBoolean = true;
+        boolean[] booleanArray = new boolean[10];
+        
+        // 分析内存占用，可以使用第三方工具如 JOL（Java Object Layout）
+        System.out.println("Size of single boolean: " + org.openjdk.jol.info.ClassLayout.parseInstance(singleBoolean).toPrintable());
+        System.out.println("Size of boolean array: " + org.openjdk.jol.info.ClassLayout.parseInstance(booleanArray).toPrintable());
+    }
+}
+```
+
+运行结果如下（64 操作系统 JDK 8）：
+
+```
+Size of single boolean: java.lang.Boolean object internals:
+ OFFSET  SIZE      TYPE DESCRIPTION                               VALUE
+      0     4           (object header)                           01 00 00 00 (00000001 00000000 00000000 00000000) (1)
+      4     4           (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
+      8     4           (object header)                           dd 20 00 f8 (11011101 00100000 00000000 11111000) (-134209315)
+     12     1   boolean Boolean.value                             true
+     13     3           (loss due to the next object alignment)
+Instance size: 16 bytes
+Space losses: 0 bytes internal + 3 bytes external = 3 bytes total
+
+Size of boolean array: [Z object internals:
+ OFFSET  SIZE      TYPE DESCRIPTION                               VALUE
+      0     4           (object header)                           01 00 00 00 (00000001 00000000 00000000 00000000) (1)
+      4     4           (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
+      8     4           (object header)                           05 00 00 f8 (00000101 00000000 00000000 11111000) (-134217723)
+     12     4           (object header)                           0a 00 00 00 (00001010 00000000 00000000 00000000) (10)
+     16    10   boolean [Z.<elements>                             N/A
+     26     6           (loss due to the next object alignment)
+Instance size: 32 bytes
+Space losses: 0 bytes internal + 6 bytes external = 6 bytes total
+```
+
+对于单个 boolean 变量来说：
+
+①、**对象头（Object Header）** 占用了 12 个字节：
+
+- **OFFSET 0 - 4**：对象头的一部分，包含对象的标记字段（Mark Word），用于存储对象的哈希码、GC 状态等。
+- **OFFSET 4 - 8**：对象头的另一部分，通常是指向类元数据的指针（Class Pointer）。
+- **OFFSET 8 - 12**：对象头的最后一部分，包含锁状态或其他信息。
+
+②、实际的 `boolean` 值占用 1 个字节，也就是**OFFSET 12 - 13**。
+
+③、为了满足 8 字节的对齐要求（HotSpot JVM 默认的对象对齐方式），有 3 个字节的填充。**OFFSET 13 - 16**。
+
+也就是说，尽管 `boolean` 值本身只需要 1 个字节，但由于对象头和对齐要求，一个 `boolean` 在内存中占用 16 字节。
+
+对于 `boolean` 数组来说：
+
+①、**对象头（Object Header）** 占用了 12 个字节：
+
+- **OFFSET 0 - 4**：对象头的一部分，包含对象的标记字段（Mark Word）。
+- **OFFSET 4 - 8**：对象头的另一部分，包含指向类元数据的指针（Class Pointer）。
+- **OFFSET 8 - 12**：对象头的最后一部分，通常包含数组的长度信息。
+
+②、**数组长度** 占用了 4 个字节，此处是 10，**OFFSET 12 - 16**。
+
+③、实际的 `boolean` 数组元素，每个 `boolean` 值占用 1 个字节，总共 10 个字节，**OFFSET 16 - 26**。
+
+④、为了满足 8 字节对齐要求，有 6 个字节的填充，**OFFSET 26 - 32**。
+
+也就是说，每个 `boolean` 数组元素占用 1 个字节，加上对象头、对齐填充和数组长度，包含 10 个元素的 `boolean` 数组占用 32 字节。
+
 #### 2）byte
 
 一个字节可以表示 2^8 = 256 个不同的值。由于 byte 是有符号的，它的值可以是负数或正数，其取值范围是 -128 到 127（包括 -128 和 127）。
@@ -142,6 +228,12 @@ int i; // 声明一个 int 类型变量
 i = 1000000; // 将值 1000000 赋给变量 i
 int j = -2000000; // 声明并初始化一个 int 类型变量 j，赋值为 -2000000
 ```
+
+为什么 32 位的有符号整数的取值范围是从 -2^31 到 2^31 - 1 呢？
+
+这是因为其中一位用于表示符号（正或负），剩下的 31 位用于表示数值，这意味着其范围是 -2,147,483,648（即 -2^31）到 2,147,483,647（即 2^31 - 1）。
+
+在二进制系统中，每个位（bit）可以表示两个状态，通常是 0 和 1。对于 32 位得正二进制数，除去符号位，从右到左的每一位分别代表 2^0, 2^1, 2^2, ..., 2^30，这个二进制数转换为十进制就是 2^0 + 2^1 + 2^2 + ... + 2^30，也就是 2,147,483,647。
 
 #### 5）long
 
@@ -270,6 +362,46 @@ int a = 'a';
 
 因为发生了[自动类型转换](https://javabetter.cn/basic-grammar/type-cast.html)，后面会细讲。
 
+不过，如果字符本身就是数字，这种方法就行不通了。
+
+```java
+int a = '1';
+```
+
+这样的话，a 的值是 49，而不是 1。因为字符 '1' 的 ASCII 码是 49。
+
+那么，怎么才能把字符 '1' 转成数字 1 呢？
+
+可以使用 `Character.getNumericValue()` 方法。
+
+```java
+int a = Character.getNumericValue('1');
+```
+
+这样的话，a 的值就是 1 了。
+
+除此之外，还可以使用 `Character.digit()` 方法。
+
+```java
+int a = Character.digit('1', 10);
+```
+
+这样的话，a 的值也是 1。
+
+因为这两个方法的内部实现都大差不差，大家可以研究一下源码。
+
+那还有一种更直观的方法，就是 `- '0'` 方法。
+
+```java
+int a = '1' - '0';
+```
+
+这样的话，a 的值也是 1。这是因为在 ASCII 编码和 Unicode 编码（Java 使用 Unicode 编码）中，数字字符 '0' 到 '9' 是连续排列的，并且它们的编码值是顺序递增的。
+
+字符 '0' 的编码值是 48，字符 '1' 的编码值是 49，依此类推，字符 '9' 的编码值是 57。
+
+当从一个字符的编码值中减去字符 '0' 的编码值（即 48），结果就是该字符所表示的数字值。例如，对于字符 '5'，其编码值是 53。计算 53 - 48 得到 5，这就是字符 '5' 所表示的数字值。
+
 ### 05、包装器类型
 
 包装器类型（Wrapper Types）是 Java 中的一种特殊类型，用于将基本数据类型（如 int、float、char 等）转换为对应的[对象类型](https://javabetter.cn/oo/object-class.html)。
@@ -313,6 +445,75 @@ System.out.println("字符是个数字.");
 上面的示例中，我们创建了一个 [Integer 类型](https://javabetter.cn/basic-extra-meal/int-cache.html)的对象 integerValue 并为其赋值 42。然后，我们将其值打印到控制台。
 
 我们有一个包含数字的[字符串](https://javabetter.cn/string/immutable.html) numberString。我们使用 `Integer.parseInt()` 方法将其转换为整数 parsedNumber。然后，我们将转换后的值打印到控制台。
+
+比如说 `parseInt()` 用于将字符串转换为整数，这也是非常常用的一个方法，尤其是遇到“数字字符串”转整数的时候。
+
+```java
+String text = "123";
+int number = Integer.parseInt(text);
+System.out.println(number);
+```
+
+可以简单看一下 `parseInt()` 的源码：
+
+```java
+public static int parseInt(String s, int radix) throws NumberFormatException {
+    // 如果字符串为空或基数不在有效范围内，抛出 NumberFormatException
+    if (s == null || radix < Character.MIN_RADIX || radix > Character.MAX_RADIX) {
+        throw new NumberFormatException();
+    }
+
+    int result = 0; // 用于存储解析结果的变量
+    boolean negative = false; // 标记数字是否为负数
+    int i = 0, len = s.length(); // i 是字符索引，len 是字符串长度
+    int limit = -Integer.MAX_VALUE; // 溢出检查的上限
+
+    if (len > 0) {
+        char firstChar = s.charAt(0); // 获取字符串的第一个字符
+        if (firstChar == '-') { // 如果是负号
+            negative = true; // 设置负数标记
+            limit = Integer.MIN_VALUE; // 调整溢出上限为 Integer 的最小值
+            i++;
+        } else if (firstChar == '+') { // 如果是正号
+            i++; // 仅跳过，不做额外操作
+        }
+
+        int multmin = limit / radix; // 计算溢出检查的临界值
+        while (i < len) {
+            // 将字符转换为对应的数字值
+            int digit = Character.digit(s.charAt(i++), radix);
+            if (digit < 0 || result < multmin || result * radix < limit + digit) {
+                // 如果字符不是有效数字或者结果溢出，抛出 NumberFormatException
+                throw new NumberFormatException();
+            }
+            // 累积结果
+            result = result * radix - digit;
+        }
+    } else {
+        // 如果字符串为空，抛出 NumberFormatException
+        throw new NumberFormatException();
+    }
+
+    // 根据正负号返回最终结果
+    return negative ? result : -result;
+}
+```
+
+简单解释一下：
+
+1. **空值检查**：首先检查输入字符串是否为 `null`，如果是，则抛出 `NumberFormatException`。
+
+2. **符号处理**：检查字符串的第一个字符以确定数字的符号（正或负）。如果字符串以“-”开头，则数字为负数，以“+”或数字开头则为正数。
+
+3. **数字转换**：遍历字符串中的每个字符，将字符转换为对应的数字。这是通过从字符中减去 '0' 的 ASCII 值来实现的。
+
+4. **结果计算**：计算最终的数字值。这是通过将每个数字乘以其位置权重（10 的幂）并累加到结果中来完成的。
+
+5. **溢出检查**：在整个转换过程中，代码会检查是否有溢出的风险。如果检测到溢出，将抛出 `NumberFormatException`。
+
+6. **返回结果**：根据数字的符号返回最终结果。
+
+这个源码对以后学习 LeetCode 的第八题「[字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/)」非常有帮助，题解我已经放到技术派的《[二哥的 LeetCode 刷题笔记](https://paicoding.com/column/7/8)》中，可以作为参考。
 
 我们有一个字符变量 testChar，并为其赋值字符 '9'。我们使用 `Character.isDigit()` 方法检查 testChar 是否为数字字符。如果是数字字符，我们将输出一条消息到控制台。
 
@@ -485,7 +686,7 @@ public void test()
 
 ----
 
-GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 9300+ 的 Java 教程](https://javabetter.cn/overview/)
+GitHub 上标星 10000+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 10000+ 的 Java 教程](https://javabetter.cn/overview/)
 
 微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 

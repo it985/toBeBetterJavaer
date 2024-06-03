@@ -16,7 +16,7 @@ head:
 
 BlockingQueue 是 Java 中的一个接口，它代表了一个线程安全的队列，不仅可以由多个线程并发访问，还添加了等待/通知机制，以便在队列为空时阻塞获取元素的线程，直到队列变得可用，或者在队列满时阻塞插入元素的线程，直到队列变得可用。
 
-最常用的"[生产者-消费者](https://javabetter.cn/thread/shengchanzhe-xiaofeizhe.html)"问题中，队列通常被视作线程间的数据容器，生产者将“生产”出来的数据放入数据容器，消费者从“数据容器”中获取数据，这样，生产者线程和消费者线程就解耦了，各自只需要专注自己的业务即可。
+最常见的"[生产者-消费者](https://javabetter.cn/thread/shengchanzhe-xiaofeizhe.html)"问题中，队列通常被视作线程间的数据容器，生产者将“生产”出来的数据放入数据容器，消费者从“数据容器”中获取数据，这样，生产者线程和消费者线程就解耦了，各自只需要专注自己的业务即可。
 
 阻塞队列（BlockingQueue）被广泛用于“生产者-消费者”问题中，其原因是 BlockingQueue 提供了可阻塞的插入和移除方法。**当队列容器已满，生产者线程会被阻塞，直到队列未满；当队列容器为空时，消费者线程会被阻塞，直至队列非空时为止**。
 
@@ -132,16 +132,21 @@ public ArrayBlockingQueue(int capacity, boolean fair) {
 
 ```java
 public void put(E e) throws InterruptedException {
+    // 确保传入的元素不为null
     checkNotNull(e);
     final ReentrantLock lock = this.lock;
+
+    // 请求锁，如果线程被中断则抛出异常
     lock.lockInterruptibly();
     try {
-		//如果当前队列已满，将线程移入到notFull等待队列中
-        while (count == items.length)
+        // 循环检查队列是否已满，如果满了则在notFull条件上等待
+        while (count == items.length) {
             notFull.await();
-		//满足插入数据的要求，直接进行入队操作
+        }
+        // 队列未满，将元素加入队列
         enqueue(e);
     } finally {
+        // 在try块后释放锁，确保锁最终被释放
         lock.unlock();
     }
 }
@@ -763,7 +768,7 @@ public class DelayQueueDemo {
 
 ---
 
-GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第二份 PDF 《[并发编程小册](https://javabetter.cn/thread/)》终于来了！包括线程的基本概念和使用方法、Java的内存模型、sychronized、volatile、CAS、AQS、ReentrantLock、线程池、并发容器、ThreadLocal、生产者消费者模型等面试和开发必须掌握的内容，共计 15 万余字，200+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，二哥的并发编程进阶之路.pdf](https://javabetter.cn/thread/)
+GitHub 上标星 10000+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第二份 PDF 《[并发编程小册](https://javabetter.cn/thread/)》终于来了！包括线程的基本概念和使用方法、Java的内存模型、sychronized、volatile、CAS、AQS、ReentrantLock、线程池、并发容器、ThreadLocal、生产者消费者模型等面试和开发必须掌握的内容，共计 15 万余字，200+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，二哥的并发编程进阶之路.pdf](https://javabetter.cn/thread/)
 
 [加入二哥的编程星球](https://javabetter.cn/thread/)，在星球的第二个置顶帖「[知识图谱](https://javabetter.cn/thread/)」里就可以获取 PDF 版本。
 

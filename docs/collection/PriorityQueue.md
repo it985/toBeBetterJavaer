@@ -12,7 +12,7 @@ head:
       content: Java,优先级队列,PriorityQueue,java 优先级队列,java PriorityQueue, 源码分析, 实现原理
 ---
 
-# 6.13 优先级队列PriorityQueue详解
+# 6.9 优先级队列PriorityQueue详解
 
 >继续有请王老师，来上台给大家讲讲优先级队列 PriorityQueue。
 
@@ -321,13 +321,19 @@ PriorityQueue 是一个非常常用的数据结构，它是一种特殊的堆（
 - 取出元素时按照优先级顺序（从小到大或者从大到小）进行取出。
 - 如果需要指定排序，元素必须实现 Comparable 接口或者传入一个 Comparator 来进行比较。
 
+可以通过 LeetCode 的第 23 题：[合并K个升序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/) 来练习 PriorityQueue 的使用。
+
+我把题解已经放到了技术派中，大家可以去作为参考。
+
+[合并K个升序链表](https://paicoding.com/column/7/23)
+
 > 参考链接：[https://github.com/CarpenterLee/JCFInternals](https://github.com/CarpenterLee/JCFInternals)，作者：李豪，整理：沉默王二
 
 
 
 ----
 
-GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 9300+ 的 Java 教程](https://javabetter.cn/overview/)
+GitHub 上标星 10000+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 10000+ 的 Java 教程](https://javabetter.cn/overview/)
 
 
 微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。

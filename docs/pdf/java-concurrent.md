@@ -1,6 +1,6 @@
 ---
 title: 👏下载→深入浅出Java多线程PDF
-shortTitle: 👏下载→深入浅出Java多线程PDF
+shortTitle: 👏下载→Java多线程PDF
 category:
   - PDF
 tag:

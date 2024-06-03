@@ -1,5 +1,5 @@
 ---
-title: 《二哥的并发编程进阶之路》小册简介，GitHub星标9300+，共计 15 万余字，200+张手绘图
+title: 《二哥的并发编程》小册简介，GitHub星标10000+，共计 15 万余字，200+张手绘图
 shortTitle: 并发编程小册简介
 category:
   - Java核心
@@ -20,7 +20,7 @@ head:
 
 - 小册名字：二哥的并发编程进阶之路
 - 小册作者：沉默王二
-- 小册品质：该小册的内容来源于二哥在 GitHub 上开源的知识库《[Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》，能在 GitHub 取得 9300+ star 可以说品质是有目共睹，尤其是国内还有不少小伙伴在访问 GitHub 的时候很不顺利。
+- 小册品质：该小册的内容来源于二哥在 GitHub 上开源的知识库《[Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》，能在 GitHub 取得 10000+ star 可以说品质是有目共睹，尤其是国内还有不少小伙伴在访问 GitHub 的时候很不顺利。
 - 小册初衷：面试过小伙伴应该感受比较深，并发编程在 Java 岗的面试中占比挺大，尤其是去一些知名公司的话，像 volatile、sychronized、CAS、AQS、线程池、JUC 包、原子类、ThreadLocal、生产者-消费者模式等内容，都是面试中经常被考察的内容。另外，工作一两年后的初级程序员，如果想进阶为高级程序员，并发编程的内容也是完全绕不开的，二哥之所以花大力气整理《[并发编程小册](https://javabetter.cn/thread/)》的原因也在于此，就是希望能帮助大家轻松且深刻地掌握并发编程/多线程方面的知识。
 - 小册简介：主要针对并发编程进行讲解，包括并发编程的基础知识、并发编程的高级知识、并发编程的源码分析、并发编程的面试题等，内容涵盖了 Java 并发编程的方方面面，是一份非常适合 Java 并发编程的学习资料。
 - 小册说明：小册算是《[二哥的 Java 进阶之路基础篇](https://javabetter.cn/overview/)》的姐妹篇，可通过 [GitHub 阅读](https://github.com/itwanger/toBeBetterJavaer#java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B)或者[二哥的网站在线阅读](https://javabetter.cn/thread/)，同时提供 PDF 版本，15 万+字，手绘图 200+张，有亮白版、暗黑版和 epub 三个版本，前后耗费 3 个多月的时间，很不容易，希望你能好好珍惜。
@@ -72,7 +72,7 @@ head:
 
 小册会持续保持**更新**，如果想获得最新版，请扫下面的优惠券加入[二哥的编程星球](https://mp.weixin.qq.com/s/-NvJWJD_kZVzTHWN3sPP7Q)。
 
-![](https://cdn.tobebetterjavaer.com/stutymore/wangzhe-thread-20230904125125.png)
+![](https://cdn.tobebetterjavaer.com/paicoding/952047c145246bf6c26ea96c97326602.png)
 
 然后通过下面这个链接获取 PDF。
 
@@ -88,7 +88,7 @@ PDF 在星球发表后，也是得到了球友的一致认同，看看这点赞�
 
 ## 面试指南（配套教程）
 
-《Java 面试指南》是[二哥编程星球的](https://javabetter.cn/zhishixingqiu/)的一个付费专栏，和《Java 进阶之路》上的内容可以形成很好的互补，截止到目前，已经更新 48 万字，可以说是满满的干货和诚意。
+《[Java 面试指南](https://javabetter.cn/zhishixingqiu/mianshi.html)》是[二哥编程星球的](https://javabetter.cn/zhishixingqiu/)的一个付费专栏，和《Java 进阶之路》上的内容可以形成很好的互补，截止到目前，已经更新 48 万字，可以说是满满的干货和诚意。
 
 ![](https://cdn.tobebetterjavaer.com/stutymore/readme-20230904113349.png)
 
@@ -142,15 +142,15 @@ PDF 在星球发表后，也是得到了球友的一致认同，看看这点赞�
 
 ## 更多优质专栏
 
-除了《Java 面试指南》专栏，[二哥编程星球](https://javabetter.cn/zhishixingqiu/)还提供了：《技术派实战教程》、《编程喵实战笔记》、《二哥的 LeetCode 刷题笔记》、《算法突击 50 题》、《华为 OD 笔试 AB 卷题库》等五个额外的专栏。
+除了《[Java 面试指南](https://javabetter.cn/zhishixingqiu/mianshi.html)》专栏，[二哥编程星球](https://javabetter.cn/zhishixingqiu/)还提供了：《[技术派实战教程](https://javabetter.cn/zhishixingqiu/paicoding.html)》、《编程喵实战笔记》、《[二哥的 LeetCode 刷题笔记](https://paicoding.com/column/8/1)》、《算法突击 50 题》、《华为 OD 笔试 AB 卷题库》等五个额外的专栏。
 
 ![](https://cdn.tobebetterjavaer.com/paicoding/bad32e202fd78ffb5555f2114de01eae.png)
 
 ### 01、技术派实战教程
 
-[技术派](https://mp.weixin.qq.com/s/B2VOZxj0HnKrO8GFIAggQg)是一个基于 Spring Boot、MyBatis-Plus、MySQL、Redis、ElasticSearch、MongoDB、Docker、RabbitMQ 等技术栈实现的社区系统，采用主流的互联网技术架构、全新的UI设计、支持一键源码部署，拥有完整的文章&教程发布/搜索/评论/统计流程等，代码完全开源，没有任何二次封装，是一个非常适合二次开发/实战的现代化社区项目👍 。
+[技术派](https://javabetter.cn/zhishixingqiu/paicoding.html)是一个基于 Spring Boot、MyBatis-Plus、MySQL、Redis、ElasticSearch、MongoDB、Docker、RabbitMQ 等技术栈实现的社区系统，采用主流的互联网技术架构、全新的UI设计、支持一键源码部署，拥有完整的文章&教程发布/搜索/评论/统计流程等，代码完全开源，没有任何二次封装，是一个非常适合二次开发/实战的现代化社区项目👍 。
 
-下面是《技术派教程》部分目录（包括大厂篇、基础篇、进阶篇、工程篇、扩展篇、前端篇，目前已完成 80+篇），很多球友都反馈说光这套教程就值 599 元。
+下面是《技术派教程》部分目录（包括大厂篇、基础篇、进阶篇、工程篇、扩展篇、前端篇，目前已完成 100+篇），很多球友都反馈说光这套教程就值 599 元。
 
 ![](https://cdn.tobebetterjavaer.com/paicoding/acdb224f141042a6c1c3990c794f7048.png)
 
@@ -186,15 +186,15 @@ LeetCode 的模式是你只需要输入核心代码就可以了，华为 OD 机�
 
 一年前，星球的定价还是 99 元一年，第一批优惠券的额度是 30 元，等于说 69 元的低价就可以加入，再扣除掉星球手续费，几乎就是纯粹做公益。
 
-随着时间的推移，星球积累的干货/资源越来越多，我花在星球上的时间也越来越多，[星球的知识图谱](https://mp.weixin.qq.com/s/-NvJWJD_kZVzTHWN3sPP7Q)里沉淀的问题，你可以戳这个[链接](https://javabetter.cn/zhishixingqiu/map.html)去感受一下。有学习计划啊、有学生党秋招&春招&offer选择&考研&实习&专升本&培训班的问题啊、有工作党方向选择&转行&求职&职业规划的问题啊，还有大大小小的技术细节，我都竭尽全力去帮助球友，并且得到了球友的认可和尊重。
+随着时间的推移，星球积累的干货/资源越来越多，我花在星球上的时间也越来越多，[星球的知识图谱](https://javabetter.cn/zhishixingqiu/map.html)里沉淀的问题，你可以戳这个[链接](https://javabetter.cn/zhishixingqiu/map.html)去感受一下。有学习计划啊、有学生党秋招&春招&offer选择&考研&实习&专升本&培训班的问题啊、有工作党方向选择&转行&求职&职业规划的问题啊，还有大大小小的技术细节，我都竭尽全力去帮助球友，并且得到了球友的认可和尊重。
 
-目前星球已经 3500+ 人了，所以星球也涨价到了 129 元，后续会讲星球的价格调整为 149 元/年，所以想加入的小伙伴一定要趁早。
+目前星球已经 5000+ 人了，所以星球也涨价到了 149 元，后续会讲星球的价格调整为 159 元/年，所以想加入的小伙伴一定要趁早。
 
-![](https://cdn.tobebetterjavaer.com/stutymore/readme-20230904114419.png)
+![](https://cdn.tobebetterjavaer.com/stutymore/readme-20240521200742.png)
 
-你可以微信扫码或者长按自动识别领取 30 元优惠券，**99/年** 加入，满 4000 人会涨价至 149 元，所以想要加入的话请趁早。
+你可以微信扫码或者长按自动识别领取 30 元优惠券，**119/年** 加入，新项目 pmhub 上线后会涨价至 159 元，所以想要加入的话请趁早。
 
-<img src="https://cdn.tobebetterjavaer.com/stutymore/readme-20230411114734.png" title="二哥的编程星球" width="300" />
+<img src="https://cdn.tobebetterjavaer.com/paicoding/952047c145246bf6c26ea96c97326602.png" title="二哥的编程星球" width="300" />
 
 对了，**加入星球后记得花 10 分钟时间看一下星球的两个置顶贴，你会发现物超所值**！
 

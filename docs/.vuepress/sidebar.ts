@@ -4,9 +4,31 @@ export const sidebarConfig = sidebar({
     "readme.md",
     "map",
     "mianshi",
+    "paicoding",
+    "jianli",
+  ],
+  "/nice-article/itmind/": [
+    "readme.md",
+    "shangwang.md",
+    "ideapxideajhideayjjhmideazxjhzcmpjjcyjjhqcyx",
+    "yigkymxczideatsyqdffblwxjcywdxbxt",
+    "ideapjazjczxjhmzcmyjjhcxgxz",
+    "ideajhmideajhmideapxideajhmideazcmideayjjhm",
+    "intellijidearhgbgxdsxbxt",
+    "navicatmacyjpx",
+    "navicatzxbwindowspjbjc",
+    "typorayjpx",
+    "typoramaczwpjbhyjjdkptmarkdownbjqmksimacsocom",
+    "xshellazpjbjcxshellpxffxbxt",
+    "pycharmjhpxmazjcnyrgxxbxt",
+    "webstormjhmwebstormwdzsjhmxbxt",
+    "visualstudiopxbazjcnfvisualstudiojhmmyxbxt",
+    "sublimetextzcmpjazjcqckyxbxt",
+    "termius-macos",
   ],
   // 你可以省略 .md 扩展名，以 / 结尾的路径会被推断为 /README.md(区分大小写)
   "/pdf/": [
+    "linux",
     "java",
     "programmer-111",
     "java-concurrent",
@@ -44,6 +66,7 @@ export const sidebarConfig = sidebar({
     "bigdata",
     "android",
     "donet",
+    "linux",
   ],
   "/sidebar/sanfene/": [
     "nixi",
@@ -60,6 +83,8 @@ export const sidebarConfig = sidebar({
     "rocketmq",
     "fenbushi",
     "weifuwu",
+    "shejimoshi",
+    "linux",
   ],
   // 必须放在最后面
   "/": [
@@ -96,6 +121,7 @@ export const sidebarConfig = sidebar({
           "basic-extra-meal/int-cache",
           "basic-grammar/operator",
           "basic-grammar/flow-control",
+          "basic-grammar/basic-exercise",
           ],
         },
         {
@@ -145,21 +171,23 @@ export const sidebarConfig = sidebar({
         {
           text: "2.5 集合框架（容器）",
           collapsible: true,
+          prefix: "collection/",
           children: [
-          "collection/gailan",
-          "collection/time-complexity",
-          "collection/arraylist",
-          "collection/linkedlist",
-          "collection/list-war-2",
-          "basic-extra-meal/generic",
-          "collection/iterator-iterable",
-          "collection/fail-fast",
-          "collection/hashmap",
-          "collection/linkedhashmap",
-          "collection/treemap",
-          "collection/arraydeque",
-          "collection/PriorityQueue",
-          "basic-extra-meal/comparable-omparator",
+          "gailan",
+          "arraylist",
+          "linkedlist",
+          "stack",
+          "hashmap",
+          "linkedhashmap",
+          "treemap",
+          "arraydeque",
+          "PriorityQueue",
+          "time-complexity",
+          "list-war-2",
+          "generic",
+          "iterator-iterable",
+          "fail-fast",
+          "comparable-omparator",
           ],
         },
         {
@@ -209,6 +237,7 @@ export const sidebarConfig = sidebar({
         {
           text: "2.9 Java新特性",
           prefix: "java8/",
+          link: "/java8/",
           collapsible: true,
           children: [
           "stream",
@@ -299,23 +328,23 @@ export const sidebarConfig = sidebar({
           prefix: "jvm/",
           collapsible: true,
           children: [
+          "readme.md",
           "what-is-jvm",
           "how-run-java-code",
           "class-load",
           "class-file-jiegou",
           "bytecode",
+          "vm-stack-register",
           "zijiema-zhiling",
-          "how-jvm-run-zijiema-zhiling",
-          "hsdb",
-          "asm",
-          "compile-jdk",
+          "stack-frame",
           "neicun-jiegou",
-          "whereis-the-object",
           "gc",
-          "tujie-gc",
-          "meituan-9-gc",
-          "problem-tools",
+          "gc-collector",
+          "whereis-the-object",
           "jit",
+          "console-tools",
+          "view-tools",
+          "arthas",
           "oom",
           "cpu-percent-100",
           "zongjie",
@@ -351,8 +380,10 @@ export const sidebarConfig = sidebar({
             {
               text: "3.1.3 Git",
               collapsible: true,
+              prefix: "git/",
               children: [
-              "git/git-qiyuan",
+              "git-qiyuan",
+              "port-22-to-443",
               ],
             },
             {
@@ -420,21 +451,22 @@ export const sidebarConfig = sidebar({
           ],
         },
         {
-          text: "3.4 Spring全家桶",
+          text: "3.4 Spring",
           collapsible: true,
           children: [
-            {
-              text: "Spring AOP扫盲",
-              link: "springboot/aop-log",
-            },
-            {
-              text: "Spring IoC扫盲",
-              link: "springboot/ioc",
-            },
+            "springboot/aop-log",
+            "springboot/ioc",
+          ],
+        },
+        {
+          text: "3.5 Spring Boot",
+          collapsible: true,
+          children: [
             {
               text: "搭建第一个Spring Boot项目",
               link: "springboot/initializr",
             },
+            "springboot/lombok",
             {
               text: "整合MySQL和Druid",
               link: "springboot/mysql-druid",
@@ -489,21 +521,21 @@ export const sidebarConfig = sidebar({
           ],
         },
         {
-          text: "3.5 Netty",
+          text: "3.6 Netty",
           collapsible: true,
           children: [
             "netty/rumen",
           ],
         },
         {
-          text: "3.6 MongoDB",
+          text: "3.7 MongoDB",
           collapsible: true,
           children: [
             "mongodb/rumen",
           ],
         },
         {
-          text: "3.7 消息队列",
+          text: "3.8 消息队列",
           collapsible: true,
           children: [
             {
@@ -518,7 +550,7 @@ export const sidebarConfig = sidebar({
           ],
         },
         {
-          text: "3.8 微服务/分布式",
+          text: "3.9 微服务/分布式",
           collapsible: true,
           children: [
             {
@@ -542,6 +574,15 @@ export const sidebarConfig = sidebar({
       collapsible: true,
       prefix: "mysql/",
       children: [
+        "install",
+        "database",
+        "table",
+        "data-type",
+        "charset",
+        "bin",
+        "column",
+        "select-simple",
+        "select-where",
         "redis-shuju-yizhixing",
         "lijie-shiwu",
         "shiwu-shixian",
@@ -550,15 +591,11 @@ export const sidebarConfig = sidebar({
     {
       text: "五、Redis",
       collapsible: true,
+      prefix: "redis/",
       children: [
-        {
-          text: "Redis入门",
-          link: "redis/rumen"
-        },
-        {
-          text: "缓存雪崩、穿透、击穿",
-          link: "redis/xuebeng-chuantou-jichuan"
-        },
+        "install",
+        "rumen",
+        "xuebeng-chuantou-jichuan",
       ],
     },
     {

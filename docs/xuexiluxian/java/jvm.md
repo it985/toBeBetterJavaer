@@ -1,7 +1,7 @@
 ---
 star: true
-title: 2023年最值得收藏的Java虚拟机（JVM）学习路线（🔥）
-shortTitle: Java虚拟机学习路线
+title: 2024年最值得收藏的JVM学习路线（🔥）
+shortTitle: JVM学习路线
 category:
   - 学习路线
 tag:
@@ -19,9 +19,9 @@ head:
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java/jvm-7036a048-4034-4965-92a6-e35d0211ba71.png)
 
-如果觉得这本书太厚了，可以阅读我公众号上的这篇文章，对 JVM 会有一个系统的梳理。
+如果觉得这本书太厚了，可以阅读进阶之路上的这篇文章，对 JVM 会有一个系统的梳理。
 
-[JVM 核心知识点总结](https://mp.weixin.qq.com/s/zOdiefZpkpa2dxpcBLlc6A)
+[JVM 核心知识点总结](https://javabetter.cn/jvm/zongjie.html)
 
 在金三银四/金九银十的跳槽季中，很多小伙伴都会忍不住蠢蠢欲动，其中 JVM 更是面试中不可或缺的一部分，所以我花了几天的时间整理了一条 JVM 的学习路线，希望能帮助到大家。
 
@@ -78,11 +78,11 @@ head:
 
 学 Java，怎么能少得了《二哥的Java进阶之路》，网址我贴下面了哈：
 
->[https://javabetter.cn/home.html](https://javabetter.cn/home.html)
+>[https://javabetter.cn/jvm/](https://javabetter.cn/jvm/)
 
-进去直接找「Java 核心」里面的 Java 虚拟机就对了。我按照前面的思维导图整理了 19 篇文章，全部都是硬核级别的，跟着学就对了。
+我按照前面的思维导图整理了 19 篇文章，全部都是硬核级别的，跟着学就对了。
 
-![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/java/jvm-cc84fead-278b-46aa-a8ab-a3b07acefc12.png)
+![](https://cdn.tobebetterjavaer.com/stutymore/jvm-20240116142803.png)
 
 ### **2）视频**
 
@@ -166,13 +166,11 @@ head:
 
 ### **5）付费专栏**
 
-二哥的技术派团队成员楼仔出品的《JVM 手册》，暂时只对《[技术派星球（戳链接有优惠券）](https://paicoding.com/article/detail/169)》用户开放，如果你需要这份 PDF 并且想享受更多服务的话，可以扫码加入。
+第一版的《二哥的JVM进阶之路》已经发布了，暂时只对《[二哥编程星球（戳链接有优惠券）](https://javabetter.cn/zhishixingqiu/)》的用户开放，如果你需要这份 PDF 并且想享受更多服务的话，可以扫码加入。
 
-![](https://cdn.tobebetterjavaer.com/stutymore/jvm-20230410212958.png)
+![](https://cdn.tobebetterjavaer.com/stutymore/readme-20240116133019.png)
 
-介绍一下技术派星球提供的服务内容，技术派项目学习教程，后续会采用连载的方式，让你从 0 到 1 也能搭建一套自己的网站；技术派项目答疑解惑，让你快速上手该项目，小白也能懂；向楼仔、二哥和大厂嘉宾 1 对 1 交流提问，告别迷茫；个人成长路线、职业规划和建议，帮助你有计划学习；简历指导，让你的简历也能脱颖而出，收获更多面试机会；需求方案、技术架构设计提供参考建议，对标大厂。
-
-这是 PDF 的大致内容，想要加入星球的用户，可以提前感受一下。
+除此之外，还有一份[技术派](https://javabetter.cn/zhishixingqiu/paicoding.html)团队楼仔编写的 JVM 手册。这是 PDF 的大致内容，想要加入星球的用户，可以提前感受一下。
 
 ![](https://cdn.tobebetterjavaer.com/stutymore/jvm-20230410213258.png)
 
@@ -241,7 +239,7 @@ JVM 相关的知识已经成为面试必考的科目了，但老实讲，JVM 相
 
 ---------
 
-GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 9300+ 的 Java 教程](https://javabetter.cn/overview/)
+GitHub 上标星 10000+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 10000+ 的 Java 教程](https://javabetter.cn/overview/)
 
 
 微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。

@@ -232,7 +232,7 @@ synchronized(AccountingSync.class){
 }
 ```
 
-## synchronized禁止指令重排
+## synchronized与happens before
 
 指令重排我们前面讲 [JMM](https://javabetter.cn/thread/jmm.html) 的时候讲过， 这里我们再结合 synchronized 关键字来讲一下。
 
@@ -266,6 +266,8 @@ class MonitorExample {
 在上图中，每一个箭头链接的两个节点，代表了一个 happens before 关系。黑色箭头表示程序顺序规则；橙色箭头表示监视器锁规则；蓝色箭头表示组合这些规则后提供的 happens before 保证。
 
 上图表示在线程 A 释放了锁之后，随后线程 B 获取同一个锁。在上图中，2 happens before 5。因此，线程 A 在释放锁之前所有可见的共享变量，在线程 B 获取同一个锁之后，将立刻变得对 B 线程可见。
+
+也就是说，synchronized 会防止临界区内的代码与外部代码发生重排序，`writer()` 方法中 a++ 的执行和 `reader()` 方法中 a 的读取之间存在 happens-before 关系，保证了执行顺序和内存可见性。
 
 ## synchronized属于可重入锁
 
@@ -328,7 +330,7 @@ public class AccountingSync implements Runnable{
 
 ----
 
-GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 9300+ 的 Java 教程](https://javabetter.cn/overview/)
+GitHub 上标星 10000+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 10000+ 的 Java 教程](https://javabetter.cn/overview/)
 
 
 微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。

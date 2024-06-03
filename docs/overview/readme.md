@@ -1,5 +1,5 @@
 ---
-title: 《二哥的Java进阶之路》小册简介，GitHub星标9300+，共计 32 万余字，500+张手绘图
+title: 《二哥的Java进阶之路》小册简介，GitHub星标10000+，共计 32 万余字，500+张手绘图
 shortTitle: 小册简介
 category:
   - Java核心
@@ -12,7 +12,7 @@ head:
       content: Java,Java SE,Java基础,Java教程,二哥的Java进阶之路,Java进阶之路,简介,github,pdf,二哥的Java进阶之路.pdf,Java进阶之路.pdf,java基础
 ---
 
-![](https://cdn.tobebetterjavaer.com/stutymore/readme-readme-fengmian.png)
+![](https://cdn.tobebetterjavaer.com/stutymore/README-20240130071411.png)
 
 # 第一章：小册简介
 
@@ -20,7 +20,7 @@ head:
 
 - 小册名字：二哥的 Java 进阶之路
 - 小册作者：沉默王二
-- 小册品质：能在 GitHub 取得 9300+ star，品质可以说是有目共睹，尤其是国内还有不少小伙伴在访问 GitHub 的时候很不顺利。
+- 小册品质：能在 GitHub 取得 10000+ star，品质可以说是有目共睹，尤其是国内还有不少小伙伴在访问 GitHub 的时候很不顺利。
 - 小册风格：通俗易懂、风趣幽默、深度解析，新手可以拿来入门，老手可以拿来进阶，重要的知识，比如说面试高频的内容会从应用到源码挖个底朝天，还会穿插介绍一些计算机底层知识，力求讲个明白）
 - 小册简介：这是一份通俗易懂、风趣幽默的Java学习指南，内容涵盖Java基础、Java并发编程、Java虚拟机、Java面试等核心知识点。学Java，就认准二哥的Java进阶之路😄
 - 小册品位：底部用了梵高 1889 年的《星空》（the starry night），绝美的漩涡星空，耀眼的月亮，宁静的村庄，还有一颗燃烧着火焰的巨大柏树，我想小册的艺术品位也是恰到好处的。
@@ -32,7 +32,7 @@ head:
 
 *二哥巴拉巴拉 ing...*
 
-小册的内容主要来源于我的开源知识库《[二哥的Java进阶之路](https://github.com/itwanger/toBeBetterJavaer)》，目前在 GitHub 上收获 9300+ star，深受读者喜爱。小册之所以叫《二哥的Java进阶之路》，是因为这样更方便小册的读者知道这份小册的作者是谁，IP 感更强烈一些。
+小册的内容主要来源于我的开源知识库《[二哥的Java进阶之路](https://github.com/itwanger/toBeBetterJavaer)》，目前在 GitHub 上收获 10000+ star，深受读者喜爱。小册之所以叫《二哥的Java进阶之路》，是因为这样更方便小册的读者知道这份小册的作者是谁，IP 感更强烈一些。
 
 如果有读者是第一次阅读这份小册，肯定又会问，“二哥是哪个鸟人？”
 
@@ -195,13 +195,13 @@ LeetCode 的模式是你只需要输入核心代码就可以了，华为 OD 机�
 
 随着时间的推移，星球积累的干货/资源越来越多，我花在星球上的时间也越来越多，[星球的知识图谱](https://javabetter.cn/zhishixingqiu/map.html)里沉淀的问题，你可以戳这个[链接](https://javabetter.cn/zhishixingqiu/map.html)去感受一下。有学习计划啊、有学生党秋招&春招&offer选择&考研&实习&专升本&培训班的问题啊、有工作党方向选择&转行&求职&职业规划的问题啊，还有大大小小的技术细节，我都竭尽全力去帮助球友，并且得到了球友的认可和尊重。
 
-目前星球已经 3300+ 人了，所以星球也涨价到了 129 元，后续会讲星球的价格调整为 149 元/年，所以想加入的小伙伴一定要趁早。
+目前星球已经 5000+ 人了，所以星球也涨价到了 149 元，后续会讲星球的价格调整为 159 元/年，所以想加入的小伙伴一定要趁早。
 
-![](https://cdn.tobebetterjavaer.com/stutymore/readme-20230904114419.png)
+![](https://cdn.tobebetterjavaer.com/stutymore/readme-20240521200742.png)
 
-你可以微信扫码或者长按自动识别领取 30 元优惠券，**99/年** 加入，满 4000 人会涨价至 149 元，所以想要加入的话请趁早。
+你可以微信扫码或者长按自动识别领取 30 元优惠券，**119/年** 加入，新项目 pmhub 上线后会涨价至 159 元，所以想要加入的话请趁早。
 
-<img src="https://cdn.tobebetterjavaer.com/stutymore/readme-20230411114734.png" title="二哥的编程星球" width="300" />
+<img src="https://cdn.tobebetterjavaer.com/paicoding/952047c145246bf6c26ea96c97326602.png" title="二哥的编程星球" width="300" />
 
 对了，**加入星球后记得花 10 分钟时间看一下星球的两个置顶贴，你会发现物超所值**！
 

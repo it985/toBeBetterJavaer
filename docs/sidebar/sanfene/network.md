@@ -1,7 +1,7 @@
 ---
-title: 计算机网络面试题，62道计算机网络八股文（2.2万字80张手绘图），面渣逆袭必看👍
+title: 计算机网络面试题，63道计算机网络八股文（2.2万字80张手绘图），面渣逆袭必看👍
 shortTitle: 面渣逆袭-计算机网络
-description: 下载次数超 1 万次，2.2 万字 80 张手绘图，详解 62 道计算机网络面试高频题（让天下没有难背的八股），面渣背会这些计算机网络八股文，这次吊打面试官，我觉得稳了（手动 dog）。
+description: 下载次数超 1 万次，2.2 万字 80 张手绘图，详解 63 道计算机网络面试高频题（让天下没有难背的八股），面渣背会这些计算机网络八股文，这次吊打面试官，我觉得稳了（手动 dog）。
 author: 三分恶
 category:
   - 面渣逆袭
@@ -13,7 +13,7 @@ head:
       content: 计算机网络,计算机网络面试题,面试题,八股文
 ---
 
-2.2 万字 80 张手绘图，详解 62 道计算机网络面试高频题（让天下没有难背的八股），面渣背会这些计算机网络八股文，这次吊打面试官，我觉得稳了（手动 dog）。整理：沉默王二，戳[转载链接](https://mp.weixin.qq.com/s/FvxyiMyq0422yifcyoG8vg)，作者：三分恶，戳[原文链接](https://mp.weixin.qq.com/s/yAlErlC09GnjaVvwUo3Acg)。
+2.2 万字 80 张手绘图，详解 63 道计算机网络面试高频题（让天下没有难背的八股），面渣背会这些计算机网络八股文，这次吊打面试官，我觉得稳了（手动 dog）。整理：沉默王二，戳[转载链接](https://mp.weixin.qq.com/s/FvxyiMyq0422yifcyoG8vg)，作者：三分恶，戳[原文链接](https://mp.weixin.qq.com/s/yAlErlC09GnjaVvwUo3Acg)。
 
 大家好，我是二哥呀，今天继续来给大家分享三弟的面渣逆袭！
 
@@ -25,48 +25,74 @@ head:
 
 ### 1.说下计算机网络体系结构
 
-计算机网络体系结构，一般有三种：OSI 七层模型、TCP/IP 四层模型、五层结构。
+计算机网络体系结构通过将复杂的网络通信分解成不同的层次，来标准化交互的过程。常见的模型包括 OSI 七层模型、TCP/IP 四层模型和五层体系结构。
 
-![三种网络体系结构](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-11ecdc9c-5a06-4429-bfc4-115793749000.jpg)
+![三分恶面渣逆袭：三种网络体系结构](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-11ecdc9c-5a06-4429-bfc4-115793749000.jpg)
 
+OSI 是理论上的网络通信模型，TCP/IP 是实际应用层面上的网络通信模型，五层结构是为了方便理解和记忆。
 
+#### 说说 OSI 七层模型？
 
-简单说，OSI 是一个理论上的网络通信模型，TCP/IP 是实际上的网络通信模型，五层结构就是为了介绍网络原理而折中的网络通信模型。
+OSI（Open System Interconnection）七层参考模型是一个网络架构模型，由国际标准化组织（ISO）提出，用于描述和标准化各种计算机网络的功能和过程。这七层从低到高分别是：
 
-> **OSI 七层模型**
+- **应用层**：最靠近用户的层，负责处理特定的应用程序细节。这一层提供了网络服务与用户应用软件之间的接口。例如，Web 浏览器、FTP 客户端和服务器、电子邮件客户端等。
+- **表示层**：确保从一个系统发送的信息可以被另一个系统的应用层读取。它负责数据的转换、压缩和加密。例如，确保数据从一种编码格式转换为另一种，如 ASCII 到 EBCDIC。
+- **会话层**：管理用户的会话，控制网络上两节点间的对话和数据交换的管理。它负责建立、维护和终止会话。例如，建立一个会话令牌，以便在网络上的两个节点之间传递。
+- **传输层**：提供端到端的通信服务，保证数据的完整性和正确顺序。这一层包括 TCP 和 UDP 等。
+- **网络层**：负责在多个网络之间进行数据传输，确保数据能够在复杂的网络结构中找到从源到目的地的最佳路径。这层使用的是 IP（Internet Protocol）协议。
+- **数据链路层**：在物理连接中提供可靠的传输，负责建立和维护两个相邻节点间的链路。包括帧同步、MAC（媒体访问控制）。
+- **物理层**：负责在物理媒介上实现原始的数据传输，比如电缆、光纤和无线信号传输。涉及的内容包括电压、接口、针脚、电缆的规格和传输速率等。
 
-OSI 七层模型是国际标准化组织（International Organization for Standardization）制定的一个用于计算机或通信系统间互联的标准体系。
+#### 说说 TCP/IP 四层模型？
 
-- 应用层：通过应用进程之间的交互来完成特定网络应用，应用层协议定义的是应用进程间通信和交互的规则，常见的协议有：**HTTP FTP  SMTP SNMP DNS**.
-- 表示层：数据的表示、安全、压缩。确保一个系统的应用层所发送的信息可以被另一个系统的应用层读取。
-- 会话层：建立、管理、终止会话，是用户应用程序和网络之间的接口。
-- 运输层：提供源端与目的端之间提供可靠的透明数据传输，传输层协议为不同主机上运行的进程提供逻辑通信。
-- 网络层：将网络地址翻译成对应的物理地址，实现不同网络之间的路径选择, 协议有 **ICMP IGMP IP 等**.
-- 数据链路层：在物理层提供比特流服务的基础上，建立相邻结点之间的数据链路。
-- 物理层：建立、维护、断开物理连接。
+TCP/IP 四层模型是互联网通信的核心，定义了一系列协议和标准，确保设备间可以可靠地进行数据传输。
 
-> **TCP/IP 四层模型**
+![medium：Victor Aaron Winnercoz](https://cdn.tobebetterjavaer.com/stutymore/network-20240602114602.png)
 
-- 应用层：对应于 OSI 参考模型的（应用层、表示层、会话层）。
-- 传输层: 对应 OSI 的传输层，为应用层实体提供端到端的通信功能，保证了数据包的顺序传送及数据的完整性。
-- 网际层：对应于 OSI 参考模型的网络层，主要解决主机到主机的通信问题。
-- 网络接口层：与 OSI 参考模型的数据链路层、物理层对应。
+①、**应用层（Application Layer）**：直接面向用户和应用程序，提供各种网络服务。它包含了用于特定应用的协议和服务，如 HTTP（HyperText Transfer Protocol）、FTP（File Transfer Protocol）、SMTP（Simple Mail Transfer Protocol）等。
 
-> **五层体系结构**
+示例：当在浏览器中输入一个 URL 并访问一个网页时，浏览器使用 HTTP 协议从 Web 服务器请求页面内容。
 
-- 应用层：对应于 OSI 参考模型的（应用层、表示层、会话层）。
-- 传输层：对应 OSI 参考模型的的传输层
-- 网络层：对应 OSI 参考模型的的网络层
-- 数据链路层：对应 OSI 参考模型的的数据链路层
-- 物理层：对应 OSI 参考模型的的物理层。
+②、**传输层（Transport Layer）**：提供端到端的通信服务，确保数据可靠传输。它负责分段数据、流量控制、错误检测和纠正。常见的传输层协议有 TCP 和 UDP。
+
+示例：当发送一封电子邮件时，TCP 协议确保邮件从你的客户端可靠地传输到邮件服务器。
+
+③、**网际层**：或者叫网络层（Internet Layer），负责在不同网络之间路由数据包，提供逻辑地址（IP 地址）和网络寻址功能。用于处理数据包的分组、转发和路由选择，确保数据可以从源端传输到目标端。
+
+常见协议：IPv4、IPv6、ICMP（Internet Control Message Protocol）。
+
+示例：当访问一个网站时，网络层协议（如 IPv4）将你的请求从你的计算机通过多个路由器传输到目标服务器。
+
+④、**网络接口层（Network Access Layer）**：或者叫链路层（Link Layer），负责将数字信号在物理通道（网线）中准确传输，定义了如何在单一网络链路上传输数据，如何处理数据帧的发送和接收，包括物理地址（MAC 地址）的解析。
+
+常见协议：以太网（Ethernet）、Wi-Fi。
+
+示例：在一个局域网（LAN）中，计算机通过以太网连接交换机，链路层协议负责数据帧在网络设备间的传输。
+
+#### 说说五层体系结构？
+
+是对 OSI 和 TCP/IP 的折衷，它保留了 TCP/IP 的实用性，同时提供了比四层模型更细致的分层，便于教学和理解网络的各个方面。
+
+- 应用层：作为网络服务和最终用户之间的接口。它提供了一系列供应用程序使用的协议，如 HTTP（网页）、FTP（文件传输）、SMTP（邮件传输）等。使用户的应用程序可以访问网络服务。
+- 传输层：提供进程到进程的通信管理，这一层确保数据按顺序、无错误地传输。主要协议包括 TCP 和 UDP。
+- 网络层：负责数据包从源到目的地的传输和路由选择，包括跨越多个网络（即互联网）。它使用逻辑地址（如 IP 地址）来唯一标识设备。路由器是网络层设备。
+- 数据链路层：确保从一个节点到另一个节点的可靠、有效的数据传输。交换机、网桥是数据链路层设备。
+- 物理层：电缆、光纤、无线电频谱、网络适配器等。
+
+#### TCP三次握手四次挥手工作在哪一层？
+
+三次握手和四次挥手都是工作在传输层。传输层（Transport Layer）是 OSI 模型的第四层，负责提供端到端的通信服务，包括数据传输的建立、维护和终止。
+
+TCP 作为一种面向连接的协议，通过三次握手建立连接，通过四次挥手终止连接，确保数据传输的可靠性和完整性。
+
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的华为 OD 面经同学 1 一面面试原题：说一些 OSI 七层参考模型
+> 2. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的京东面经同学 2  后端面试原题：TCP三次握手四次挥手工作在哪一层？
 
 ### 2.说一下每一层对应的网络协议有哪些？
 
 一张表格总结常见网络协议：
 
 ![各层网络对应的网络协议](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-ad64bbac-e0d5-4286-9b77-d008e8c8d419.jpg)
-
-
 
 ### 3.那么数据在各层之间是怎么传输的呢？
 
@@ -80,12 +106,9 @@ OSI 七层模型是国际标准化组织（International Organization for Standa
 
 ![数据在各层之间的传输](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-6e4a8326-992c-442a-8265-5dc3d179b689.jpg)
 
-
-
 这个过程类似写信，写一封信，每到一层，就加一个信封，写一些地址的信息。到了目的地之后，又一层层解封，传向下一个目的地。
 
-GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 9300+ 的 Java 教程](https://javabetter.cn/overview/)
-
+GitHub 上标星 10000+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括 Java 基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM 等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 10000+ 的 Java 教程](https://javabetter.cn/overview/)
 
 微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
@@ -95,49 +118,53 @@ GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https:
 
 ### 4.从浏览器地址栏输入 url 到显示主页的过程？
 
-这道题，大概的过程比较简单，但是有很多点可以细挖：DNS 解析、TCP 三次握手、HTTP 报文格式、TCP 四次挥手等等。
+从在浏览器地址栏输入 URL 到显示主页的过程包括多个步骤，涵盖了 DNS 解析、TCP 连接、发送 HTTP 请求、服务器处理请求并返回 HTTP 响应、浏览器处理响应并渲染页面等多个环节。
 
-1.  DNS 解析：将域名解析成对应的 IP 地址。
-2.  TCP 连接：与服务器通过三次握手，建立 TCP 连接
-3.  向服务器发送 HTTP 请求
-4.  服务器处理请求，返回 HTTp 响应
-5.  浏览器解析并渲染页面
-6.  断开连接：TCP 四次挥手，连接结束
+1. **DNS 解析**：浏览器发起一个 DNS 请求到 DNS 服务器，将域名解析为服务器的 IP 地址。
+2. **TCP 连接**：浏览器通过解析得到的 IP 地址与服务器建立 TCP 连接（通常是通过 443 端口进行 SSL 加密的 HTTPS 连接）。这一步涉及到 TCP 的三次握手过程，确保双方都准备好进行数据传输。
+3. **发送 HTTP 请求**：浏览器构建 HTTP 请求消息，包括请求行（如 GET / HTTP/1.1）、请求头（包含用户代理、接受的内容类型等信息）和请求体（如果有）；将请求发送到服务器。
+4. **服务器处理请求**：服务器接收到 HTTP 请求后，根据请求的资源路径，经过后端处理（可能包括数据库查询等），生成 HTTP 响应消息；响应消息包括状态行（如 HTTP/1.1 200 OK）、响应头（内容类型、缓存控制等信息）和响应体（请求的资源内容）。
+5. **浏览器接收 HTTP 响应**：浏览器接收到服务器返回的 HTTP 响应数据，开始解析响应体中的 HTML 内容；然后构建 DOM 树、解析 CSS 和 JavaScript 文件等，最终渲染页面。
+6. **断开连接**：TCP 四次挥手，连接结束
 
 我们以输入 www.baidu.com 为例：
 
-![www.baidu.comliu 到显示主页](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-c2c19567-dec4-4dbd-9a6e-4c0e52070ed6.jpg)
+![三分恶面渣逆袭：www.baidu.com URL 到显示主页](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-c2c19567-dec4-4dbd-9a6e-4c0e52070ed6.jpg)
 
+**各个过程都使用了哪些协议？**
 
+![三分恶面渣逆袭：www.baidu.com URL 到显示主页过程使用的协议](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-f5ff6e46-4524-4594-b294-56a23c366df9.jpg)
 
-> 各个过程都使用了哪些协议？
-
-![www.baidu.comliu 到显示主页过程使用的协议](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-f5ff6e46-4524-4594-b294-56a23c366df9.jpg)
-
-
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的字节跳动商业化一面的原题：url 请求的全过程（要求详细）
+> 2. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的字节跳动面经同学 9 飞书后端技术一面面试原题：输入 URL 会发生什么
 
 ### 5.说说 DNS 的解析过程？
 
-DNS，英文全称是 **domain name system**，域名解析系统，它的作用也很明确，就是域名和 IP 相互映射。
+DNS 的全称是 **Domain Name System**，也就是域名解析系统，它可以将域名映射到对应的 IP 地址上，比如说我们访问 www.javabetter.cn，实际上访问的是我在阿里云上一台丐版服务器，它的 IP 地址是 xxx.xxx.xxx.xxx。
 
-DNS 的解析过程如下图：
+当然了，也可以通过 IP 地址直接访问服务器，但不方便记忆，所以就有了域名系统。一个好的域名可以卖好多好多钱，像 javabetter.cn 这个域名，一年需要 39 块钱。
 
-![DNS 解析流程](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-03408af8-3ca8-49bd-9244-6afa6fe132c6.jpg)
+域名到 IP 之间的映射，就需要 DNS 来完成。
 
+![二哥的 Java 进阶之路：javabetter.cn](https://cdn.tobebetterjavaer.com/stutymore/network-20240417102013.png)
 
+我来说说 DNS 的解析过程吧：
 
-假设你要查询 **www.baidu.com** 的 IP 地址:
+![三分析面渣逆袭：DNS 解析流程](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-03408af8-3ca8-49bd-9244-6afa6fe132c6.jpg)
 
-- 首先会查找浏览器的缓存,看看是否能找到**www.baidu.com**对应的 IP 地址，找到就直接返回；否则进行下一步。
-- 将请求发往给本地 DNS 服务器，如果查找到也直接返回，否则继续进行下一步；
+假设我们在浏览器地址栏里键入了 [paicoding.com](https://paicoding.com)：
 
-![域名服务器层级](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-924caa3c-37cc-4a15-8796-4c43d6a1b07b.jpg)
+浏览器会首先检查自己的缓存中是否有这个域名对应的 IP 地址，如果有，直接返回；如果没有，进入下一步。
 
+![](https://cdn.tobebetterjavaer.com/stutymore/network-20240417103757.png)
 
+检查本地 DNS 缓存是否有该域名的记录。如果没有，向**根域名服务器**发送请求，根域名服务器将请求指向更具体的服务，如 `com` 顶级域名服务器。
 
-- 本地 DNS 服务器向**根域名服务器**发送请求，根域名服务器返回负责`com`的顶级域名服务器的 IP 地址的列表。
-- 本地 DNS 服务器再向其中一个负责`com`的顶级域名服务器发送一个请求，返回负责`baidu.com`的权限域名服务器的 IP 地址列表。
-- 本地 DNS 服务器再向其中一个权限域名服务器发送一个请求，返回**www.baidu.com**所对应的 IP 地址。
+顶级域名服务器再将请求指向权限域名服务器，通常由域名注册机构直接管理，`paicoding.com`是在阿里云上注册的，所以阿里云会提供对应的 DNS 解析服务，将域名和阿里云服务器绑定起来。
+
+最终，浏览器使用获得的 IP 地址发起一个 HTTP 请求到目标服务器，然后该服务器返回所请求的网页内容。
+
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的华为面经同学 6 Java  通用软件开发一面面试原题：说说 DNS 的解析过程
 
 ### 6.说说 WebSocket 与 Socket 的区别？
 
@@ -152,8 +179,7 @@ DNS 的解析过程如下图：
 
 ![常见端口和服务](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-b026de43-e203-40be-ac6c-a9d386d319b2.jpg)
 
-GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 9300+ 的 Java 教程](https://javabetter.cn/overview/)
-
+GitHub 上标星 10000+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括 Java 基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM 等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 10000+ 的 Java 教程](https://javabetter.cn/overview/)
 
 微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
@@ -163,44 +189,83 @@ GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https:
 
 ### 8.说说 HTTP 常用的状态码及其含义？
 
-HTTP 状态码首先应该知道个大概的分类：
+HTTP 响应状态码是由服务器返回给客户端，用于表示对请求的响应结果。
 
-- 1XX：信息性状态码
-- 2XX：成功状态码
-- 3XX：重定向状态码
-- 4XX：客户端错误状态码
-- 5XX：服务端错误状态码
+这些状态码分为五个不同的类别，每个类别用一个数字开头，共有三位数：
 
-几个常用的，面试之外，也应该记住：
+- 1XX：临时的响应，客户端应继续请求。
+- 2XX：请求已成功被服务器接收。
+- 3XX：用来重定向。
+- 4XX：请求可能出错。
+- 5XX：服务器在尝试处理请求时发生了错误。
 
-![常见 HTTP 状态码](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-edf4b4c4-79c1-445c-b0e1-86c0dce9d96d.jpg)
+![三分恶面渣逆袭：常见 HTTP 状态码](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-edf4b4c4-79c1-445c-b0e1-86c0dce9d96d.jpg)
 
-
-
-之前写过一篇：程序员五一被拉去相亲，结果彻底搞懂了 HTTP 常用状态码，还比较有意思，可以看看。
-
-> **说一下 301 和 302 的区别？**
+#### 说一下 301 和 302 的区别？
 
 - 301：永久性移动，请求的资源已被永久移动到新位置。服务器返回此响应时，会返回新的资源地址。
 - 302：临时性性移动，服务器从另外的地址响应资源，但是客户端还应该使用这个地址。
 
 用一个比喻，301 就是嫁人的新垣结衣，302 就是有男朋友的长泽雅美。
 
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的字节跳动面经同学 13 Java 后端二面面试原题：http 的响应号有哪些
+
 ### 9.HTTP 有哪些请求方式？
 
-![HTTP 请求方式](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-9e7939fa-0f71-4c45-86e4-26534a05220e.jpg)
+HTTP 协议定义了多种请求方式，用以指示请求的目的。常见的请求方式有 GET、POST、DELETE、PUT。
 
+![三分恶面渣逆袭：HTTP 请求方式](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-9e7939fa-0f71-4c45-86e4-26534a05220e.jpg)
 
+- GET：请求检索指定的资源。应该只用于获取数据，并且是幂等的，即多次执行相同的 GET 请求应该返回相同的结果，并且不会改变资源的状态。
+- POST：向指定资源提交数据，请求服务器进行处理（如提交表单或上传文件）。数据被包含在请求体中。可能会创建新的资源或修改现有资源。
+- DELETE：删除指定的资源。
+- PUT：用于替换指定的资源。如果指定的资源不存在，创建一个新资源。
 
-其中，POST、DELETE、PUT、GET 的含义分别对应我们最熟悉的增、删、改、查。
+#### HTTP 的 GET 方法可以实现写操作吗?
+
+可以是可以，但是不推荐。
+
+使用 GET 执行写操作可能导致严重的安全问题，如跨站请求伪造（CSRF）。
+
+实际开发中，也应该杜绝使用 GET 方法执行写操作。在[技术派实战项目](https://javabetter.cn/zhishixingqiu/paicoding.html)中，我们会在接口上明确规定应该使用哪种请求方式。
+
+![技术派实战项目源码](https://cdn.tobebetterjavaer.com/stutymore/network-20240418131052.png)
+
+客户端一旦使用错误 ❎，将会收到一个 405 Method Not Allowed 的响应。
+
+#### 什么是幂等？幂等方法了解哪些？
+
+幂等（Idempotence）是一个数学概念，用于描述某些操作的特性，即无论操作执行多少次，结果都是相同的。换句话说，幂等操作可以重复执行而不会改变系统状态。
+
+如果一个操作是幂等的，那么对同一资源执行该操作一次和执行多次的效果相同。
+
+在正确实现的条件下，GET、HEAD、PUT 和 DELETE 等方法都是幂等的，而 POST 方法不是。
+
+例如，`GET /pageX HTTP/1.1` 幂等的。连续调用多次，客户端接收到的结果都是一样的：
+
+```
+GET /pageX HTTP/1.1
+GET /pageX HTTP/1.1
+GET /pageX HTTP/1.1
+GET /pageX HTTP/1.1
+```
+
+`DELETE /idX/delete HTTP/1.1` 是幂等的，即便是不同请求之间接收到的状态码不一样：
+
+```
+DELETE /idX/delete HTTP/1.1   -> Returns 200 if idX exists
+DELETE /idX/delete HTTP/1.1   -> Returns 404 as it just got deleted
+DELETE /idX/delete HTTP/1.1   -> Returns 404
+```
+
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的字节跳动面经同学 13 Java 后端二面面试原题：http 有哪些方法，http 的 get 方法可以实现写操作吗，https 传递 url 安全吗，为什么数据在浏览器中，中间人攻击是什么
+> 2. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的字节跳动面经同学 1 技术二面面试原题：什么是幂等？幂等方法了解哪些？
 
 ### 10.说⼀下 GET 和 POST 的区别？
 
 可以从以下几个方面来说明 GET 和 POST 的区别：
 
 ![Get 和 Post 区别](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-58214e69-98a3-4d89-9896-362a364ba017.jpg)
-
-
 
 1.  从 HTTP 报文层面来看，GET 请求将信息放在 URL，POST 将请求信息放在请求体中。这一点使得 GET 请求携带的数据量有限，因为 URL 本身是有长度限制的，而 POST 请求的数据存放在报文体中，因此对大小没有限制。而且从形式上看，GET 请求把数据放 URL 上不太安全，而 POST 请求把数据放在请求体里想比较而言安全一些。
 2.  从数据库层面来看，GET 符合幂等性和安全性，而 POST 请求不符合。这个其实和 GET/POST 请求的作用有关。按照 HTTP 的约定，GET 请求用于查看信息，不会改变服务器上的信息；而 POST 请求用来改变服务器上的信息。正因为 GET 请求只查看信息，不改变信息，对数据库的一次或多次操作获得的结果是一致的，认为它符合幂等性。安全性是指对数据库操作没有改变数据库中的数据。
@@ -216,52 +281,63 @@ HTTP 中的 GET 方法是通过 URL 传递数据的，但是 URL 本身其实并
 
 ### 12.HTTP 请求的过程与原理？
 
-HTTP 协议定义了浏览器怎么向服务器请求文档，以及服务器怎么把文档传给浏览器。
+HTTP 全称是超文本传输协议（HyperText Transfer Protocol），是一个基于请求与响应模式的应用层协议，基于 TCP/IP 协议传输数据。
 
-![HTTP 请求的过程和原理](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-9a1a42b7-c14a-43d8-b8d8-f1f18c9b923b.jpg)
+HTTP 遵循标准的客户端-服务器模型，客户端打开连接以发出请求，然后等待它收到服务器端响应。
 
+![三分恶面渣逆袭：HTTP 请求的过程和原理](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-9a1a42b7-c14a-43d8-b8d8-f1f18c9b923b.jpg)
 
+- 在浏览器输入 URL 后，浏览器首先会通过 DNS 解析获取到服务器的 IP 地址，然后与服务器建立 TCP 连接。
+- TCP 连接建立后，浏览器会向服务器发送 HTTP 请求。
+- 服务器收到请求后，会根据请求的信息处理请求。
+- 处理完请求后，服务器会返回一个 HTTP 响应给浏览器。
+- 浏览器收到响应后，会根据响应的信息渲染页面。然后，浏览器和服务器断开 TCP 连接。
 
-- 每个服务器都有一个进程，它不断监听 TCP 的端口 80，以便发现是否有浏览器向它发出连接建立请求
-- 监听到连接请求，就会建立 TCP 连接
-- 浏览器向服务器发出浏览某个页面的请求，服务器接着就返回所请求的页面作为响应
-- 最后，释放 TCP 连接
+客户端发送一个请求到服务器，服务器处理请求并返回一个响应。这个过程是同步的，也就是说，客户端在发送请求后必须等待服务器的响应。在等待响应的过程中，客户端不会发送其他请求。
 
-在浏览器和服务器之间的请求和响应的交互，必须按照规定的格式和遵循一定的规则，这些格式和规则就是超文本传输协议 HTTP。
-
-PS:这道题和上面浏览器输入网址发生了什么那道题大差不差。
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的华为 OD 面经同学 1 一面面试原题：什么是 HTTP？
+> 2. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的招商银行面经同学 6 招银网络科技面试原题：HTTP传送请求的一次流程
 
 ### 13.说一下 HTTP 的报文结构？
 
-HTTP 报文有两种，HTTP 请求报文和 HTTP 响应报文：
+HTTP 的报文结构可以分为两类：请求报文和响应报文。两者在结构上相似，都包含了**起始行**、**头部**和**消息正文**。
 
-![HTTP 报文](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-2ea62914-e1ed-418c-9580-e13ecf7b8992.jpg)
+![三分恶面渣逆袭：HTTP 报文](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-2ea62914-e1ed-418c-9580-e13ecf7b8992.jpg)
 
+#### 说下 HTTP 请求报文结构？
 
-
-**HTTP 请求报文**
-
-HTTP 请求报文的格式如下：
-
-```
-GET / HTTP/1.1
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5)
-Accept: */*
+```http
+GET /index.html HTTP/1.1
+Host: www.javabetter.cn
+Accept: text/html
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3
 ```
 
-HTTP 请求报文的第一行叫做请求行，后面的行叫做首部行，首部行后还可以跟一个实体主体。请求首部之后有一个空行，这个空行不能省略，它用来划分首部与实体。
+①、请求行
 
-请求行包含三个字段：
+包括方法（如 GET、POST）、请求的 URL 和 HTTP 协议的版本。例如：`GET /index.html HTTP/1.1`。
 
-- 方法字段：包括 POST、GET 等请方法。
-- URL 字段
-- HTTP 版本字段。
+②、请求头部
 
-**HTTP 响应报文**
+包含请求的附加信息，如客户端想要接收的内容类型、浏览器类型等。
 
-HTTP 响应报文的格式如下：
+请求头部由键值对组成，键和值之间用冒号分隔，每一行一个键值对。例如：
 
-```
+- `Host: www.javabetter.cn`，表示请求的主机名（域名）
+- `Accept: text/html`，表示客户端可以接收的媒体类型
+- `User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3`，表示客户端的浏览器类型
+
+③、空行
+
+请求头部和消息正文之间有一个空行，表示请求头部结束。
+
+④、消息正文（可选）
+
+请求的具体内容，如 POST 请求中的表单数据；GET 请求中没有消息正文。
+
+#### 说下 HTTP 响应报文结构？
+
+```http
 HTTP/1.0 200 OK
 Content-Type: text/plain
 Content-Length: 137582
@@ -269,71 +345,89 @@ Expires: Thu, 05 Dec 1997 16:00:00 GMT
 Last-Modified: Wed, 5 August 1996 15:55:28 GMT
 Server: Apache 0.84
 <html>
-  <body>Hello World</body>
+  <body>沉默王二很天真</body>
 </html>
 ```
 
-HTTP 响应报文的第一行叫做**状态行**，后面的行是**首部行**，最后是**实体主体**。
+①、状态行
 
-- **状态行**包含了三个字段：协议版本字段、状态码和相应的状态信息。
-- **实体部分**是报文的主要部分，它包含了所请求的对象。
-- **首部行**首部可以分为四种首部，请求首部、响应首部、通用首部和实体首部。通用首部和实体首部在请求报文和响应报文中都可以设置，区别在于请求首部和响应首部。
+包括 HTTP 协议的版本、状态码（如 200、404）和状态消息（如 OK、NotFound）。例如：`HTTP/1.0 200 OK`。
 
-- 常见的请求首部有 Accept 可接收媒体资源的类型、Accept-Charset 可接收的字符集、Host 请求的主机名。
-- 常见的响应首部有 ETag 资源的匹配信息，Location 客户端重定向的 URI。
-- 常见的通用首部有 Cache-Control 控制缓存策略、Connection 管理持久连接。
-- 常见的实体首部有 Content-Length 实体主体的大小、Expires 实体主体的过期时间、Last-Modified 资源的最后修改时间。
+②、响应头部
+
+包含响应的附加信息，如服务器类型、内容类型、内容长度等。也是键值对，例如：
+
+- `Content-Type: text/plain`，表示响应的内容类型
+- `Content-Length: 137582`，表示响应的内容长度
+- `Expires: Thu, 05 Dec 1997 16:00:00 GMT`，表示资源的过期时间
+- `Last-Modified: Wed, 5 August 1996 15:55:28 GMT`，表示资源的最后修改时间
+- `Server: Apache 0.84`，表示服务器类型
+
+③、空行
+
+表示响应头部结束。
+
+④、消息正文（可选）
+
+响应的具体内容，如 HTML 页面。不是所有的响应都有消息正文，如 204 No Content 状态码的响应。
+
+> 1.  [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的比亚迪面经同学 3 Java 技术一面面试原题：说一下 HTTP 的结构和 HTTPS 的原理
+> 2. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的 小公司面经合集好未来测开面经同学 3 测开一面面试原题：HTTP 请求消息和响应消息的格式
 
 ### 14.URI 和 URL 有什么区别?
 
 ![URI 和 URL](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-fee87ab7-0475-429b-aba6-7a8df6841572.jpg)
 
-
-
 - URI，统一资源标识符(Uniform Resource Identifier， URI)，标识的是 Web 上每一种可用的资源，如 HTML 文档、图像、视频片段、程序等都是由一个 URI 进行标识的。
-- URL，统一资源定位符（Uniform Resource Location)，它是 URI 的一种子集，主要作用是提供资源的路径。
+- URL，统一资源定位符（Uniform Resource Location），它是 URI 的一种子集，主要作用是提供资源的路径。
 
 它们的主要区别在于，URL 除了提供了资源的标识，还提供了资源访问的方式。这么比喻，URI 像是身份证，可以唯一标识一个人，而 URL 更像一个住址，可以通过 URL 找到这个人——人类住址协议://地球/中国/北京市/海淀区/xx 职业技术学院/14 号宿舍楼/525 号寝/张三.男。
 
-### 15.说下 HTTP/1.0，1.1，2.0 的区别？
+### 15.说下 HTTP1.0，1.1，2.0 的区别？
 
-关键需要记住 **HTTP/1.0** 默认是短连接，可以强制开启，HTTP/1.1 默认长连接，HTTP/2.0 采用**多路复用**。
+> 如果记不住下面这么多，可以回答：**HTTP1.0** 默认短连接，HTTP 1.1 默认长连接，HTTP 2.0 采用**多路复用**。
 
-**HTTP/1.0**
+#### 说下 HTTP1.0
 
-- 默认使用**短连接**，每次请求都需要建立一个 TCP 连接。它可以设置`Connection: keep-alive` 这个字段，强制开启长连接。
+- **无状态协议**：HTTP 1.0 是无状态的，每个请求之间相互独立，服务器不保存任何请求的状态信息。
+- **非持久连接**：默认情况下，每个 HTTP 请求/响应对之后，连接会被关闭，属于短连接。这意味着对于同一个网站的每个资源请求，如 HTML 页面上的图片和脚本，都需要建立一个新的 TCP 连接。可以设置`Connection: keep-alive` 强制开启长连接。
 
-**HTTP/1.1**
+#### 说下 HTTP1.1
 
-- 引入了持久连接，即 TCP 连接默认不关闭，可以被多个请求复用。
-- 分块传输编码，即服务端每产生一块数据，就发送一块，用” 流模式” 取代” 缓存模式”。
-- 管道机制，即在同一个 TCP 连接里面，客户端可以同时发送多个请求。
+- **持久连接**：HTTP 1.1 引入了持久连接（也称为 HTTP keep-alive），默认情况下不会立即关闭连接，可以在一个连接上发送多个请求和响应。极大减轻了 TCP 连接的开销。
+- **流水线处理**：HTTP 1.1 支持客户端在前一个请求的响应到达之前发送下一个请求，以提高传输效率。
 
-**HTTP/2.0**
+#### 说下 HTTP2.0
 
-- 二进制协议，1.1 版本的头信息是文本（ASCII 编码），数据体可以是文本或者二进制；2.0 中，头信息和数据体都是二进制。
-- 完全多路复用，在一个连接里，客户端和浏览器都可以同时发送多个请求或回应，而且不用按照顺序一一对应。
-- 报头压缩，HTTP 协议不带有状态，每次请求都必须附上所有信息。Http/2.0 引入了头信息压缩机制，使用 gzip 或 compress 压缩后再发送。
-- 服务端推送，允许服务器未经请求，主动向客户端发送资源。
+- **二进制协议**：HTTP 2.0 使用二进制而不是文本格式来传输数据，解析更加高效。
+- **多路复用**：一个 TCP 连接上可以同时进行多个 HTTP 请求/响应，解决了 HTTP 1.x 的队头阻塞问题。
+- **头部压缩**：HTTP 协议不带状态，所以每次请求都必须附上所有信息。HTTP 2.0 引入了头部压缩机制，可以使用 gzip 或 compress 压缩后再发送，减少了冗余头部信息的带宽消耗。
+- **服务端推送**：服务器可以主动向客户端推送资源，而不需要客户端明确请求。
+
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的腾讯面经同学 23 QQ 后台技术一面面试原题：HTTP 1 和 2 的区别
 
 ### 16.HTTP/3 了解吗？
 
-HTTP/3 主要有两大变化，**传输层基于 UDP**、使用**QUIC 保证 UDP 可靠性**。
+HTTP/2.0 基于 TCP 协议，而 HTTP/3.0 则基于 QUIC 协议，Quick UDP Connections，直译为快速 UDP 网络连接。
 
-HTTP/2 存在的一些问题，比如重传等等，都是由于 TCP 本身的特性导致的，所以 HTTP/3 在 QUIC 的基础上进行发展而来，QUIC（Quick UDP Connections）直译为快速 UDP 网络连接，底层使用 UDP 进行数据传输。
+![三分恶面渣逆袭：HTTP 协议变迁](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-9384b248-3ea3-4437-b343-f8b7e73f9157.jpg)
 
-HTTP/3 主要有这些特点：
+基于 TCP 的 HTTP/2.0，尽管从逻辑上来说，不同的流之间相互独立，不会相互影响，但在实际传输的过程中，数据还是要一帧一帧的发送和接收，一旦某一个流的数据有丢包，仍然会阻塞在它之后传输的流数据。
 
-- 使用 UDP 作为传输层进行通信
-- 在 UDP 的基础上 QUIC 协议保证了 HTTP/3 的安全性，在传输的过程中就完成了 TLS 加密握手
-- HTTPS 要建⽴⼀个连接，要花费 6 次交互，先是建⽴三次握⼿，然后是 TLS/1.3 的三次握⼿。QUIC 直接把以往的 TCP 和 TLS/1.3 的 6 次交互合并成了 **3** 次，减少了交互次数。
-- QUIC 有⾃⼰的⼀套机制可以保证传输的可靠性的。当某个流发⽣丢包时，只会阻塞这个流，其他流不会受到影响。
+而基于 UDP 的 QUIC 协议可以更彻底地解决这样的问题，让不同的流之间真正的实现相互独立传输，互不干扰。
 
-我们拿一张图看一下 HTTP 协议的变迁：
+同时，QUIC 协议在传输的过程中就完成了 TLS 加密握手，更直接了。
 
-![HTTP 协议变迁](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-9384b248-3ea3-4437-b343-f8b7e73f9157.jpg)
+#### 目前使用最广泛的是哪个HTTP版本？
 
+应该是 HTTP/2，在 2022 年 1 月达到峰值，占所有网站的 46.9%。
 
+统计网站：[w3techs](https://w3techs.com/technologies/history_overview/site_element/all)
+
+![w3techs：使用趋势](https://cdn.tobebetterjavaer.com/stutymore/network-20240522104709.png)
+
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的华为面经同学 8 技术二面面试原题：HTTP 2.0 和 3.0 的区别
+> 2. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的字节跳动面经同学 1 技术二面面试原题：目前使用最广泛的是哪个HTTP版本？
 
 ### 17.HTTP 如何实现长连接？在什么时候会超时？
 
@@ -359,82 +453,115 @@ HTTP/3 主要有这些特点：
 
 ### 18.说说 HTTP 与 HTTPS 有哪些区别？
 
-1.  HTTP 是超⽂本传输协议，信息是明⽂传输，存在安全⻛险的问题。HTTPS 则解决 HTTP 不安全的缺陷，在 TCP 和 HTTP ⽹络层之间加⼊了 SSL/TLS 安全协议，使得报⽂能够加密传输。
-2.  HTTP 连接建⽴相对简单， TCP 三次握⼿之后便可进⾏ HTTP 的报⽂传输。⽽ HTTPS 在 TCP 三次握⼿之后，还需进⾏ SSL/TLS 的握⼿过程，才可进⼊加密报⽂传输。
-3.  HTTP 的端⼝号是 80，HTTPS 的端⼝号是 443。
-4.  HTTPS 协议需要向 CA（证书权威机构）申请数字证书，来保证服务器的身份是可信的。
+1. HTTPS 是 HTTP 的增强版，在 HTTP 的基础上加入了 SSL/TLS 协议，确保数据在传输过程中是加密的。SSL/TLS 需要向 CA（证书权威机构）申请数字证书，用于验证服务器的身份。
+2. HTTP 的默认端⼝号是 80，URL 以`http://`开头；HTTPS 的默认端⼝号是 443，URL 以`https://`开头。
+
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的字节跳动面经同学 13 Java 后端二面面试原题：http 和 https 的区别，https 是怎么建立连接，https 是对称还是非对称加密
+> 2. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的 小公司面经合集好未来测开面经同学 3 测开一面面试原题：说说 HTTP和 HTTPS 的区别
 
 ### 19.为什么要用 HTTPS？解决了哪些问题？
 
-因为 HTTP 是明⽂传输，存在安全上的风险：
+使用 HTTPS 主要是为了解决 HTTP 传输过程中的一些安全问题，因为 HTTP 是明文传输，所以 HTTPS 在 HTTP 的基础上加入了 SSL/TLS 协议。
 
-**窃听⻛险**，⽐如通信链路上可以获取通信内容，用户账号被盗。
+![](https://cdn.tobebetterjavaer.com/stutymore/network-20240418120939.png)
 
-**篡改⻛险**，⽐如强制植⼊垃圾⼴告，视觉污染。
+SSL（安全套接字）/TLS（传输层安全）协议可以用来加密通信内容，保证通信过程中的数据不被窃取和篡改。整个加密过程主要涉及两种类型的加密方法：
 
-**冒充⻛险**，⽐如冒充淘宝⽹站，用户金钱损失。
+- 非对称加密：服务器向客户端发送公钥，然后客户端用公钥加密自己的随机密钥，也就是会话密钥，发送给服务器，服务器用私钥解密，得到会话密钥。
+- 然后双方用会话密钥加密通信内容。
 
-![HTTP 和 HTTPS](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-7ad7a529-1565-49d0-992f-7f90b0b30acc.jpg)
+客户端会通过数字证书来验证服务器的身份，数字证书由 CA（证书权威机构）签发，包含了服务器的公钥、证书的颁发机构、证书的有效期等信息。
 
+![三分恶面渣逆袭：HTTPS 主要流程](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-d91b220e-a7e0-4856-af53-697c96591ec7.jpg)
 
+HTTPS 主要解决了以下几个问题：
 
-所以引入了 HTTPS，HTTPS 在 HTTP 与 TCP 层之间加⼊了 SSL/TLS 协议，可以很好的解决了这些风险：
+- **窃听风险**：第三方可以截获传输的数据包，获取敏感信息。
+- **篡改风险**：第三方可以在传输过程中篡改数据包，修改数据。
+- **冒充风险**：第三方可以冒充服务器，与客户端通信。
 
-- **信息加密**：交互信息⽆法被窃取。
-- **校验机制**：⽆法篡改通信内容，篡改了就不能正常显示。
-- **身份证书**：能证明淘宝是真淘宝。
-
-所以 SSL/TLS 协议是能保证通信是安全的。
+> 1.  [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的比亚迪面经同学 3 Java 技术一面面试原题：说一下 HTTP 的结构和 HTTPS 的原理
 
 ### 20.HTTPS 工作流程是怎样的？
 
-这道题有几个要点：**公私钥、数字证书、加密、对称加密、非对称加密**。
+HTTPS 的连接建立在 SSL/TLS 握手之上，主要分为以下几个步骤：
 
-HTTPS 主要工作流程：
+![](https://cdn.tobebetterjavaer.com/stutymore/network-20240418124713.png)
 
-1.  客户端发起 HTTPS 请求，连接到服务端的 443 端口。
-2.  服务端有一套数字证书（证书内容有公钥、证书颁发机构、失效日期等）。
-3.  服务端将自己的数字证书发送给客户端（公钥在证书里面，私钥由服务器持有）。
-4.  客户端收到数字证书之后，会验证证书的合法性。如果证书验证通过，就会生成一个随机的对称密钥，用证书的公钥加密。
-5.  客户端将公钥加密后的密钥发送到服务器。
-6.  服务器接收到客户端发来的密文密钥之后，用自己之前保留的私钥对其进行非对称解密，解密之后就得到客户端的密钥，然后用客户端密钥对返回数据进行对称加密，酱紫传输的数据都是密文啦。
-7.  服务器将加密后的密文返回到客户端。
-8.  客户端收到后，用自己的密钥对其进行对称解密，得到服务器返回的数据。
+①、客户端向服务器发起请求
 
-![https 主要流程](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-d91b220e-a7e0-4856-af53-697c96591ec7.jpg)
+②、服务器接收到请求后，会返回自己的数字证书，包含了公钥、颁发机构等信息。
 
+③、客户端收到服务器的数字证书后，会验证证书的合法性，如果合法，就会生成一个随机码，然后用服务器的公钥加密这个随机码，发送给服务器。
 
+④、服务器收到会话密钥后，用私钥解密，得到会话密钥。
 
-这里还画了一张更详尽的图：
+⑤、客户端和服务器通过会话密码对通信内容进行加密，然后传输。
 
-![https 工作流程详图](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-c0e6e3e1-b4a2-41de-97ac-4103db2f2fc5.jpg)
+如果通信内容被截取，但由于没有会话密钥，所以无法解密。当通信结束后，连接会被关闭，会话密钥也会被销毁，下次通信会重新生成一个会话密钥。
 
+HTTPS 在不同阶段会使用不同的加密方式：
 
+- 非对称加密：在握手阶段使用，特别是在密钥交换过程中。非对称加密使用公钥和私钥，其中公钥可以公开，私钥保密。客户端使用公钥加密信息，服务器使用私钥解密。
+- 对称加密：在完成握手后，所有的数据传输都使用对称加密。对称加密使用相同的密钥进行加密和解密，这种加密方式比非对称加密更快。
+
+#### HTTPS 会加密 URL 吗？
+
+HTTPS 通过 SSL/TLS 协议确保了客户端与服务器之间交换的数据被加密，这包括 HTTP 头部和正文。
+
+而 URL 是 HTTP 头部的一部分，因此这部分信息也是加密的。
+
+![人人编程网：HTTP 协议请求报文](https://cdn.tobebetterjavaer.com/stutymore/network-20240418133527.png)
+
+但因为涉及到 SSL 握手的过程，所以域名信息会被暴露出来，需要注意。
+
+![小林：server name](https://cdn.tobebetterjavaer.com/stutymore/network-20240418134538.png)
+
+另外，完整的 URL 可能在 Web 服务器的日志中记录，这些日志可能是明文的。还有，URL 在浏览器历史记录中也是可见的。
+
+因此，敏感信息永远不应该通过 URL 传递，即使是在使用 HTTPS 的情况下。
+
+#### 什么是中间人攻击？
+
+中间人攻击（Man-in-the-Middle, MITM）是一种常见的网络安全威胁，攻击者可以在通信的两端插入自己，以窃取通信双方的信息。
+
+![维基百科](https://cdn.tobebetterjavaer.com/stutymore/network-20240418135536.png)
+
+在很多电影中，都会存在这样的场景：主角通过某种方式，将自己伪装成中间人，然后窃取通信双方的信息，阿汤哥的碟中谍中就有很多类似的手笔。
+
+中间人攻击是一个缺乏相互认证的攻击，因此大多数加密协议都会专门加入一些特殊的认证方法，以防止中间人攻击。像 SSL 协议，就是通过验证服务器的数字证书，是否由 CA（权威的受信任的数字证书认证机构）签发，来防止中间人攻击的。
+
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的字节跳动面经同学 13 Java 后端二面面试原题：http 和 https 的区别，https 是怎么建立连接，https 是对称还是非对称加密
+> 2. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的字节跳动面经同学 13 Java 后端二面面试原题：http 有哪些方法，http 的 get 方法可以实现写操作吗，https 传递 url 安全吗，为什么数据在浏览器中，中间人攻击是什么
 
 ### 21.客户端怎么去校验证书的合法性？
 
-首先，服务端的证书从哪来的呢？
+推荐阅读：[HTTPS 握手过程中，客户端如何验证证书的合法性](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/74)
 
-为了让服务端的公钥被⼤家信任，服务端的证书都是由 CA （_Certificate Authority_，证书认证机构）签名的，CA 就是⽹络世界⾥的公安局、公证中⼼，具有极⾼的可信度，所以由它来给各个公钥签名，信任的⼀⽅签发的证书，那必然证书也是被信任的。
+首先，所有的证书都是由 CA 机构签发的，CA 机构是一个受信任的第三方机构，它会对证书的申请者进行身份验证，然后签发证书。
 
-![证书签名和客户端校验-来源参考](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-77213977-9def-4118-b125-a26e8737d423.jpg)
+CA 就像是网络世界的公安局，具有极高的可信度。
 
+![三分恶面渣逆袭：证书签名和客户端校验-来源参考](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-77213977-9def-4118-b125-a26e8737d423.jpg)
 
+CA 签发证书的过程是非常严格的：
 
-CA 签发证书的过程，如上图左边部分：
+- 首先，CA 会把持有者的公钥、⽤途、颁发者、有效时间等信息打成⼀个包，然后对这些信息进⾏ Hash 计算，得到⼀个 Hash 值；
+- 然后 CA 会使⽤⾃⼰的私钥将该 Hash 值加密，⽣成 Certificate Signature；
+- 最后将 Certificate Signature 添加在⽂件证书上，形成数字证书。
 
-- ⾸先 CA 会把持有者的公钥、⽤途、颁发者、有效时间等信息打成⼀个包，然后对这些信息进⾏ Hash 计算，得到⼀个 Hash 值；
-- 然后 CA 会使⽤⾃⼰的私钥将该 Hash 值加密，⽣成 Certificate Signature，也就是 CA 对证书做了签名；
-- 最后将 Certificate Signature 添加在⽂件证书上，形成数字证书；
+![二哥的 Java 进阶之路：证书信息](https://cdn.tobebetterjavaer.com/stutymore/network-20240516123314.png)
 
-客户端校验服务端的数字证书的过程，如上图右边部分：
+客户端（通常是浏览器，通常会集成 CA 的公钥信息）在校验证书的合法性时，主要通过以下步骤来校验证书的合法性。
 
-- ⾸先客户端会使⽤同样的 Hash 算法获取该证书的 Hash 值 H1；
-- 通常浏览器和操作系统中集成了 CA 的公钥信息，浏览器收到证书后可以使⽤ CA 的公钥解密 Certificate
-- Signature 内容，得到⼀个 Hash 值 H2 ；
-- 最后⽐较 H1 和 H2，如果值相同，则为可信赖的证书，否则则认为证书不可信。
+- 浏览器会读取证书的所有者、有效期、颁发者等信息，先校验网站域名是否一致，然后校验证书的有效期是否过期；
+- 浏览器开始查找内置的 CA，与服务器返回证书中的颁发者进行对比，确认是否为合法机构；
+- 如果是，从内部植入的 CA 公钥解密 Certificate 的 Signature 内容，得到⼀个 Hash 值 H2；
+- 使⽤同样的 Hash 算法获取证书的 Hash 值 H1，⽐较 H1 和 H2，如果值相同，则为可信赖的证书，否则告警。
 
-假如在 HTTPS 的通信过程中，中间人篡改了证书原文，由于他没有 CA 机构的私钥，所以 CA 公钥解密的内容就不一致。
+假如在 HTTPS 的通信过程中，中间人篡改了证书，但由于他没有 CA 机构的私钥，所以无法生成正确的 Signature，因此就无法通过校验。
+
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的得物面经同学 1 面试原题：HTTPS，中间人伪造证书怎么办，伪造证书机构
 
 ### 22.如何理解 HTTP 协议是无状态的？
 
@@ -455,8 +582,6 @@ CA 签发证书的过程，如上图左边部分：
 
 ![Cookie 和 Session](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-bea711c9-2f1c-42ed-a05d-5e17bf868fa6.jpg)
 
-
-
 > Session 和 Cookie 到底有什么不同呢？
 
 - 存储位置不一样，Cookie 保存在客户端，Session 保存在服务器端。
@@ -471,8 +596,6 @@ CA 签发证书的过程，如上图左边部分：
 
 ![Session 和 Cookie 的关联](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-419362c7-955e-44b5-b40e-224bb3dbc6b6.jpg)
 
-
-
 - 用户第一次请求服务器时，服务器根据用户提交的信息，创建对应的 Session，请求返回时将此 Session 的唯一标识信息 SessionID 返回给浏览器，浏览器接收到服务器返回的 SessionID 信息后，会将此信息存入 Cookie 中，同时 Cookie 记录此 SessionID 是属于哪个域名。
 - 当用户第二次访问服务器时，请求会自动判断此域名下是否存在 Cookie 信息，如果存在，则自动将 Cookie 信息也发送给服务端，服务端会从 Cookie 中获取 SessionID，再根据 SessionID 查找对应的 Session 信息，如果没有找到，说明用户没有登录或者登录失效，如果找到 Session 证明用户已经登录可执行后面操作。
 
@@ -485,8 +608,6 @@ CA 签发证书的过程，如上图左边部分：
 可以使用 Redis 等分布式缓存来存储 Session，在多台服务器之间共享。
 
 ![Session 共享](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-375a3b8e-35a9-4b41-a62f-dd6f16353332.jpg)
-
-
 
 > **客户端无法使用 Cookie 怎么办？**
 
@@ -501,8 +622,7 @@ CA 签发证书的过程，如上图左边部分：
 - 拼接到 URL 里：直接把 SessionID 作为 URL 的请求参数
 - 放到请求头里：把 SessionID 放到请求的 Header 里，比较常用。
 
-GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 9300+ 的 Java 教程](https://javabetter.cn/overview/)
-
+GitHub 上标星 10000+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括 Java 基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM 等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 10000+ 的 Java 教程](https://javabetter.cn/overview/)
 
 微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
@@ -512,72 +632,123 @@ GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https:
 
 ### 24.详细说一下 TCP 的三次握手机制
 
-PS:TCP 三次握手是最重要的知识点，一定要熟悉到问到即送分。
+TCP（传输控制协议）的三次握手机制是一种用于在两个 TCP 主机之间建立一个可靠的连接的过程。这个机制确保了两端的通信是同步的，并且在数据传输开始前，双方都准备好了进行通信。
 
-TCP 提供面向连接的服务，在传送数据前必须建立连接，TCP 连接是通过三次握手建立的。
+![三分恶面渣逆袭：TCP 三次握手示意图](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-a6c0457e-544e-4291-98d9-862fc6a18631.jpg)
 
-![TCP 三次握手示意图](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-a6c0457e-544e-4291-98d9-862fc6a18631.jpg)
+那我再说一下三次握手 🤝 的过程：
 
+①、第一次握手：SYN（最开始都是 CLOSE，之后服务器进入 LISTEN）
 
+- **发起连接**：客户端发送一个 TCP 报文段到服务器。这个报文段的头部中，SYN 位被设置为 1，表明这是一个连接请求。同时，客户端会随机选择一个序列号（Sequence Number），假设为 x，发送给服务器。
+- **目的**：客户端通知服务器它希望建立连接，并告知服务器自己的初始序列号。
+- **状态**：客户端进入 SYN_SENT 状态。
 
-三次握手的过程：
+②、第二次握手：SYN + ACK
 
-- 最开始，客户端和服务端都处于 CLOSE 状态，服务端监听客户端的请求，进入 LISTEN 状态
+- **确认并应答**：服务器收到客户端的连接请求后，如果同意建立连接，它会发送一个应答 TCP 报文段给客户端。在这个报文段中，SYN 位和 ACK 位都被设置为 1。服务器也会选择自己的一个随机序列号，假设为 y，并将客户端的序列号加 1（即 x+1）作为确认号（Acknowledgment Number），发送给客户端。
+- **目的**：服务器告诉客户端，它的连接请求被接受了，并通知客户端自己的初始序列号。
+- **状态**：服务器进入 SYN_RCVD 状态。
 
-- 客户端端发送连接请求，**第一次握手** (SYN=1, seq=x)，发送完毕后，客户端就进入 SYN_SENT 状态
-- 服务端确认连接，**第二次握手** (SYN=1, ACK=1, seq=y, ACKnum=x+1)， 发送完毕后，服务器端就进入 SYN_RCV 状态。
-- 客户端收到服务端的确认之后，再次向服务端确认，这就是\*\*第三次握手 \*\*(ACK=1，ACKnum=y+1)，发送完毕后，客户端进入 ESTABLISHED 状态，当服务器端接收到这个包时，也进入 ESTABLISHED 状态。
+③、第三次握手：ACK
 
-TCP 三次握手通俗比喻：
+- **最终确认**：客户端收到服务器的应答后，还需要向服务器发送一个确认。这个 TCP 报文段的 ACK 位被设置为 1，确认号被设置为服务器序列号加 1（即 y+1），而自己的序列号是 x+1。
+- **目的**：客户端确认收到了服务器的同步应答，完成三次握手，建立连接。
+- **状态**：客户端进入 ESTABLISHED 状态，当服务器接收到这个包时，也进入 ESTABLISHED 状态
 
-在二十年前的农村，电话没有普及，手机就更不用说了，所以，通信基本靠吼。
+用大白话讲 TCP 三次握手就是：
+
+三十年前的农村，电话还没有普及，所以，通信基本靠吼。
 
 老张和老王是邻居，这天老张下地了，结果家里有事，热心的邻居老王赶紧跑到村口，开始叫唤老王。
 
-- 老王：老张唉！我是老王，你能听到吗？
-- 老张一听，是老王的声音：老王老王，我是老张，我能听到，你能听到吗？
+- 老王：老张唉！我是老王，你能听得到吗？
+- 老张一听，是老王的声音：老王老王，我是老张，我能听得到，你能听得到吗？
 - 老王一听，嗯，没错，是老张：老张，我听到了，我有事要跟你说。
 
-"你老婆要生了，赶紧回家吧！"
+"你老婆要生了，赶紧回去吧！"
 
 老张风风火火地赶回家，老婆顺利地生了个带把的大胖小子。握手的故事充满了幸福和美满。
 
-![大白话三次握手](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-debc218d-3550-46d5-840d-a80bd87a24e3.jpg)
+![三分恶面渣逆袭：大白话三次握手](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-debc218d-3550-46d5-840d-a80bd87a24e3.jpg)
 
+#### 可以再举一个例子说明 TCP 三次握手吗？
 
+当然可以，你（客户端）在一个拥挤的聚会上遇到了你想交谈的美女（服务器）。因为周围很吵，你们需要确认对方都准备好交流，并清楚地听到对方说的每一句话。
+
+**①、第一次握手：打招呼**
+
+- 你走向那个美女，大声说：“嘿，我是小二，我们可以聊聊吗？”（你发送了一个连接请求，告诉服务器你想深入交流，并提供了你的微信号`x`，也就是你们交谈的起点）
+
+**②、第二次握手：对方回应**
+
+- 美女一看你挺帅挺有气质，回答说：“嗨，我是小青，可以聊聊。”（服务器接受你的请求，同样愿意深入交流，告诉你它的微信号`y`，并确认了你的微信号`x+1`，表示它准备好了）
+
+**③、第三次握手：确认准备就绪**
+
+- 你听到美女的回答后，对她说：“太好了，我们以后就微信上聊吧。”（你确认了美女的回答，也告诉她你准备好开始了，通过发送确认号`y+1`）
+
+④、聊天开始
+
+这时候，你们两个就确认彼此都准备好深入交流了，可以开始你们的对话了。
+
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的字节跳动面经同学 9 飞书后端技术一面面试原题：TCP 为什么要三次握手
 
 ### 25.TCP 握手为什么是三次，为什么不能是两次？不能是四次？
 
-> **为什么不能是两次？**
+使用三次握手可以建立一个可靠的连接。这一过程的目的是确保双方都知道对方已准备好进行通信，并同步双方的序列号，从而保持数据包的顺序和完整性。
 
-- 为了防止服务器端开启一些无用的连接增加服务器开销
-- 防止已失效的连接请求报文段突然又传送到了服务端，因而产生错误。
+#### 为什么 TCP 握手不能是两次？
 
-由于网络传输是有延时的(要通过网络光纤和各种中间代理服务器)，在传输的过程中，比如客户端发起了 SYN=1 的第一次握手。
+- 为了防止服务器一直等，等到黄花菜都凉了。
+- 为了防止客户端已经失效的连接请求突然又传送到了服务器。
 
-如果服务器端就直接创建了这个连接并返回包含 SYN、ACK 和 Seq 等内容的数据包给客户端，这个数据包因为网络传输的原因丢失了，丢失之后客户端就一直没有接收到服务器返回的数据包。
+要知道，网络传输是有延时的（要通过网络光纤、WIFI、卫星信号传输等）。
 
-如果没有第三次握手告诉服务器端客户端收的到服务器端传输的数据的话，服务器端是不知道客户端有没有接收到服务器端返回的信息的。
+假如说客户端发起了 SYN=1 的第一次握手。服务器也及时回复了 SYN=2 和 ACK=1 的第二次握手，但是这个 ACK=1 的确认报文段因为某些原因在传输过程中丢失了。
 
-服务端就认为这个连接是可用的，端口就一直开着，等到客户端因超时重新发出请求时，服务器就会重新开启一个端口连接。这样一来，就会有很多无效的连接端口白白地开着，导致资源的浪费。
+如果没有第三次握手告诉服务器，客户端收到了服务器的回应，那服务器是不知道客户端有没有接收到的。
 
-![无三次握手导致端口占用](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-ad16baac-f8fa-4fb1-a459-8a98e4db85ca.jpg)
+于是服务器就一直干巴巴地开着端口在等着客户端发消息呢，但其实客户端并没有收到服务器的回应，心灰意冷地跑了。
 
+![三分恶面渣逆袭：无三次握手导致端口占用](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-ad16baac-f8fa-4fb1-a459-8a98e4db85ca.jpg)
 
+这就好像你找美女要联系方式了，人家回你了，你却没听见，还以为人家看不上你，赌气地跑了；剩下的美女却一直在等你。。。
 
-还有一种情况是已经失效的客户端发出的请求信息，由于某种原因传输到了服务器端，服务器端以为是客户端发出的有效请求，接收后产生错误。
+还有一种情况是，一个旧的、延迟的连接请求（SYN=1）被服务器接受，导致服务器错误地开启一个不再需要的连接。
 
-![响应生效请求](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-4209349f-b80c-4387-8461-c6ecd0e2129b.jpg)
+![三分恶面渣逆袭：响应失效请求](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-4209349f-b80c-4387-8461-c6ecd0e2129b.jpg)
 
+举个例子：假设你（客户端）给你的朋友（服务器）发送了一个邮件（连接请求）。因为某些原因，这封邮件迟迟没有到达朋友那里，可能是因为邮局的延误。于是你决定再发一封新的邮件。朋友收到了第二封邮件，你们成功地建立了连接并开始通信。
 
+但是，过了很久，那封延误的旧邮件突然也到了你朋友那里。如果没有一种机制来识别和处理这种延误的邮件，你的朋友可能会以为这是一个新的连接请求，并尝试响应它，但其实你已经重新发了请求，原来的不需要了。这就导致了不必要的混乱和资源浪费。
 
-所以我们需要“第三次握手”来确认这个过程：
+所以我们需要“三次握手”来确认这个过程：
 
-通过第三次握手的数据告诉服务端，客户端有没有收到服务器“第二次握手”时传过去的数据，以及这个连接的序号是不是有效的。若发送的这个数据是“`收到且没有问题`”的信息，接收后服务器就正常建立 TCP 连接，否则建立 TCP 连接失败，服务器关闭连接端口。由此减少服务器开销和接收到失效请求发生的错误。
+- 第一次握手：客户端发送 SYN 包（连接请求）给服务器，如果这个包延迟了，客户端不会一直等待，它可能会重试并发送一个新的连接请求。
+- 第二次握手：服务器收到 SYN 包后，发送一个 SYN-ACK 包（确认接收到连接请求）回客户端。
+- 第三次握手：客户端收到 SYN-ACK 包后，再发送一个 ACK 包给服务器，确认收到了服务器的响应。
 
-> **为什么不是四次？**
+#### 为什么不是四次？
 
-简单说，就是三次挥手已经足够创建可靠的连接，没有必要再多一次握手导致花费更多的时间建立连接。
+三次握手已经足够创建可靠的连接了，没有必要再多一次握手。
+
+#### 什么是泛洪攻击？
+
+泛洪攻击（SYN Flood Attack）是一种常见的 DoS（拒绝服务）攻击，攻击者会发送大量的伪造的 TCP 连接请求，导致服务器资源耗尽，无法处理正常的连接请求。
+
+半连接服务拒绝，也称为 SYN 洪泛攻击或 SYN Flood。
+
+所谓的半连接就是指在 TCP 的三次握手过程中，当服务器接收到来自客户端的第一个 SYN 包后，它会回复一个 SYN-ACK 包，此时连接处于“半开”状态，因为连接的建立还需要客户端发送最后一个 ACK 包。
+
+在收到最后的 ACK 包之前，服务器会为这个尚未完成的连接分配一定的资源，并在它的队列中保留这个连接的位置。
+
+#### 如果让你重新设计，怎么设计？
+
+如果重新设计 TCP 的连接建立过程，可以考虑引入 SYN cookies，这种技术通过在 SYN-ACK 响应中编码连接信息，从而在不占用大量资源的情况下验证客户端。
+
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的字节跳动面经同学 9 飞书后端技术一面面试原题：TCP 为什么要三次握手
+> 2. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的美团同学 2 优选物流调度技术 2 面面试原题：为什么三次握手，有什么缺点，洪泛攻击，半连接服务拒绝，让你重新设计，怎么设计
 
 ### 26.三次握手中每一次没收到报文会发生什么情况？
 
@@ -615,8 +786,6 @@ TCP 进入三次握手前，服务端会从 **CLOSED** 状态变为 **LISTEN** �
 
 ![三次握手中创建的队列](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-f95c3cbb-cf2d-4444-9878-44ec076beb86.jpg)
 
-
-
 顾名思义，半连接队列存放的是三次握手未完成的连接，全连接队列存放的是完成三次握手的连接。
 
 - TCP 三次握手时，客户端发送 SYN 到服务端，服务端收到之后，便回复 **ACK 和 SYN**，状态由 **LISTEN 变为 SYN_RCVD**，此时这个连接就被推入了 **SYN 队列**，即半连接队列。
@@ -627,8 +796,6 @@ TCP 进入三次握手前，服务端会从 **CLOSED** 状态变为 **LISTEN** �
 SYN Flood 是一种典型的 DDos 攻击，它在短时间内，伪造**不存在的 IP 地址**, 向服务器发送大量 SYN 报文。当服务器回复 SYN+ACK 报文后，不会收到 ACK 回应报文，那么 SYN 队列里的连接旧不会出对队，久⽽久之就会占满服务端的 **SYN** 接收队列（半连接队列），使得服务器不能为正常⽤户服务。
 
 ![SYN 攻击](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-f3b36155-842c-4583-ba4d-b0f04f0eda58.jpg)
-
-
 
 > **那有什么应对方案呢？**
 
@@ -642,8 +809,6 @@ SYN Flood 是一种典型的 DDos 攻击，它在短时间内，伪造**不存�
 PS：问完三次握手，常常也会顺道问问四次挥手，所以也是必须掌握知识点。
 
 ![TCP 四次挥手](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-ba156295-03af-46dc-8ef3-869b44b11303.jpg)
-
-
 
 TCP 四次挥手过程：
 
@@ -668,8 +833,6 @@ TCP 四次挥手过程：
 挥手的故事总充满了悲伤和遗憾！
 
 ![大白话四次挥手](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-578a667b-ec12-4023-a7c5-76bacbce9683.jpg)
-
-
 
 ### 31.TCP 挥手为什么需要四次呢？
 
@@ -696,8 +859,6 @@ TIME_WAIT 等待 2 倍的 MSL，⽐较合理的解释是：⽹络中可能存在
 
 ![2MSL 恰好一个来回](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-0ad2ab5b-d0e6-4985-bfbe-1d0c8ae25dd2.jpg)
 
-
-
 ⽐如如果被动关闭⽅没有收到断开连接的最后的 ACK 报⽂，就会触发超时重发 Fin 报⽂，另⼀⽅接收到 FIN 后，会重发 ACK 给被动关闭⽅， ⼀来⼀去正好 2 个 MSL。
 
 ### 33.保活计时器有什么用？
@@ -721,8 +882,6 @@ TIME-WAIT 状态发生在第四次挥手，当客户端向服务端发送 ACK �
 它存在的意义主要是两个：
 
 ![TIME_WAIT 状态的作用](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-5a66e507-bf0e-4131-91ba-8a7f69ddc084.jpg)
-
-
 
 - **防⽌旧连接的数据包**
 
@@ -749,30 +908,30 @@ TIME-WAIT 状态发生在第四次挥手，当客户端向服务端发送 ACK �
 - 服务器可以设置 SO_REUSEADDR 套接字来通知内核，如果端口被占用，但是 TCP 连接位于 TIME_WAIT 状态时可以重用端口。
 - 还可以使用长连接的方式来减少 TCP 的连接和断开，在长连接的业务里往往不需要考虑 TIME_WAIT 状态。
 
-### 36.说说 TCP 报文首部的格式？
+### 36.说说 TCP 报文头部的格式？
 
-看一下 TCP 报文首部的格式：
+一个 TCP 报文段主要由报文段头部（Header）和数据两部分组成。头部包含了确保数据可靠传输所需的各种控制信息，比如说序列号、确认号、窗口大小等。
 
-![TCP 报文首部的格式](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-f74d2a4f-b91e-4d8c-9fe7-6b670d818aed.jpg)
+![三分恶面渣逆袭：TCP 报文头部的格式](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-f74d2a4f-b91e-4d8c-9fe7-6b670d818aed.jpg)
 
+- **源端口号**（Source Port）：16 位（2 个字节），用于标识发送端的应用程序。
+- **目标端口号**（Destination Port）：也是 16 位，用于标识接收端的应用程序。
+- **序列号**（Sequence Number）：32 位，用于标识从 TCP 发送者发送的数据字节流中的第一个字节的顺序号。确保数据按顺序接收。
+- **确认号**（Acknowledgment Number）：32 位，如果 ACK 标志被设置，则该字段包含发送确认的序列号，即接收 TCP 希望收到的下一个序列号。
+- **数据偏移**（Data Offset）：4 位，表示 TCP 报文头部的长度，用于指示数据开始的位置。
+- **保留**（Reserved）：6 位，为将来使用预留，目前必须置为 0。
+- **控制位**（Flags）：共 6 位，包括 URG（紧急指针字段是否有效）、ACK（确认字段是否有效）、PSH（提示接收端应该尽快将这个报文段交给应用层）、RST（重置连接）、SYN（同步序号，用于建立连接）、FIN（结束发送数据）。
+- **窗口大小**（Window）：16 位，用于流量控制，表示接收端还能接收的数据的字节数（基于接收缓冲区的大小）。
+- **校验和**（Checksum）：16 位，覆盖整个 TCP 报文段（包括 TCP 头部、数据和一个伪头部）的校验和，用于检测数据在传输过程中的任何变化。
+- **紧急指针**（Urgent Pointer）：16 位，只有当 URG 控制位被设置时才有效，指出在报文段中有紧急数据的位置。
 
-
-- **16 位端口号**：源端口号，主机该报文段是来自哪里；目标端口号，要传给哪个上层协议或应用程序
-- **32 位序号**：一次 TCP 通信（从 TCP 连接建立到断开）过程中某一个传输方向上的字节流的每个字节的编号。
-- **32 位确认号**：用作对另一方发送的 tcp 报文段的响应。其值是收到的 TCP 报文段的序号值加 1。
-- **4 位首部长度**：表示 tcp 头部有多少个 32bit 字（4 字节）。因为 4 位最大能标识 15，所以 TCP 头部最长是 60 字节。
-- **6 位标志位**：URG(紧急指针是否有效)，ACk（表示确认号是否有效），PST（缓冲区尚未填满），RST（表示要求对方重新建立连接），SYN（建立连接消息标志接），FIN（表示告知对方本端要关闭连接了）
-- **16 位窗口大小**：是 TCP 流量控制的一个手段。这里说的窗口，指的是接收通告窗口。它告诉对方本端的 TCP 接收缓冲区还能容纳多少字节的数据，这样对方就可以控制发送数据的速度。
-- **16 位校验和**：由发送端填充，接收端对 TCP 报文段执行 CRC 算法以检验 TCP 报文段在传输过程中是否损坏。注意，这个校验不仅包括 TCP 头部，也包括数据部分。这也是 TCP 可靠传输的一个重要保障。
-- **16 位紧急指针**：一个正的偏移量。它和序号字段的值相加表示最后一个紧急数据的下一字节的序号。因此，确切地说，这个字段是紧急指针相对当前序号的偏移，不妨称之为紧急偏移。TCP 的紧急指针是发送端向接收端发送紧急数据的方法。
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的字节跳动面经同学 9 飞书后端技术一面面试原题：TCP 报文的结构
 
 ### 37.TCP 是如何保证可靠性的？
 
 TCP 主要提供了检验和、序列号/确认应答、超时重传、最大消息长度、滑动窗口控制等方法实现了可靠性传输。
 
 ![TCP 保证可靠性的方法](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-b4c90727-7005-4404-953a-68ac50e76ac2.jpg)
-
-
 
 1.  **连接管理**：TCP 使用三次握手和四次挥手保证可靠地建立连接和释放连接，这里就不用多说了。
 2.  **校验和**：TCP 将保持它首部和数据的检验和。这是一个端到端的检验和，目的是检测数据在传输过程中的任何变化。如果接收端的检验和有差错，TCP 将丢弃这个报文段和不确认收到此报文段。
@@ -785,31 +944,21 @@ TCP 校验和
 
 ![序列号/确认应答](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-cbf040f5-ccc5-437d-98c4-711701e47113.jpg)
 
-
-
 4.  \*\*流量控制：\*\*TCP 连接的每一方都有固定大小的缓冲空间，TCP 的接收端只允许发送端发送接收端缓冲区能接纳的数据。当接收方来不及处理发送方的数据，能提示发送方降低发送的速率，防止包丢失。TCP 使用的流量控制协议是可变大小的滑动窗口协议。（TCP 利用滑动窗口实现流量控制）
 
 ![滑动窗口简图](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-52b64e86-1562-484c-aaf4-aa5a98c177ef.jpg)
-
-
 
 5.  **最大消息长度**：在建立 TCP 连接的时候，双方约定一个最大的长度（MSS）作为发送的单位，重传的时候也是以这个单位来进行重传。理想的情况下是该长度的数据刚好不被网络层分块。
 
 ![最大消息长度](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-6e8beed6-0723-4933-bb0d-9618c510c46d.jpg)
 
-
-
 6.  \*\*超时重传：\*\*超时重传是指发送出去的数据包到接收到确认包之间的时间，如果超过了这个时间会被认为是丢包了，需要重传。
 
 ![超时重传](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-0720e03f-44cd-48e7-8ac1-67629f643d96.jpg)
 
-
-
 7.  \*\*拥塞控制：\*\*如果网络非常拥堵，此时再发送数据就会加重网络负担，那么发送的数据段很可能超过了最大生存时间也没有到达接收方，就会产生丢包问题。为此 TCP 引入慢启动机制，先发出少量数据，就像探路一样，先摸清当前的网络拥堵状态后，再决定按照多大的速度传送数据。
 
 ![拥塞控制简略示意图](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-fa3390bb-4e71-444a-9a56-8a08b81e3070.jpg)
-
-
 
 ### 38.说说 TCP 的流量控制？
 
@@ -820,8 +969,6 @@ TCP 通过**滑动窗口**来控制流量，我们看下简要流程：
 - 首先双方三次握手，初始化各自的窗口大小，均为 400 个字节。
 
 ![TCP 流量控制](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-fd8ca2c7-ffa3-4947-8f6f-c64c12f9ca58.jpg)
-
-
 
 - 假如当前发送方给接收方发送了 200 个字节，那么，发送方的`SND.NXT`会右移 200 个字节，也就是说当前的可用窗口减少了 200 个字节。
 - 接受方收到后，放到缓冲队列里面，REV.WND =400-200=200 字节，所以 win=200 字节返回给发送方。接收方会在 ACK 的报文首部带上缩小后的滑动窗口 200 字节
@@ -850,8 +997,6 @@ TCP 滑动窗口分为两种: 发送窗口和接收窗口。**发送端的滑动
 
 ![发送端滑动窗口](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-4ce3171e-065c-46e3-9b22-626837cf774e.jpg)
 
-
-
 - 深蓝色框里就是发送窗口。
 - SND.WND: 表示发送窗口的大小, 上图虚线框的格子数是 10 个，即发送窗口大小是 10。
 - SND.NXT：下一个发送的位置，它指向未发送但可以发送的第一个字节的序列号。
@@ -865,8 +1010,6 @@ TCP 滑动窗口分为两种: 发送窗口和接收窗口。**发送端的滑动
 
 ![接收方滑动窗口](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-ba692020-9702-4b8c-b007-8a6539f78f72.jpg)
 
-
-
 - 蓝色框内，就是接收窗口。
 - REV.WND: 表示接收窗口的大小, 上图虚线框的格子就是 9 个。
 - REV.NXT: 下一个接收的位置，它指向未收到但可以接收的第一个字节的序列号。
@@ -878,8 +1021,6 @@ TCP 滑动窗口分为两种: 发送窗口和接收窗口。**发送端的滑动
 当我们 TCP 报⽂的承载的数据⾮常⼩的时候，例如⼏个字节，那么整个⽹络的效率是很低的，因为每个 TCP 报⽂中都会有 20 个字节的 TCP 头部，也会有 20 个字节的 IP 头部，⽽数据只有⼏个字节，所以在整个报⽂中有效数据占有的比例就会⾮常低。
 
 ![小数据情况](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-baaa9b39-ba10-4b80-ba4b-d72bb3d22a2b.jpg)
-
-
 
 这就好像快递员开着⼤货⻋送⼀个⼩包裹⼀样浪费。
 
@@ -931,8 +1072,6 @@ TCP 延迟确认的策略：
 
 ![破解的水管-图片来源网络](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-d9ab72ba-a61e-48ce-9d7e-222dcf7c713d.jpg)
 
-
-
 发送方维护一个**拥塞窗口 cwnd（congestion window）** 的变量，调节所要发送数据的量。
 
 > **什么是拥塞窗⼝？和发送窗⼝有什么关系呢？**
@@ -951,8 +1090,6 @@ TCP 延迟确认的策略：
 拥塞控制主要有这几种常用算法：
 
 ![拥塞控制常用算法](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-ee50148b-dc93-459b-a9aa-ae850d129fdf.jpg)
-
-
 
 - 慢启动
 - 拥塞避免
@@ -974,13 +1111,9 @@ TCP 延迟确认的策略：
 
 ![慢启动算法](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-d99e183e-e516-4489-898b-9a5c70041783.jpg)
 
-
-
 发包的个数是指数性的增⻓。
 
 ![慢启动呈指数型增长](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-753a6b23-6a90-4d62-ad9e-57d01c8f525d.jpg)
-
-
 
 为了防止 cwnd 增长过大引起网络拥塞，还需设置一个**慢启动阀值 ssthresh**（slow start threshold）状态变量。当`cwnd`到达该阀值后，就好像水管被关小了水龙头一样，减少拥塞状态。即当 **cwnd >ssthresh** 时，进入了**拥塞避免**算法。
 
@@ -999,8 +1132,6 @@ TCP 延迟确认的策略：
 
 ![拥塞避免算法](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-32ef01e0-2725-4ab9-b7de-670c68d8bd6c.jpg)
 
-
-
 ##### 拥塞发生
 
 当网络拥塞发生**丢包**时，会有两种情况：
@@ -1015,8 +1146,6 @@ TCP 延迟确认的策略：
 - 进入新的慢启动过程
 
 ![拥塞发生算法](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-1cb5d1ed-373c-47c8-9b2d-33ff197bf331.jpg)
-
-
 
 这种方式就像是飙车的时候急刹车，还飞速倒车，这。。。
 
@@ -1047,15 +1176,11 @@ TCP 延迟确认的策略：
 
 ![快速恢复算法](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-32b74e2e-6437-443a-91ab-634653208ad7.jpg)
 
-
-
 ### 42.说说 TCP 的重传机制？
 
 重传包括**超时重传、快速重传、带选择确认的重传（SACK）、重复 SACK 四种**。
 
 ![TCP 重传分类](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-6aa21a4b-9148-43d9-918a-7b2cf9933ed8.jpg)
-
-
 
 ##### 超时重传
 
@@ -1066,8 +1191,6 @@ TCP 延迟确认的策略：
 先来看下什么叫 **RTT（Round-Trip Time，往返时间）**。
 
 ![RTT](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-1ddf0bc7-ab7f-4779-8251-a73638e0c3d9.jpg)
-
-
 
 RTT 就是数据完全发送完，到收到确认信号的时间，即数据包的一次往返时间。
 
@@ -1117,8 +1240,6 @@ TCP 还有另外⼀种快速重传（**Fast Retransmit**）机制，它不以时
 
 ![快速重传流程](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-46028267-3d31-4eb6-8e6c-aefb0c752035.jpg)
 
-
-
 在上图，发送⽅发出了 1，2，3，4，5 份数据：
 
 - 第⼀份 Seq1 先送到了，于是就 Ack 回 2；
@@ -1143,8 +1264,6 @@ TCP 还有另外⼀种快速重传（**Fast Retransmit**）机制，它不以时
 
 ![SACK 机制](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-947df4b4-2e14-482b-9b5d-37cb01a0b5c2.jpg)
 
-
-
 如上图中，发送⽅收到了三次同样的 ACK 确认报⽂，于是就会触发快速重发机制，通过 SACK 信息发现只有 200~299 这段数据丢失，则重发时，就只选择了这个 TCP 段进⾏重发。
 
 ##### 重复 SACK（D-SACK）
@@ -1156,8 +1275,6 @@ DSACK 的目的是帮助发送方判断，是否发生了包失序、ACK 丢失�
 例如 ACK 丢包导致的数据包重复：
 
 ![ACK 丢包](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-cf41596b-0d6c-45e3-bd8b-7063f241c11b.jpg)
-
-
 
 - 接收⽅发给发送⽅的两个 ACK 确认应答都丢失了，所以发送⽅超时后，重传第⼀个数据包（3000 ~
 
@@ -1175,8 +1292,6 @@ TCP 是面向流，没有界限的一串数据。TCP 底层并不了解上层业
 
 ![TCP 的粘包和拆包](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-7f201989-9b3d-4a66-b6cd-8acbf4a2737f.jpg)
 
-
-
 > **为什么会产生粘包和拆包呢?**
 
 - 要发送的数据小于 TCP 发送缓冲区的大小，TCP 将多次写入缓冲区的数据一次发送出去，将会发生粘包；
@@ -1190,8 +1305,25 @@ TCP 是面向流，没有界限的一串数据。TCP 底层并不了解上层业
 - 在数据尾部增加特殊字符进行分割
 - 将数据分为两部分，一部分是头部，一部分是内容体；其中头部结构大小固定，且有一个字段声明内容体的大小。
 
-GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 9300+ 的 Java 教程](https://javabetter.cn/overview/)
+### 63.一个TCP连接可以发送多少次HTTP请求?（补充）
 
+>2024年05月24日新增
+
+一个 TCP 连接可以发送多少次 HTTP 请求，取决于 HTTP 协议的版本。
+
+在 HTTP/1.0 中，每个 HTTP 请求-响应使用一个单独的 TCP 连接。这意味着每次发送 HTTP 请求都需要建立一个新的 TCP 连接。
+
+HTTP/1.1 引入了持久连接（Persistent Connection），默认情况下允许在一个 TCP 连接上发送多个 HTTP 请求。
+
+通过使用 `Connection: keep-alive` 头部实现，保持连接打开状态，直到明确关闭为止。这极大地提高了效率，因为无需为每个请求都建立新的连接。
+
+此外，HTTP/1.1 支持请求管道化（Pipelining），允许客户端在收到前一个响应之前发送多个请求。
+
+HTTP/2 进一步优化了连接复用，允许在单个 TCP 连接上同时发送多个请求和响应，这些请求和响应被分割成帧并通过流传输。HTTP/2 的多路复用（Multiplexing）机制显著提高了并发性能和资源利用效率。
+
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的字节跳动面经同学 1 技术二面面试原题：一个TCP连接可以发送多少次HTTP请求?
+
+GitHub 上标星 10000+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括 Java 基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM 等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 10000+ 的 Java 教程](https://javabetter.cn/overview/)
 
 微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
@@ -1199,34 +1331,56 @@ GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https:
 
 ## UDP
 
-UDP 问的不多，基本上是被拿来和 TCP 比较。
+UDP 问的不会特别多，基本上是被拿来和 TCP 作比较的。
 
 ### 44.说说 TCP 和 UDP 的区别？
 
-最根本区别：**TCP 是面向连接，而 UDP 是无连接**。
+TCP 是面向连接的，而 UDP 是无连接的。
 
-![TCP 和 UDP 区别](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-1830171b-a33a-49c4-9d53-94ee20503ad4.jpg)
+![三分恶面渣逆袭：TCP 和 UDP 区别](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-1830171b-a33a-49c4-9d53-94ee20503ad4.jpg)
 
+可以这么形容：TCP 是打电话，UDP 是大喇叭（😂）。
 
+![三分恶面渣逆袭：TCP 和 UDP 比喻](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-97958ecc-6da6-42c5-8af6-cfca8b8c3de8.jpg)
 
-可以这么形容：TCP 是打电话，UDP 是大喇叭。
+在数据传输开始之前，TCP 需要先建立连接，数据传输完成后，再断开连接。这个过程通常被称为“三次握手”。
 
-![TCP 和 UDP 比喻](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-97958ecc-6da6-42c5-8af6-cfca8b8c3de8.jpg)
+UDP 是无连接的，发送数据之前不需要建立连接，发送完毕也无需断开连接，数据以数据报形式发送。
 
+在此基础上，我们可以得出：TCP 是可靠的，它通过确认机制、重发机制等来保证数据的可靠传输。而 UDP 是不可靠的，数据包可能会丢失、重复、乱序。
 
+#### 说说 TCP 和 UDP 的应用场景？
 
-> **说说 TCP 和 UDP 的应用场景？**
+- **TCP：** 适用于那些对数据准确性要求高于数据传输速度的场合。例如：网页浏览、电子邮件、文件传输（FTP）、远程控制、数据库链接。
+- **UDP：** 适用于对速度要求高、可以容忍一定数据丢失的场合。例如：QQ 聊天、在线视频、网络语音电话、广播通信。容忍一定的数据丢失。
 
-- **TCP 应用场景：** 效率要求相对低，但对准确性要求相对高的场景。因为传输中需要对数据确认、重发、排序等操作，相比之下效率没有 UDP 高。例如：文件传输（准确高要求高、但是速度可以相对慢）、收发邮件、远程登录。
-- **UDP 应用场景：** 效率要求相对高，对准确性要求相对低的场景。例如：QQ 聊天、在线视频、网络语音电话（即时通讯，速度要求高，但是出现偶尔断续不是太大问题，并且此处完全不可以使用重发机制）、广播通信（广播、多播）。
+#### 你会如何设计 QQ 中的网络协议？
+
+首先，我们要实现登录功能，这是使用 QQ 的第一步，为了保证账号和密码的安全性，我们可以选择 TCP + SSL/TLS 协议来进行登录。
+
+因为 TCP 协议是一种可靠的传输协议，能够保证数据的完整性，而 SSL/TLS 能够对通信进行加密，保证数据的安全性。
+
+接下来，我们需要考虑消息传递的实时性，如语音视频通话等，这时候我们可以选择 UDP 协议。UDP 的传输速度更快，对于实时性服务来说，速度是最重要的。
+
+#### 如何保证消息的不丢失？
+
+对于 TCP 协议来说，如果数据包在传输过程中丢失，TCP 协议会自动进行重传。
+
+而对于 UDP 协议来说，我们可以通过应用层的重传机制来保证消息的不丢失。当接收方收到消息后，返回一个确认信息给发送方，如果发送方在一定时间内没有收到确认信息，就重新发送消息。
+
+同时，每个消息都附带一个唯一的序列号，接收方根据序列号判断是否有消息丢失，如果发现序列号不连续，就可以要求发送方重新发送。这样还可以防止消息重复。
+
+当然了，消息持久化也很重要，可以将消息保存在服务器或者本地的数据库中，即使在网络中断或者其他异常情况下，也能从数据库中恢复消息。
+
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的华为一面原题：说下 TCP 和 UDP 的区别？
+> 2. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的奇安信面经同学 1 Java 技术一面面试原题：tcp 和 udp 的区别？QQ 用的协议？它如何保证消息的不丢失？
+> 3. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的招商银行面经同学 6 招银网络科技面试原题：UDP和TCP的区别？
 
 ### 45.为什么 QQ 采用 UDP 协议？
 
 PS：这是多年前的老题了，拉出来怀怀旧。
 
 ![QQ 使用 UDP](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-cd8fb482-885d-4c99-b948-19d9dcf47fb4.jpg)
-
-
 
 - 首先，QQ 并不是完全基于 UDP 实现。比如在使用 QQ 进行文件传输等活动的时候，就会使用 TCP 作为可靠传输的保证。
 - 使用 UDP 进行交互通信的好处在于，延迟较短，对数据丢失的处理比较简单。同时，TCP 是一个全双工协议，需要建立连接，所以网络开销也会相对大。
@@ -1252,8 +1406,7 @@ UDP 在传输数据之前不需要先建立连接，远地主机的运输层在�
 
 当客户端想 DNS 服务器查询域名（域名解析）的时候，一般返回的内容不会超过 UDP 报文的最大长度，即 512 字节，用 UDP 传输时，不需要创建连接，从而大大提高了响应速度，但这要求域名解析服务器和域名服务器都必须自己处理超时和重传从而保证可靠性。
 
-GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 9300+ 的 Java 教程](https://javabetter.cn/overview/)
-
+GitHub 上标星 10000+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括 Java 基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM 等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 10000+ 的 Java 教程](https://javabetter.cn/overview/)
 
 微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
@@ -1263,28 +1416,38 @@ GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https:
 
 ### 48.IP 协议的定义和作用？
 
-> **IP 协议是什么？**
+IP 协议（Internet Protocol）用于在计算机网络之间传输数据包，它定义了数据包的格式和处理规则，确保数据能够从一个设备传输到另一个设备，可能跨越多个中间网络设备（如路由器）。
 
-IP 协议（Internet Protocol）又被称为互联网协议，是支持网间互联的数据包协议，工作在**网际层**，主要目的就是为了提高网络的可扩展性。
+![三分恶面渣逆袭：虚拟 IP 网](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-2672de5a-b5de-4f7f-905b-7c4935ca3efb.jpg)
 
-通过**网际协议 IP**，可以把参与互联的，性能各异的网络**看作一个统一的网络**。
+#### IP 协议有哪些作用？
 
-![虚拟 IP 网](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-2672de5a-b5de-4f7f-905b-7c4935ca3efb.jpg)
+①、**寻址**：每个连接到网络的设备都有一个唯一的 IP 地址。IP 协议使用这些地址来标识数据包的源地址和目的地址，确保数据包能够准确地传输到目标设备。
 
+②、**路由**：IP 协议负责决定数据包在网络传输中的路径。比如说路由器使用路由表和 IP 地址信息来确定数据包的最佳传输路径。
 
+③、**分片和重组**：当数据包过大无法在某个网络上传输时，IP 协议会将数据包分成更小的片段进行传输。接收端会根据头部信息将这些片段重新组装成完整的数据包。
 
-和传输层 TCP 相比，IP 协议是一种无连接/不可靠、尽力而为的数据包传输服务，和 TCP 协议一起构成了 TCP/IP 协议的核心。
+#### 举一个实际的例子来说明？
 
-> **IP 协议有哪些作用？**
+假设有两个设备 A 和 B 通过互联网通信，A 的 IP 地址是 192.168.1.1，B 的 IP 地址是 203.0.113.5。数据包的传输过程如下：
 
-IP 协议主要有以下几个作用：
+①、设备 A 发送数据包：
 
-- **寻址和路由**：在 IP 数据报中携带源 IP 地址和目的 IP 地址来表示该数据包的源主机和目标主机。IP 数据报在传输过程中，每个中间节点（IP 网关、路由器）只根据网络地址来进行转发，如果中间节点是路由器，则路由器会根据路由表选择合适的路径。IP 协议根据路由选择协议提供的路由信息对 IP 数据报进行转发，直至目标主机。
-- **分段和重组**：IP 数据报在传输过程中可能会经过不同的网络，在不同的网络中数据报的最大长度限制是不同的，IP 协议通过给每个 IP 数据报分配一个标识符以及分段与组装的相关信息，使得数据报在不同的网络中能够被传输，被分段后的 IP 数据报可以独立地在网络中进行转发，在达到目标主机后由目标主机完成重组工作，恢复出原来的 IP 数据报。
+- 设备 A 创建一个 IP 数据包，设置源地址为 192.168.1.1，目的地址为 203.0.113.5，将要传输的数据放入数据部分。
+- 数据包封装后，通过本地网络发送到路由器。
 
-> **传输层协议和网络层协议有什么区别？**
+②、路由器转发数据包：
 
-网络层协议负责提供主机间的逻辑通信；传输层协议负责提供进程间的逻辑通信。
+- 路由器根据路由表查找目的地址 203.0.113.5，确定数据包的传输路径。
+- 数据包可能经过多个中间路由器，每个路由器都根据路由表选择下一跳，最终到达目标设备的网络。
+
+③、设备 B 接收数据包：
+
+- 设备 B 接收数据包，读取 IP 头部信息，验证数据包的完整性。
+- 并数据部分取出，交给上层协议处理（如 TCP 或 UDP）。
+
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的华为面经同学 12 暑期实习一面面试原题：说说IP协议. 
 
 ### 49.IP 地址有哪些分类？
 
@@ -1303,8 +1466,6 @@ IP 地址分为 A，B，C，D，E 五大类：
 
 ![IP 地址分类](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-40b6445c-0392-47b2-97c9-6235675fd459.jpg)
 
-
-
 ### 50.域名和 IP 的关系？一个 IP 可以对应多个域名吗？
 
 - IP 地址在同一个网络中是惟一的，用来标识每一个网络上的设备，其相当于一个人的身份证号
@@ -1322,8 +1483,6 @@ IP 地址分为 A，B，C，D，E 五大类：
 
 ![IPV4 不够解决办法](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-2787d939-672e-4117-b6ae-03d13221b5bb.jpg)
 
-
-
 - DHCP：动态主机配置协议，动态分配 IP 地址，只给接入网络的设备分配 IP 地址，因此同一个 MAC 地址的设备，每次接入互联网时，得到的 IP 地址不一定是相同的，该协议使得空闲的 IP 地址可以得到充分利用。
 - CIDR：无类别域间路由。CIDR 消除了传统的 A 类、B 类、C 类地址以及划分子网的概念，因而更加有效地分配 IPv4 的地址空间，但无法从根本上解决地址耗尽的问题。
 - NAT：网络地址转换协议，我们知道属于不同局域网的主机可以使用相同的 IP 地址，从而一定程度上缓解了 IP 资源枯竭的问题，然而主机在局域网中使用的 IP 地址是不能在公网中使用的，当局域网主机想要与公网主机进行通信时，NAT 方法可以将该主机 IP 地址转换为全球 IP 地址。该协议能够有效解决 IP 地址不足的问题。
@@ -1331,16 +1490,27 @@ IP 地址分为 A，B，C，D，E 五大类：
 
 ### 52.说下 ARP 协议的工作过程？
 
-ARP 协议，**Address Resolution Protocol**，地址解析协议，它是用于实现 IP 地址到 MAC 地址的映射。
+ARP（Address Resolution Protocol，地址解析协议）是网络通信中的一种协议，主要目的是将网络层的 IP 地址解析为链路层的 MAC 地址。
 
-![ARP 协议作用](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-41988dc1-fb5b-4287-a8e8-754bf2f0d310.jpg)
+![三分恶面渣逆袭：ARP 协议作用](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-41988dc1-fb5b-4287-a8e8-754bf2f0d310.jpg)
 
+①、ARP 请求
 
+当主机 A 要发送数据给主机 B 时，首先会在自己的 ARP 缓存中查找主机 B 的 MAC 地址。
 
-1.  首先，每台主机都会在自己的 ARP 缓冲区中建立一个 ARP 列表，以表示 IP 地址和 MAC 地址的对应关系。
-2.  当源主机需要将一个数据包要发送到目的主机时，会首先检查自己的 ARP 列表，是否存在该 IP 地址对应的 MAC 地址；如果有﹐就直接将数据包发送到这个 MAC 地址；如果没有，就向本地网段发起一个 ARP 请求的广播包，查询此目的主机对应的 MAC 地址。此 ARP 请求的数据包里，包括源主机的 IP 地址、硬件地址、以及目的主机的 IP 地址。
-3.  网络中所有的主机收到这个 ARP 请求后，会检查数据包中的目的 IP 是否和自己的 IP 地址一致。如果不相同，就会忽略此数据包；如果相同，该主机首先将发送端的 MAC 地址和 IP 地址添加到自己的 ARP 列表中，如果 ARP 表中已经存在该 IP 的信息，则将其覆盖，然后给源主机发送一个 ARP 响应数据包，告诉对方自己是它需要查找的 MAC 地址。
-4.  源主机收到这个 ARP 响应数据包后，将得到的目的主机的 IP 地址和 MAC 地址添加到自己的 ARP 列表中，并利用此信息开始数据的传输。如果源主机一直没有收到 ARP 响应数据包，表示 ARP 查询失败。
+如果没有找到，主机 A 会向网络中广播一个 ARP 请求数据包，请求网络中的所有主机告诉它们的 MAC 地址；这个请求包含了请求设备和目标设备的 IP 和 MAC 地址。
+
+②、ARP 应答
+
+网络中的所有主机都会收到这个 ARP 请求，但只有主机 B 会回复 ARP 应答，告诉主机 A 自己的 MAC 地址。
+
+并且主机 B 会将主机 A 的 IP 和 MAC 地址映射关系缓存到自己的 ARP 缓存中，以便下次通信时直接使用。
+
+③、更新 ARP 缓存
+
+主机 A 收到主机 B 的 ARP 应答后，也会将主机 B 的 IP 和 MAC 地址映射关系缓存到自己的 ARP 缓存中。
+
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的快手面经同学 7 Java 后端技术一面面试原题：说一下 ARP 协议的过程
 
 ### 53.为什么既有 IP 地址，又有 MAC 地址？
 
@@ -1359,8 +1529,6 @@ ARP 协议，**Address Resolution Protocol**，地址解析协议，它是用于
 
 ![IP 地址和 MAC 地址](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-824dd638-6387-4f8b-b8ae-b0bd0e525a69.jpg)
 
-
-
 - 只有当设备连入网络时，才能根据他进入了哪个子网来为其分配 IP 地址，在设备还没有 IP 地址的时候，或者在分配 IP 的过程中。我们需要 MAC 地址来区分不同的设备。
 - IP 地址可以比作为地址，MAC 地址为收件人，在一次通信过程中，两者是缺一不可的。
 
@@ -1376,25 +1544,23 @@ ICMP（Internet Control Message Protocol） ，网际控制报文协议。
 
 ### 55.说下 ping 的原理？
 
-ping，**Packet Internet Groper**，是一种因特网包探索器，用于测试网络连接量的程序。Ping 是工作在 TCP/IP 网络体系结构中应用层的一个服务命令， 主要是向特定的目的主机发送 ICMP（Internet Control Message Protocol 因特网报文控制协议） 请求报文，测试目的站是否可达及了解其有关状态。
+ping，**Packet Internet Groper**，一个网络工具，主要用来测试网络连接的可达性和延迟。
 
-![ping 百度](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-5b7eade5-aa45-4c6f-93ea-2a0256424a7c.jpg)
+![ping 二哥的 Java 进阶之路](https://cdn.tobebetterjavaer.com/stutymore/network-20240405224226.png)
 
+Ping 的过程主要基于 ICMP（Internet Control Message Protocol，互联网控制消息协议）实现，其基本过程包括：
 
+①、当执行 Ping 命令，如`ping javabetter.cn`，Ping 首先解析域名获取 IP 地址，然后向目标 IP 发送一个 ICMP Echo Request 消息。
 
-一般来说，ping 可以用来检测网络通不通。它是基于`ICMP`协议工作的。假设**机器 A** ping **机器 B**，工作过程如下：
+②、当目标 IP 收到 ICMP Echo Request 消息后，它会生成一个 ICMP Echo Reply 消息并返回，即 Ping 响应消息。
 
-1.  ping 通知系统，新建一个固定格式的 ICMP 请求数据包
-2.  ICMP 协议，将该数据包和目标机器 B 的 IP 地址打包，一起转交给 IP 协议层
-3.  IP 层协议将本机 IP 地址为源地址，机器 B 的 IP 地址为目标地址，加上一些其他的控制信息，构建一个 IP 数据包
-4.  先获取目标机器 B 的 MAC 地址。
-5.  数据链路层构建一个数据帧，目的地址是 IP 层传过来的 **MAC 地址**，源地址是本机的 **MAC 地址**
-6.  机器 B 收到后，对比目标地址，和自己本机的 MAC 地址是否一致，符合就处理返回，不符合就丢弃。
-7.  根据目的主机返回的 ICMP 回送回答报文中的时间戳，从而计算出往返时间
-8.  最终显示结果有这几项：发送到目的主机的 IP 地址、发送 & 收到 & 丢失的分组数、往返时间的最小、最大 & 平均值
+③、发起 Ping 命令的设备接收到 ICMP Echo Reply 消息后，计算并显示从发送 Echo Request 到接收到 Echo Reply 的时间（通常称为往返时间 RTT，Round-Trip Time），以及可能的丢包情况。
 
-GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 9300+ 的 Java 教程](https://javabetter.cn/overview/)
+Ping 通常会发送多个请求，以便提供平均响应时间和丢包率等信息，以便我们了解网络连接的质量。
 
+> 1. [Java 面试指南（付费）](https://javabetter.cn/zhishixingqiu/mianshi.html)收录的快手面经同学 7 Java 后端技术一面面试原题：说一下 Ping 的过程
+
+GitHub 上标星 10000+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括 Java 基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM 等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 10000+ 的 Java 教程](https://javabetter.cn/overview/)
 
 微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 
@@ -1408,8 +1574,6 @@ GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https:
 
 ![主动攻击和被动攻击](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-ad171b05-519e-4cdc-aa71-f4b3b2d51fbc.jpg)
 
-
-
 - **被动攻击**：是指攻击者从网络上窃听他人的通信内容，通常把这类攻击称为截获，被动攻击主要有两种形式：消息内容泄露攻击和流量分析攻击。由于攻击者没有修改数据，使得这种攻击很难被检测到。
 - **主动攻击**：直接对现有的数据和服务造成影响，常见的主动攻击类型有：
 
@@ -1422,8 +1586,6 @@ GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https:
 DNS 劫持即域名劫持，是通过将原域名对应的 IP 地址进行替换，从而使用户访问到错误的网站，或者使用户无法正常访问网站的一种攻击方式。
 
 ![DNS 劫持示意图](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-5b53389d-aa64-42d0-a147-eaa369304e1b.jpg)
-
-
 
 域名劫持往往只能在特定的网络范围内进行，范围外的 DNS 服务器能够返回正常的 IP 地址。攻击者可以冒充原域名所属机构，通过电子邮件的方式修改组织机构的域名注册信息，或者将域名转让给其它主持，并将新的域名信息保存在所指定的 DNS 服务器中，从而使用户无法对原域名来进行解析以访问目标地址。
 
@@ -1451,8 +1613,6 @@ CSRF，跨站请求伪造（英文全称是 Cross-site request forgery），是�
 
 ![CSRF 典型例子](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-d2f2a4a7-2511-4b3a-8bcb-e1cb5c6a74c7.jpg)
 
-
-
 1.  用户登陆银行，没有退出，浏览器包含了 用户 在银行的身份认证信息。
 2.  攻击者将伪造的转账请求，包含在在帖子
 3.  用户在银行网站保持登陆的情况下，浏览帖子
@@ -1476,8 +1636,6 @@ HTTP 头中的 Referer 字段记录了该 HTTP 请求的来源地址。在通常
 ### 59.什么是 DoS、DDoS、DRDoS 攻击？
 
 ![请求太多服务器着不住](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-624ef810-660d-40d5-9da9-6073023b7ebd.jpg)
-
-
 
 - **DOS**: (Denial of Service), 翻译过来就是拒绝服务, 一切能引起拒绝 行为的攻击都被称为 DOS 攻击。最常见的 DoS 攻击就有**计算机网络宽带攻击**、**连通性攻击**。
 - **DDoS**: (Distributed Denial of Service)，翻译过来是分布式拒绝服务。是指处于不同位置的多个攻击者同时向一个或几个目标发动攻击，或者一个攻击者控制了位于不同位置的多台机器，并利用这些机器对受害者同时实施攻击。
@@ -1512,8 +1670,6 @@ XSS 攻击一般分三种类型：**存储型 、反射型 、DOM 型 XSS**
 
 ![一个典型的 XSS](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-711b796f-5258-4cbe-b733-7d2a4386ed78.jpg)
 
-
-
 > **如何应对 XSS 攻击？**
 
 - 对输入进行过滤，过滤标签等，只允许合法值。
@@ -1527,13 +1683,9 @@ XSS 攻击一般分三种类型：**存储型 、反射型 、DOM 型 XSS**
 
 ![对称加密](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-7c06bc75-c05f-4e52-bff1-0453b6164917.jpg)
 
-
-
 **非对称加密**：指的是加密和解密使用不同的密钥（即公钥和私钥）。公钥与私钥是成对存在的，如果用公钥对数据进行加密，只有对应的私钥才能解密。常见的非对称加密算法有 RSA。
 
 ![非对称加密](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/nice-article/weixin-mianznxjsjwllsewswztwxxssc-5161d827-93e1-4254-8ac6-866f6f24c5c3.jpg)
-
-
 
 ### 62.RSA 和 AES 算法有什么区别？
 
@@ -1547,39 +1699,32 @@ XSS 攻击一般分三种类型：**存储型 、反射型 、DOM 型 XSS**
 
 ---
 
-*没有什么使我停留——除了目的，纵然岸旁有玫瑰、有绿荫、有宁静的港湾，我是不系之舟*。
+> 图文详解 63 道计算机网络面试高频题，这次吊打面试官，我觉得稳了（手动 dog）。整理：沉默王二，戳[转载链接](https://mp.weixin.qq.com/s/FvxyiMyq0422yifcyoG8vg)，作者：三分恶，戳[原文链接](https://mp.weixin.qq.com/s/yAlErlC09GnjaVvwUo3Acg)。
+
+_没有什么使我停留——除了目的，纵然岸旁有玫瑰、有绿荫、有宁静的港湾，我是不系之舟_。
 
 
 **系列内容**：
+
+- [面渣逆袭 Java SE 篇 👍](https://javabetter.cn/sidebar/sanfene/javase.html)
+- [面渣逆袭 Java 集合框架篇 👍](https://javabetter.cn/sidebar/sanfene/javathread.html)
+- [面渣逆袭 Java 并发编程篇 👍](https://javabetter.cn/sidebar/sanfene/collection.html)
+- [面渣逆袭 JVM 篇 👍](https://javabetter.cn/sidebar/sanfene/jvm.html)
+- [面渣逆袭 Spring 篇 👍](https://javabetter.cn/sidebar/sanfene/spring.html)
+- [面渣逆袭 Redis 篇 👍](https://javabetter.cn/sidebar/sanfene/redis.html)
+- [面渣逆袭 MyBatis 篇 👍](https://javabetter.cn/sidebar/sanfene/mybatis.html)
+- [面渣逆袭 MySQL 篇 👍](https://javabetter.cn/sidebar/sanfene/mysql.html)
+- [面渣逆袭操作系统篇 👍](https://javabetter.cn/sidebar/sanfene/os.html)
+- [面渣逆袭计算机网络篇 👍](https://javabetter.cn/sidebar/sanfene/network.html)
+- [面渣逆袭 RocketMQ 篇 👍](https://javabetter.cn/sidebar/sanfene/rocketmq.html)
+- [面渣逆袭分布式篇 👍](https://javabetter.cn/sidebar/sanfene/fenbushi.html)
+- [面渣逆袭微服务篇 👍](https://javabetter.cn/sidebar/sanfene/weifuwu.html)
+- [面渣逆袭设计模式篇 👍](https://javabetter.cn/sidebar/sanfene/shejimoshi.html)
+- [面渣逆袭 Linux 篇 👍](https://javabetter.cn/sidebar/sanfene/linux.html)
 
 ---
 
-*没有什么使我停留——除了目的，纵然岸旁有玫瑰、有绿荫、有宁静的港湾，我是不系之舟*。
-
-
-**系列内容**：
-
-- [面渣逆袭 Java SE 篇👍](https://javabetter.cn/sidebar/sanfene/javase.html)
-- [面渣逆袭 Java 集合框架篇👍](https://javabetter.cn/sidebar/sanfene/javathread.html)
-- [面渣逆袭 Java 并发编程篇👍](https://javabetter.cn/sidebar/sanfene/collection.html)
-- [面渣逆袭 JVM 篇👍](https://javabetter.cn/sidebar/sanfene/jvm.html)
-- [面渣逆袭 Spring 篇👍](https://javabetter.cn/sidebar/sanfene/spring.html)
-- [面渣逆袭 Redis 篇👍](https://javabetter.cn/sidebar/sanfene/redis.html)
-- [面渣逆袭 MyBatis 篇👍](https://javabetter.cn/sidebar/sanfene/mybatis.html)
-- [面渣逆袭 MySQL 篇👍](https://javabetter.cn/sidebar/sanfene/mysql.html)
-- [面渣逆袭操作系统篇👍](https://javabetter.cn/sidebar/sanfene/os.html)
-- [面渣逆袭计算机网络篇👍](https://javabetter.cn/sidebar/sanfene/network.html)
-- [面渣逆袭RocketMQ篇👍](https://javabetter.cn/sidebar/sanfene/rocketmq.html)
-- [面渣逆袭分布式篇👍](https://javabetter.cn/sidebar/sanfene/fenbushi.html)
-- [面渣逆袭微服务篇👍](https://javabetter.cn/sidebar/sanfene/weifuwu.html)
-
-----
-
-> 图文详解计算机网络面试高频题，这次吊打面试官，我觉得稳了（手动 dog）。整理：沉默王二，戳[转载链接](https://mp.weixin.qq.com/s/FvxyiMyq0422yifcyoG8vg)，作者：三分恶，戳[原文链接](https://mp.weixin.qq.com/s/yAlErlC09GnjaVvwUo3Acg)。
-
-
-GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 9300+ 的 Java 教程](https://javabetter.cn/overview/)
-
+GitHub 上标星 10000+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括 Java 基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM 等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 10000+ 的 Java 教程](https://javabetter.cn/overview/)
 
 微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
 

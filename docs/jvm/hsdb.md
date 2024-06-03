@@ -1,6 +1,6 @@
 ---
-title: HSDB（Hotspot Debugger）从入门到实战
-shortTitle: HSDB从入门到实战
+title: 如何调试 JVM 运行时数据？HSDB（Hotspot Debugger）从入门到实战
+shortTitle: 如何调试 JVM 运行时数据？
 category:
   - Java核心
 tag:
@@ -12,7 +12,7 @@ head:
       content: Java,JavaSE,教程,二哥的Java进阶之路,jvm,Java虚拟机,HSDB
 ---
 
-# HSDB（Hotspot Debugger）从入门到实战
+# 第十三节：如何调试 JVM 运行时数据？
 
 `HSDB（Hotspot Debugger)`，是一款内置于 SA 中的 GUI 调试工具，可用于调试 JVM 运行时数据，从而进行故障排除。
 
@@ -350,13 +350,12 @@ jseval "st = sa.vm.stringTable;st.stringsDo(function (s) { if (sapkg.oops.OopUti
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/jvm/hsdb-47a42bfa-7645-4c9b-bcd8-aeabea1ae44f.png)
 
----
 
->参考链接：https://zzcoder.cn/2019/12/06/HSDB%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E6%88%98/
+参考链接：https://juejin.cn/post/7072344870374866951
 
 ----
 
-GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 9300+ 的 Java 教程](https://javabetter.cn/overview/)
+GitHub 上标星 10000+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 10000+ 的 Java 教程](https://javabetter.cn/overview/)
 
 
 微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。

@@ -1,6 +1,6 @@
 ---
 title: 如何在Java中拆分字符串：详解String类的split()方法
-shortTitle: String拆分
+shortTitle: 如何拆分字符串
 category:
   - Java核心
 tag:
@@ -12,7 +12,7 @@ head:
       content: Java,字符串,String,字符串拆分
 ---
 
-# 4.11 String拆分
+# 4.11 如何拆分字符串
 
 “哥，我感觉字符串拆分没什么可讲的呀，直接上 String 类的 `split()` 方法不就可以了！”三妹毫不客气地说。
 
@@ -225,7 +225,7 @@ if (cmower.contains("，")) {
 
 ---
 
-GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 9300+ 的 Java 教程](https://javabetter.cn/overview/)
+GitHub 上标星 10000+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 10000+ 的 Java 教程](https://javabetter.cn/overview/)
 
 
 微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。

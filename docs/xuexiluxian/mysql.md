@@ -1,6 +1,6 @@
 ---
 star: true
-title: 2023年最值得收藏的MySQL学习路线（建议收藏🔥）
+title: 2024年最值得收藏的MySQL学习路线（建议收藏🔥）
 shortTitle: MySQL学习路线
 category:
   - 学习路线
@@ -112,9 +112,9 @@ SQL 学完，再学 MySQL 就会更加丝滑，学习曲线会平滑一些。
 
 >[https://t.zsxq.com/04eMf6AMZ](https://t.zsxq.com/04eMf6AMZ)
 
-Windows 的话，在 二哥的Java进阶之路上分享过破解方法：
+Windows 的话，在技术派上分享过破解方法：
 
->[https://javabetter.cn/nice-article/itmind/navicatzxbwindowspjbjc.html](https://javabetter.cn/nice-article/itmind/navicatzxbwindowspjbjc.html)
+>[https://paicoding.com/article/detail/411](https://paicoding.com/article/detail/411)
 
 **破解方法请勿外传，保密就对了**。
 
@@ -233,7 +233,7 @@ Windows 的话，在 二哥的Java进阶之路上分享过破解方法：
 
 ----
 
-GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 9300+ 的 Java 教程](https://javabetter.cn/overview/)
+GitHub 上标星 10000+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 10000+ 的 Java 教程](https://javabetter.cn/overview/)
 
 
 微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。

@@ -13,19 +13,19 @@ actions:
     link: /zhishixingqiu/
     type: default
 footer: |-
-  <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2021038026号-1</a> | 主题: <a href="https://theme-hope.vuejs.press/zh/" target="_blank">VuePress Theme Hope</a>
+  <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2021038026号-4</a> | 主题: <a href="https://theme-hope.vuejs.press/zh/" target="_blank">VuePress Theme Hope</a>
 ---
 
 ## 推荐阅读 
 
-- [学习路线👉](/xuexiluxian/) : 一份涵盖 Java、MySQL、Redis、C 语言、C++、Python、Go、操作系统、前端、数据结构与算法、蓝桥杯、大数据、Android、.NET的全方位编程学习路线！清晰且有效！
-- [面渣逆袭📗](sidebar/sanfene/nixi.md) ：面试前必刷，硬核理解版八股文，包括 Java 基础（JavaSE）、Java 集合框架、Java 并发编程（Java 多线程）、Java 虚拟机（JVM）、Spring、Redis、MyBatis、MySQL、操作系统、计算机网络、RocketMQ、分布式等等，助你拿到心仪 offer！
+- [学习路线👉](/xuexiluxian/) : 一份涵盖 Java、MySQL、Redis、C 语言、C++、Python、Go、操作系统、前端、数据结构与算法、蓝桥杯、大数据、Android、.NET、Linux 的全方位编程学习路线！清晰且有效！
+- [面渣逆袭📗](sidebar/sanfene/nixi.md) ：面试前必刷，硬核理解版八股文，包括 Java 基础（JavaSE）、Java 集合框架、Java 并发编程（Java 多线程）、Java 虚拟机（JVM）、Spring、Redis、MyBatis、MySQL、操作系统、计算机网络、RocketMQ、分布式、微服务、设计模式、Linux 等等，助你拿到心仪 offer！
 - [Java程序员常读书单📚](/pdf/)：超1000本PDF，助力Java 程序员构建最强知识体系，涵盖Java、设计模式、数据库、数据结构与算法、大数据、架构、其他编程语言等等，再也不用辛苦去找下载地址了，这里全都有。
 - [技术派实战项目](https://github.com/itwanger/paicoding) ：⭐️一款好用又强大的开源社区，附详细教程，包括Java、Spring、MySQL、Redis、微服务&分布式、消息队列、操作系统、计算机网络、数据结构与算法等计算机专业核心知识点。学编程，就上技术派😁。
 
 ## 公众号
 
-GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 9300+ 的 Java 教程](https://javabetter.cn/overview/)
+GitHub 上标星 10000+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，500+张手绘图，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 10000+ 的 Java 教程](https://javabetter.cn/overview/)
 
 
 微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
@@ -49,9 +49,34 @@ GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https:
 
 时间|小伙伴|赞赏金额
 ---|---|---
+2024-02-29|r*y|6元
+2024-02-23|*~|9.99元
+2024-02-21|从头再来|5元
+2024-02-15|*斗|10元
+2024-02-02|*切|2元
+2024-02-01|*康|9元
+2024-01-31|*康|1元
+2024-01-22|*妙|10元
+2024-01-17|*清|9.9元
+2024-01-12|*奥|5元
+2024-01-04|*👈🏻|1元
+2024-01-03|*|3元
+2024-01-03|Y*o|2元
+2023-12-22|*逗|50元
+2023-11-25|*君|2元
+2023-10-23|*🐻|6.66元
+2023-10-17|*哈|5元
+2023-10-12|0*7|7.77元
+2023-10-03|S*d|0.5元
+2023-09-27|*1|1元
+2023-09-25|L*e|10.24元
+2023-09-19|*人|2元
+2023-09-15|L*D|2元
+2023-09-15|*暖|5元
+2023-09-11|A*B|1元
 2023-08-21|*氏|2元
 2023-08-18|*寻|1元
-2023-08-03|*寻|10.24元
+2023-08-03|*案|10.24元
 2023-08-02|*,|1元
 2023-07-24|m*l|3元
 2023-07-20|lzy|6元

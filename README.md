@@ -44,17 +44,21 @@
 
 ![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/tobebetterjavaer-map.png)
 
-一个人可以走得很快，但一群人才能走得更远。[二哥的编程星球](https://javabetter.cn/zhishixingqiu/)已经有 **3400 多名** 球友加入了，如果你也需要一个良好的学习环境，[戳链接](https://javabetter.cn/zhishixingqiu/)加入我们吧！这是一个**编程学习指南 + Java项目实战 + LeetCode刷题的私密圈子**，你可以阅读星球专栏、向二哥提问、帮你制定学习计划、和球友一起打卡成长。
+一个人可以走得很快，但一群人才能走得更远。[二哥的编程星球](https://javabetter.cn/zhishixingqiu/)已经有 **5000 多名** 球友加入了（戳[链接](https://javabetter.cn/zhishixingqiu/)了解详情），如果你也需要一个良好的学习环境，扫描下方的优惠券加入我们吧。新人可免费体验 3 天，不满意可全额退款（只能帮你到这里了😄）。
 
-<a href="https://javabetter.cn/zhishixingqiu/">
-  <img src="https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/map.png">
-</a>
+<p align="center">
+  <a href="https://javabetter.cn/zhishixingqiu/">
+    <kbd>
+      <img src="https://cdn.tobebetterjavaer.com/paicoding/952047c145246bf6c26ea96c97326602.png" width="400px" alt="星球优惠券">
+    </kbd>
+  </a>
+</p>
 
-知识图谱里已经沉淀了非常多优质的内容，**相信能帮助你走的更快、更稳、更远**。下面 👇🏻 是二哥最近一直在做的三件大事，对你的求职和学习都会很有帮助：
+这是一个**编程学习指南 + Java 项目实战 + LeetCode 刷题的私密圈子**，你可以阅读星球专栏、向二哥提问、帮你制定学习计划、和球友一起打卡成长。两个置顶帖「球友必看」和「知识图谱」里已经沉淀了非常多优质的内容，**相信能帮助你走的更快、更稳、更远**。
 
-- ✌️：[官宣：二哥的Java面试指南+八股文发布了~](https://javabetter.cn/zhishixingqiu/mianshi.html)
-- ✌️：[官宣：二哥的实战项目技术派上线了~](https://mp.weixin.qq.com/s/B2VOZxj0HnKrO8GFIAggQg)
-- ✌️：[官宣：二哥的前端React项目2.0上线了~](https://mp.weixin.qq.com/s/MSFOGhBupTgpSSt6UDfRug)
+- [Java面试指南专栏，面试必备✌️](https://javabetter.cn/zhishixingqiu/mianshi.html)
+- [技术派，秋招项目经历必备✌️](https://javabetter.cn/zhishixingqiu/paicoding.html)
+- [简历修改服务✌️](https://javabetter.cn/zhishixingqiu/jianli.html)
 
 # 学习路线
 
@@ -76,11 +80,12 @@
   * [大数据学习路线（建议收藏🔥）](docs/xuexiluxian/bigdata.md)
   * [Android 安卓学习路线（建议收藏🔥）](docs/xuexiluxian/android.md)
   * [.NET 学习路线（建议收藏🔥）](docs/xuexiluxian/donet.md)
+  * [Linux 学习路线（建议收藏🔥）](docs/xuexiluxian/linux.md)
   
 
 # 面渣逆袭
 
->  **面试前必读系列**！包括 Java 基础、Java 集合框架、Java 并发编程、Java 虚拟机、Spring、Redis、MyBatis、MySQL、操作系统、计算机网络、RocketMQ、分布式 等等。
+>  **面试前必读系列**！包括 Java 基础、Java 集合框架、Java 并发编程、Java 虚拟机、Spring、Redis、MyBatis、MySQL、操作系统、计算机网络、RocketMQ、分布式、微服务、设计模式、Linux 等等。
 
 - [面渣逆袭（Java 基础篇八股文面试题）必看👍](docs/sidebar/sanfene/javase.md)
 - [面渣逆袭（Java 集合框架篇八股文面试题）必看👍](docs/sidebar/sanfene/collection.md)
@@ -95,6 +100,8 @@
 - [面渣逆袭（RocketMQ八股文面试题）必看👍](docs/sidebar/sanfene/rocketmq.md)
 - [面渣逆袭（分布式面试题八股文）必看👍](docs/sidebar/sanfene/fenbushi.md)
 - [面渣逆袭（微服务面试题八股文）必看👍](docs/sidebar/sanfene/weifuwu.md)
+- [面渣逆袭（设计模式面试题八股文）必看👍](docs/sidebar/sanfene/shejimoshi.md)
+- [面渣逆袭（Linux面试题八股文）必看👍](docs/sidebar/sanfene/linux.md)
 
 # Java基础
 
@@ -118,6 +125,7 @@
 - [Java基本数据类型缓存池剖析（IntegerCache）](docs/basic-extra-meal/int-cache.md)
 - [Java运算符详解](docs/basic-grammar/operator.md)
 - [Java流程控制语句详解](docs/basic-grammar/flow-control.md)
+- [Java 语法基础练习题](docs/basic-grammar/basic-exercise.md)
 
 ## 数组&字符串
 
@@ -159,20 +167,21 @@
 
 ## 集合框架（容器）
 
-- [Java集合框架：List、Set、Map、队列——全面解析](docs/collection/gailan.md)
-- [时间复杂度](docs/collection/time-complexity.md)
+- [Java集合框架概览，包括List、Set、Map、队列](docs/collection/gailan.md)
 - [深入探讨 Java ArrayList](docs/collection/arraylist.md)
 - [深入探讨 Java LinkedList](docs/collection/linkedlist.md)
-- [ArrayList和LinkedList的区别](docs/collection/list-war-2.md)
-- [Java 泛型深入解析](docs/basic-extra-meal/generic.md)
-- [Java迭代器Iterator和Iterable有什么区别？](docs/collection/iterator-iterable.md)
-- [为什么禁止在foreach里执行元素的删除操作？](docs/collection/fail-fast.md)
+- [Java Stack详解](docs/collection/stack.md)
 - [Java HashMap详解](docs/collection/hashmap.md)
 - [Java LinkedHashMap详解](docs/collection/linkedhashmap.md)
 - [Java TreeMap详解](docs/collection/treemap.md)
 - [Java 双端队列 ArrayDeque详解](docs/collection/arraydeque.md)
 - [Java 优先级队列PriorityQueue详解](docs/collection/PriorityQueue.md)
-- [Java Comparable和Comparator的区别](docs/basic-extra-meal/comparable-omparator.md)
+- [Java Comparable和Comparator的区别](docs/collection/comparable-omparator.md)
+- [时间复杂度，评估ArrayList和LinkedList的执行效率](docs/collection/time-complexity.md)
+- [ArrayList和LinkedList的区别](docs/collection/list-war-2.md)
+- [Java 泛型深入解析](docs/basic-extra-meal/generic.md)
+- [Java迭代器Iterator和Iterable有什么区别？](docs/collection/iterator-iterable.md)
+- [为什么禁止在foreach里执行元素的删除操作？](docs/collection/fail-fast.md)
 
 ## Java IO
 
@@ -277,25 +286,25 @@
 
 ## Java虚拟机
 
-- [JVM到底是什么？](docs/jvm/what-is-jvm.md)
-- [JVM到底是如何运行Java代码的？](docs/jvm/how-run-java-code.md)
-- [我竟然不再抗拒Java的类加载机制了](docs/jvm/class-load.md)
-- [详解Java的类文件（class文件）结构](docs/jvm/class-file-jiegou.md)
+- [JVM小册简介](docs/jvm/readme.md)
+- [大白话带你认识JVM](docs/jvm/what-is-jvm.md)
+- [JVM是如何运行Java代码的？](docs/jvm/how-run-java-code.md)
+- [Java的类加载机制（付费）](docs/jvm/class-load.md)
+- [Java的类文件结构](docs/jvm/class-file-jiegou.md)
 - [从javap的角度轻松看懂字节码](docs/jvm/bytecode.md)
-- [JVM字节码指令详解](docs/jvm/zijiema-zhiling.md)
-- [虚拟机是如何执行字节码指令的？](docs/jvm/how-jvm-run-zijiema-zhiling.md)
-- [HSDB（Hotspot Debugger）从入门到实战](docs/jvm/hsdb.md)
-- [史上最通俗易懂的ASM教程](docs/jvm/asm.md)
-- [自己编译JDK](docs/jvm/compile-jdk.md)
-- [深入理解JVM的内存结构](docs/jvm/neicun-jiegou.md)
+- [栈虚拟机与寄存器虚拟机](docs/jvm/vm-stack-register.md)
+- [字节码指令详解](docs/jvm/zijiema-zhiling.md)
+- [深入理解JVM的栈帧结构](docs/jvm/stack-frame.md)
+- [深入理解JVM的运行时数据区](docs/jvm/neicun-jiegou.md)
+- [深入理解JVM的垃圾回收机制](docs/jvm/gc.md)
+- [深入理解 JVM 的垃圾收集器：CMS、G1、ZGC](docs/jvm/gc-collector.md)
 - [Java 创建的对象到底放在哪？](docs/jvm/whereis-the-object.md)
-- [咱们从头到尾说一次Java垃圾回收](docs/jvm/gc.md)
-- [图解Java的垃圾回收机制](docs/jvm/tujie-gc.md)
-- [Java中9种常见的CMS GC问题分析与解决](docs/jvm/meituan-9-gc.md)
-- [Java问题诊断和排查工具（查看JVM参数、内存使用情况及分析）](docs/jvm/problem-tools.md)
-- [Java即时编译（JIT）器原理解析及实践](docs/jvm/jit.md)
-- [一次内存溢出排查优化实战](docs/jvm/oom.md)
-- [一次生产CPU 100% 排查优化实践](docs/jvm/cpu-percent-100.md)
+- [深入理解JIT（即时编译）](docs/jvm/jit.md)
+- [JVM 性能监控之命令行篇](docs/jvm/console-tools.md)
+- [JVM 性能监控之可视化篇](docs/jvm/view-tools.md)
+- [阿里开源的 Java 诊断神器 Arthas](docs/jvm/arthas.md)
+- [内存溢出排查优化实战](docs/jvm/oom.md)
+- [CPU 100% 排查优化实践](docs/jvm/cpu-percent-100.md)
 - [JVM 核心知识点总结](docs/jvm/zongjie.md)
 
 
@@ -328,7 +337,8 @@
 
 > Git 是一个分布式版本控制系统，缔造者是大名鼎鼎的林纳斯·托瓦茲 (Linus Torvalds)，Git 最初的目的是为了能更好的管理 Linux 内核源码。如今，Git 已经成为全球软件开发者的标配。如果说 Linux 项目促成了开源软件的成功并改写了软件行业的格局，那么 Git 则是改变了全世界开发者的工作方式和写作方式。
 
-- [1小时彻底掌握Git，（可能是）史上最简单明了的 Git 教程](docs/git/git-qiyuan.md)
+- [1小时彻底掌握Git](docs/git/git-qiyuan.md)
+- [GitHub 远程仓库端口切换](docs/git/port-22-to-443.md)
 
 ## Spring
 
@@ -339,6 +349,7 @@
 ## SpringBoot
 
 - [一分钟快速搭建Spring Boot项目](docs/springboot/initializr.md)
+- [Spring Boot 整合 lombok](docs/springboot/lombok.md)
 - [Spring Boot 整合 MySQL 和 Druid](docs/springboot/mysql-druid.md)
 - [Spring Boot 整合 JPA](docs/springboot/jpa.md)
 - [Spring Boot 整合 Thymeleaf 模板引擎](docs/springboot/thymeleaf.md)
@@ -405,6 +416,15 @@
 
 ## MySQL
 
+- [MySQL 的安装和连接，结合技术派实战项目来讲](docs/mysql/install.md)
+- [MySQL 的数据库操作，利用 Spring Boot 实现数据库的自动创建](docs/mysql/database.md)
+- [MySQL 表的基本操作，结合技术派的表自动初始化来讲](docs/mysql/table.md)
+- [MySQL 的数据类型，4000 字 20 张手绘图，彻底掌握](docs/mysql/data-type.md)
+- [MySQL 的字符集和比较规则，从跟上掌握](docs/mysql/charset.md)
+- [MySQL bin目录下的那些可执行文件，包括备份数据库、导入 CSV 等](docs/mysql/bin.md)
+- [MySQL 的字段属性，默认值、是否为空、主键、自增、ZEROLFILL等一网打尽](docs/mysql/column.md)
+- [MySQL 的简单查询，开始踏上 SELECT 之旅](docs/mysql/select-simple.md)
+- [MySQL 的 WEHRE 条件查询，重点搞懂 % 通配符](docs/mysql/select-where.md)
 - [如何保障MySQL和Redis的数据一致性？](docs/mysql/redis-shuju-yizhixing.md)
 - [从根上理解 MySQL 的事务](docs/mysql/lijie-shiwu.md)
 - [浅入深出 MySQL 中事务的实现](docs/mysql/shiwu-shixian.md)
@@ -494,6 +514,7 @@
 
 ## PDF下载
 
+- [👏下载→Linux速查备忘手册.pdf](docs/pdf/linux.md)
 - [👏下载→超1000本计算机经典书籍分享](docs/pdf/java.md)
 - [👏下载→2022年全网最全关于程序员学习和找工作的PDF资源](docs/pdf/programmer-111.md)
 - [👏下载→深入浅出Java多线程PDF](docs/pdf/java-concurrent.md)
@@ -563,9 +584,7 @@
 
 ### 原创公众号
 
-![](https://itwanger-oss.oss-cn-beijing.aliyuncs.com/paicoding/1_995464436_171_85_3_731480121_1577da7e9942707dbf727407411f7288_dd680c35.png)
-
-GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 9300+ 的 Java 教程](https://javabetter.cn/overview/)
+GitHub 上标星 10000+ 的开源知识库《[二哥的 Java 进阶之路](https://github.com/itwanger/toBeBetterJavaer)》第一版 PDF 终于来了！包括Java基础语法、数组&字符串、OOP、集合框架、Java IO、异常处理、Java 新特性、网络编程、NIO、并发编程、JVM等等，共计 32 万余字，可以说是通俗易懂、风趣幽默……详情戳：[太赞了，GitHub 上标星 10000+ 的 Java 教程](https://javabetter.cn/overview/)
 
 
 微信搜 **沉默王二** 或扫描下方二维码关注二哥的原创公众号沉默王二，回复 **222** 即可免费领取。
@@ -589,16 +608,41 @@ GitHub 上标星 9300+ 的开源知识库《[二哥的 Java 进阶之路](https:
 开源不易，如果《二哥的Java进阶之路》对你有些帮助，可以请作者喝杯咖啡，算是对开源做出的一点点鼓励吧！
 
 <div align="left">
-    <img src="https://itwanger-oss.oss-cn-beijing.aliyuncs.com/tobebetterjavaer/images/weixin-zhifu.png" width="260px">
+    <img src="https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/weixin-zhifu.png" width="260px">
 </div>
 
 :gift_heart: 感谢大家对我资金的赞赏，每隔一个月会统计一次。
 
 时间|小伙伴|赞赏金额
 ---|---|---
+2024-02-29|r*y|6元
+2024-02-23|*~|9.99元
+2024-02-21|从头再来|5元
+2024-02-15|*斗|10元
+2024-02-02|*切|2元
+2024-02-01|*康|9元
+2024-01-31|*康|1元
+2024-01-22|*妙|10元
+2024-01-17|*清|9.9元
+2024-01-12|*奥|5元
+2024-01-04|*👈🏻|1元
+2024-01-03|*|3元
+2024-01-03|Y*o|2元
+2023-12-22|*逗|50元
+2023-11-25|*君|2元
+2023-10-23|*🐻|6.66元
+2023-10-17|*哈|5元
+2023-10-12|0*7|7.77元
+2023-10-03|S*d|0.5元
+2023-09-27|*1|1元
+2023-09-25|L*e|10.24元
+2023-09-19|*人|2元
+2023-09-15|L*D|2元
+2023-09-15|*暖|5元
+2023-09-11|A*B|1元
 2023-08-21|*氏|2元
 2023-08-18|*寻|1元
-2023-08-03|*寻|10.24元
+2023-08-03|*案|10.24元
 2023-08-02|*,|1元
 2023-07-24|m*l|3元
 2023-07-20|lzy|6元
