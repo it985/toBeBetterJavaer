@@ -251,17 +251,17 @@ System.out.println(s5 == s6);  // true
 ```
 
 
-- [StackOverflow : What is String interning?](https://stackoverflow.com/questions/10578984/what-is-string-interning)
-- [深入解析 String#intern](https://tech.meituan.com/in_depth_understanding_string_intern.html)
+- [字符串常量池](https://javabetter.cn/string/constant-pool.html)
+- [详解 String.intern() 方法](https://javabetter.cn/string/intern.html)
 
 ### new String("abc")
 
 使用这种方式一共会创建两个字符串对象（前提是 String Pool 中还没有 "abc" 字符串对象）。
 
-- "abc" 属于字符串字面量，因此编译时期会在 String Pool 中创建一个字符串对象，指向这个 "abc" 字符串字面量；
-- 而使用 new 的方式会在堆中创建一个字符串对象。
+- "abc" 属于字符串字面量，因此编译时会在 String Pool 中创建一个字符串对象；
+- 使用 new 会在堆中创建一个新的字符串对象，这个新对象在创建的时候，会使用字符串常量池中 "abc" 作为构造方法的参数。
 
-创建一个测试类，其 main 方法中使用这种方式来创建字符串对象。
+好，我们来创建一个测试类，main 方法中使用这种方式来创建字符串对象。
 
 ```java
 public class NewStringTest {
@@ -271,7 +271,7 @@ public class NewStringTest {
 }
 ```
 
-使用 javap -verbose 进行反编译，得到以下内容：
+使用 `javap -verbose` 进行反编译，得到以下内容：
 
 ```java
 // ...
@@ -297,9 +297,11 @@ Constant pool:
 // ...
 ```
 
-在 Constant Pool 中，#19 存储这字符串字面量 "abc"，#3 是 String Pool 的字符串对象，它指向 #19 这个字符串字面量。在 main 方法中，0: 行使用 new #2 在堆中创建一个字符串对象，并且使用 ldc #3 将 String Pool 中的字符串对象作为 String 构造函数的参数。
+在 Constant Pool 中，#19 存储了字符串字面量 "abc"，#3 是 String Pool 的字符串对象，它指向 #19 这个字符串字面量。
 
-以下是 String 构造函数的源码，可以看到，在将一个字符串对象作为另一个字符串对象的构造函数参数时，并不会完全复制 value 数组内容，而是都会指向同一个 value 数组。
+在 main 方法中，0: 行使用 new #2 在堆中创建了一个字符串对象，并且使用 ldc #3 将 String Pool 中的字符串对象作为 String 构造方法的参数。
+
+以下是 String 构造方法的源码，可以看到，在将一个字符串对象作为另一个字符串对象的构造方法参数时，并不会复制 value 数组的内容，而是指向同一个 value 数组。
 
 ```java
 public String(String original) {
@@ -308,13 +310,17 @@ public String(String original) {
 }
 ```
 
+> 微信搜索《**沉默王二**》或者微信扫下面的二维码，关注后回复《**java**》即可获取最新的 PDF 版本。
+
+![手机端可以长按识别](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)
+
 ## 三、运算
 
 ### 参数传递
 
-Java 的参数是以值传递的形式传入方法中，而不是引用传递。
+Java 的参数是以值传递的形式传入方法中的，而不是引用传递。
 
-以下代码中 Dog dog 的 dog 是一个指针，存储的是对象的地址。在将一个参数传入一个方法时，本质上是将对象的地址以值的方式传递到形参中。
+这是一个 Dog 类，有一个字段 name、一个构造方法、一个 getName 方法和一个 setName 方法，以及一个 getObjectAddress 方法，用来返回对象的地址。
 
 ```java
 public class Dog {
@@ -339,7 +345,7 @@ public class Dog {
 }
 ```
 
-在方法中改变对象的字段值会改变原对象该字段值，因为引用的是同一个对象。
+然后我们在测试类的 main 方法中创建一个 Dog 对象 dog，并调用 func 方法，将 dog 对象作为参数传入。
 
 ```java
 class PassByValueExample {
@@ -355,7 +361,9 @@ class PassByValueExample {
 }
 ```
 
-但是在方法中将指针引用了其它对象，那么此时方法里和方法外的两个指针指向了不同的对象，在一个指针改变其所指向对象的内容对另一个指针所指向的对象没有影响。
+可以看到，dog 的 name 发生了改变，因为调用 func 方法时，传入的是 dog 对象的引用，也就是说，传入的是对象的地址，所以在 func 方法中对对象的字段进行修改，会影响到传入之前的对象。
+
+但如果在方法中将变量引用到其它对象，那么此时方法里和方法外的两个引用其实指向了不同的对象，因此 func 方法中的 `dog = new Dog("B")` 并不会影响 main 方法中的 dog 对象。
 
 ```java
 public class PassByValueExample {
@@ -376,13 +384,15 @@ public class PassByValueExample {
 }
 ```
 
-[StackOverflow: Is Java “pass-by-reference” or “pass-by-value”?](https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value)
+因此，在将一个对象作为参数传入另外一个方法时，本质上是将对象的地址以值的方式传递到形参中。
+
+推荐阅读：[Java 到底是值传递还是引用传递](https://javabetter.cn/basic-extra-meal/pass-by-value.html)
 
 ### float 与 double
 
-Java 不能隐式执行向下转型，因为这会使得精度降低。
+Java 不能隐式向下转型，因为这会使精度降低。
 
-1.1 字面量属于 double 类型，不能直接将 1.1 直接赋值给 float 变量，因为这是向下转型。
+`1.1` 字面量属于 double 类型，不能直接将 `1.1` 赋值给 float 变量，因为这是向下转型。
 
 ```java
 // float f = 1.1;
@@ -416,7 +426,7 @@ s1++;
 s1 = (short) (s1 + 1);
 ```
 
-[StackOverflow : Why don't Java's +=, -=, *=, /= compound assignment operators require casting?](https://stackoverflow.com/questions/8710619/why-dont-javas-compound-assignment-operators-require-casting)
+推荐阅读：[自动类型转换与强制类型转换](https://javabetter.cn/basic-grammar/type-cast.html)
 
 ### switch
 
@@ -434,33 +444,22 @@ switch (s) {
 }
 ```
 
-switch 不支持 long、float、double，是因为 switch 的设计初衷是对那些只有少数几个值的类型进行等值判断，如果值过于复杂，那么还是用 if 比较合适。
+推荐阅读：[switch 语句的介绍](https://javabetter.cn/basic-grammar/flow-control.html#_02%E3%80%81switch-%E8%AF%AD%E5%8F%A5)
 
-```java
-// long x = 111;
-// switch (x) { // Incompatible types. Found: 'long', required: 'char, byte, short, int, Character, Byte, Short, Integer, String, or an enum'
-//     case 111:
-//         System.out.println(111);
-//         break;
-//     case 222:
-//         System.out.println(222);
-//         break;
-// }
-```
+> 微信搜索《**沉默王二**》或者微信扫下面的二维码，关注后回复《**java**》即可获取最新的 PDF 版本。
 
-[StackOverflow : Why can't your switch statement data type be long, Java?](https://stackoverflow.com/questions/2676210/why-cant-your-switch-statement-data-type-be-long-java)
-
+![手机端可以长按识别](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)
 
 ## 四、关键字
 
 ### final
 
-**1. 数据**  
+#### 1.变量
 
-声明数据为常量，可以是编译时常量，也可以是在运行时被初始化后不能被改变的常量。
+使用 final 修饰的变量被称为常量，常量在定义时必须进行初始化，并且初始化后值不可改变。
 
-- 对于基本类型，final 使数值不变；
-- 对于引用类型，final 使引用不变，也就不能引用其它对象，但是被引用的对象本身是可以修改的。
+- 对于基本数据类型，final 修饰后的变量值不可改变。
+- 对于引用数据类型，final 修饰后的引用不变，也就事不能引用其它对象，但是被引用的对象本身是可以修改的。
 
 ```java
 final int x = 1;
@@ -469,22 +468,22 @@ final A y = new A();
 y.a = 1;
 ```
 
-**2. 方法**  
+#### 2.方法 
 
-声明方法不能被子类重写。
+final 修饰的方法不能被子类重写。
 
-private 方法隐式地被指定为 final，如果在子类中定义的方法和基类中的一个 private 方法签名相同，此时子类的方法不是重写基类方法，而是在子类中定义了一个新的方法。
+#### 3. 类
 
-**3. 类**  
+final 修饰的类不允许被继承。
 
-声明类不允许被继承。
+推荐阅读：[一文彻底搞懂 Java final 关键字](https://javabetter.cn/oo/final.html)
 
 ### static
 
-**1. 静态变量**  
+#### 1.静态变量 
 
-- 静态变量：又称为类变量，也就是说这个变量属于类的，类所有的实例都共享静态变量，可以直接通过类名来访问它。静态变量在内存中只存在一份。
-- 实例变量：每创建一个实例就会产生一个实例变量，它与该实例同生共死。
+- 静态变量：又称类变量，也就是通过 static 关键字修饰的变量，这个变量是属于类的，类所有的实例都共享静态变量，可以直接通过类名来访问静态变量。静态变量在内存中只有一份。
+- 实例变量：或者叫成员变量，每创建一个实例就会产生一个实例变量，它与该实例同生共死。
 
 ```java
 public class A {
@@ -501,9 +500,11 @@ public class A {
 }
 ```
 
-**2. 静态方法**  
+#### 2.静态方法
 
-静态方法在类加载的时候就存在了，它不依赖于任何实例。所以静态方法必须有实现，也就是说它不能是抽象方法。
+static 修饰的方法被称为静态方法，它在类加载的时候就存在了，它不依赖于任何实例。
+
+但 static 不能用来修饰抽象方法，因为 abstract 方法需要子类重写并提供具体实现，而 static 方法是静态的，无法被子类重写，这使得 static 和 abstract 修饰符是冲突的。
 
 ```java
 public abstract class A {
@@ -513,7 +514,7 @@ public abstract class A {
 }
 ```
 
-只能访问所属类的静态字段和静态方法，方法中不能有 this 和 super 关键字，因为这两个关键字与具体对象关联。
+静态方法只能访问所属类的静态字段和静态方法，并且静态方法中不能有 this 和 super 关键字，因为这两个关键字与具体的对象关联。
 
 ```java
 public class A {
@@ -529,9 +530,9 @@ public class A {
 }
 ```
 
-**3. 静态语句块**  
+#### 3.静态代码块
 
-静态语句块在类初始化时运行一次。
+静态代码块在类初始化时运行一次。
 
 ```java
 public class A {
@@ -546,13 +547,15 @@ public class A {
 }
 ```
 
-```html
+可以用 static 代码块来初始化一些静态变量，它会优先于 main 方法执行。
+
+```
 123
 ```
 
-**4. 静态内部类**  
+#### 4.静态内部类
 
-非静态内部类依赖于外部类的实例，也就是说需要先创建外部类实例，才能用这个实例去创建非静态内部类。而静态内部类不需要。
+非静态内部类依赖于外部类的实例，也就是说需要先创建外部类的实例，才能用这个实例去创建非静态内部类。而静态内部类不需要，可以直接实例化。
 
 ```java
 public class OuterClass {
@@ -572,45 +575,39 @@ public class OuterClass {
 }
 ```
 
-静态内部类不能访问外部类的非静态的变量和方法。
+但静态内部类不能访问外部类的非静态变量和方法。
 
-**5. 静态导包**  
+#### 5.静态导包
 
-在使用静态变量和方法时不用再指明 ClassName，从而简化代码，但可读性大大降低。
+在使用静态变量和静态方法时不用再指明 ClassName，从而简化代码，但可读性大大降低，不推荐。
 
 ```java
 import static com.xxx.ClassName.*
 ```
 
-**6. 初始化顺序**  
+#### 6.代码的初始化顺序
 
-静态变量和静态语句块优先于实例变量和普通语句块，静态变量和静态语句块的初始化顺序取决于它们在代码中的顺序。
+静态变量和静态代码块优先于实例变量和普通代码块，而静态变量和静态代码块的初始化顺序取决于它们在代码中的顺序。
 
 ```java
 public static String staticField = "静态变量";
-```
 
-```java
 static {
     System.out.println("静态语句块");
 }
-```
 
-```java
 public String field = "实例变量";
-```
 
-```java
 {
     System.out.println("普通语句块");
 }
 ```
 
-最后才是构造函数的初始化。
+最后才是构造方法的初始化。
 
 ```java
 public InitialOrderTest() {
-    System.out.println("构造函数");
+    System.out.println("构造方法");
 }
 ```
 
@@ -619,16 +616,23 @@ public InitialOrderTest() {
 - 父类（静态变量、静态语句块）
 - 子类（静态变量、静态语句块）
 - 父类（实例变量、普通语句块）
-- 父类（构造函数）
+- 父类（构造方法）
 - 子类（实例变量、普通语句块）
-- 子类（构造函数）
+- 子类（构造方法）
+
+推荐阅读：[详解 Java static 关键字的作用](https://javabetter.cn/oo/static.html)
+
+> 微信搜索《**沉默王二**》或者微信扫下面的二维码，关注后回复《**java**》即可获取最新的 PDF 版本。
+
+![手机端可以长按识别](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)
 
 ## 五、Object 通用方法
 
 ### 概览
 
-```java
+下面👇🏻这些方法都挺常用的，先看个大概，然后我们来挑一些使用频率非常高的方法做一个系统化地介绍。
 
+```java
 public native int hashCode()
 
 public boolean equals(Object obj)
@@ -654,30 +658,24 @@ public final void wait() throws InterruptedException
 
 ### equals()
 
-**1. 等价关系**  
+#### 1. 等价关系
 
-两个对象具有等价关系，需要满足以下五个条件：
+两个对象具有等价关系，需要满足以下 4 个条件：
 
-Ⅰ 自反性
-
-```java
-x.equals(x); // true
-```
-
-Ⅱ 对称性
+①、对称性
 
 ```java
 x.equals(y) == y.equals(x); // true
 ```
 
-Ⅲ 传递性
+②、传递性
 
 ```java
 if (x.equals(y) && y.equals(z))
     x.equals(z); // true;
 ```
 
-Ⅳ 一致性
+③、一致性
 
 多次调用 equals() 方法结果不变
 
@@ -685,7 +683,7 @@ if (x.equals(y) && y.equals(z))
 x.equals(y) == x.equals(y); // true
 ```
 
-Ⅴ 与 null 的比较
+④、与 null 的比较
 
 对任何不是 null 的对象 x 调用 x.equals(null) 结果都为 false
 
@@ -693,7 +691,7 @@ x.equals(y) == x.equals(y); // true
 x.equals(null); // false;
 ```
 
-**2. 等价与相等**  
+#### 2. 等价与相等
 
 - 对于基本类型，== 判断两个值是否相等，基本类型没有 equals() 方法。
 - 对于引用类型，== 判断两个变量是否引用同一个对象，而 equals() 判断引用的对象是否等价。
@@ -705,7 +703,7 @@ System.out.println(x.equals(y)); // true
 System.out.println(x == y);      // false
 ```
 
-**3. 实现**  
+#### 3. 实现
 
 - 检查是否为同一个对象的引用，如果是直接返回 true；
 - 检查是否是同一个类型，如果不是，直接返回 false；
