@@ -1,3 +1,36 @@
+# 《30天速通Java》之Java IO篇
+
+大家好，我是二哥呀。
+
+GitHub 上有一个很知名的开源知识库《[CS-Notes](https://github.com/CyC2018/CS-Notes)》，目前已有 173k 的 star 数，其中收录了不少我认为蛮不错的内容，比如说大家现在看到的《30天速通Java》——我起了一个噱头十足的名字😁。
+
+一共五个章节，基础篇、IO 篇、容器篇、并发篇和 JVM篇，我结合《[二哥的 Java 进阶之路](https://javabetter.cn/)》对内容做一些补充和优化，并导出了亮白版和暗黑版的 PDF 和 epub 版本，好方便大家在 30 天内真的速通 Java。
+
+- 由于时间仓促和个人能力有限，手册难免存在错误和疏漏，还请大家批评指正。微信 itwanger
+- 该手册会持续更新，再次感谢原作者 CS-Notes，原文档地址：[https://github.com/CyC2018/CS-Notes/](https://github.com/CyC2018/CS-Notes/blob/master/notes/Java%20%E5%9F%BA%E7%A1%80.md)
+- 推荐：[二哥的 Java 进阶之路：Java 最新学习路线](https://javabetter.cn/xuexiluxian/java/yitiaolong.html)
+
+## 最新 PDF 获取
+
+讲个笑话，PDF 内容没办法自动更新（😂），所以只能通过下面的方式，别怪我：
+
+> 微信搜索《**沉默王二**》或者微信扫下面的二维码，关注后回复《**java**》即可获取最新的 PDF 版本。
+
+![手机端可以长按识别](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)
+
+获取方式见下图（我用的 PC 端微信截图，手机端差不多）：
+
+![无任何套路](https://cdn.tobebetterjavaer.com/stutymore/javase-20240605194117.png)
+
+附其他干货笔记下载地址：
+
+- [二哥的 Linux 速查备忘手册 PDF 下载](https://javabetter.cn/pdf/linux.html)
+- [阮一峰 C 语言入门教程 PDF 下载](https://javabetter.cn/pdf/yuanyifeng-c-language.html)
+- [Java 核心知识点整理 PDF 下载](https://javabetter.cn/pdf/github-java-jiaocheng-115-star.html)
+- [深入浅出 Java 多线程 PDF 下载](https://javabetter.cn/pdf/java-concurrent.html)
+- [Pro Git 中文版 PDF 下载](https://javabetter.cn/pdf/progit.html)
+- [给操作系统捋条线 PDF 下载](https://javabetter.cn/pdf/os.html)
+
 ## 一、概览
 
 Java 的 I/O 大概可以分成以下几类：
@@ -13,7 +46,7 @@ Java 的 I/O 大概可以分成以下几类：
 
 File 类可以用于表示文件和目录的信息，但是它不表示文件的内容。
 
-递归地列出一个目录下所有文件：
+来看一个递归列出目录下所有文件的例子：
 
 ```java
 public static void listAllFiles(File dir) {
@@ -145,6 +178,10 @@ public static void readFileContent(String filePath) throws IOException {
     bufferedReader.close();
 }
 ```
+
+> 微信搜索《**沉默王二**》或者微信扫下面的二维码，关注后回复《**java**》即可获取最新的 PDF 版本。
+
+![手机端可以长按识别](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)
 
 ## 五、对象操作
 
@@ -605,3 +642,7 @@ NIO 与普通 I/O 的区别主要有以下两点：
 ## 八、参考资料
 
 [https://github.com/CyC2018/CS-Notes/](https://github.com/CyC2018/CS-Notes/blob/master/notes/Java%20%E5%AE%B9%E5%99%A8.md)
+
+> 微信搜索《**沉默王二**》或者微信扫下面的二维码，关注后回复《**java**》即可获取最新的 PDF 版本。
+
+![手机端可以长按识别](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/gongzhonghao.png)

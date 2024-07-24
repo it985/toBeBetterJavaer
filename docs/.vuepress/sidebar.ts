@@ -15,6 +15,7 @@ export const sidebarConfig = sidebar({
 
   // 你可以省略 .md 扩展名，以 / 结尾的路径会被推断为 /README.md(区分大小写)
   "/pdf/": [
+    "java30day",
     "linux",
     "java",
     "programmer-111",
@@ -175,6 +176,7 @@ export const sidebarConfig = sidebar({
           "iterator-iterable",
           "fail-fast",
           "comparable-omparator",
+          "WeakHashMap",
           ],
         },
         {
